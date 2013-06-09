@@ -1,4 +1,18 @@
 XwordDb::Application.routes.draw do
+  get "cross_training/articles"
+
+  get "cross_training/resources"
+
+  get "cross_examination/search"
+
+  get "cross_examination/display"
+
+  get "static_pages/home"
+
+  get "static_pages/about"
+
+  get "static_pages/help"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
