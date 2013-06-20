@@ -1,0 +1,46 @@
+table.solution_grid {
+	border: 3px solid black;
+	border-collapse: collapse;
+	background-color: white;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+table.solution_grid td {
+	border: 1px solid black;
+	width: 30px;
+	height: 30px;
+}
+
+.black_square {
+	background-color: black;
+}
+
+.white_square {
+	text-align: center;
+	background-color: white;
+}
+
+.top_information_field {
+	text-align: center;
+	color: #07D;
+	margin: 3px;
+}
+
+.bottom_information_field {
+	text-align: center;
+	color: #000;
+	font-size: small;
+}
+
+div.number {
+	font-size: xx-small;
+#	float: left;
+	position: relative;
+	left: -7px;
+	top: -1px;
+}
+
+div.letter {
+	
+}

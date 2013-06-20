@@ -1,17 +1,16 @@
 XwordDb::Application.routes.draw do
-  get "cross_training/articles"
+  resources :puzzles
 
-  get "cross_training/resources"
+  root to: 'static_pages#home'
 
-  get "cross_examination/search"
+  match '/articles',	to: 'cross_training#articles'
+  match '/resources',	to: 'cross_training#resources'
+  match '/search',	to: 'cross_examination#search'
+  match '/display_puzzle',	to: 'cross_examination#display'
 
-  get "cross_examination/display"
-
-  get "static_pages/home"
-
-  get "static_pages/about"
-
-  get "static_pages/help"
+  match '/about',	to: 'static_pages#about'
+  match '/help',	to: 'static_pages#help'
+  match '/contact',	to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

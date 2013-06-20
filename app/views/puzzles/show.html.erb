@@ -1,0 +1,48 @@
+<% provide(:title, @puzzle.title) %>
+<p><a href="xpf_list.html">Back to XPF List</a></p>
+<div class="puzzle">
+<h2 class="top_information_field" id="title"><%= @puzzle.title %></h2>
+<p class="top_information_field" id="author">Author: </p>
+<p class="top_information_field" id="editor">Editor: </p>
+<p class="top_information_field" id="publisher">Publisher: </p>
+<p class="top_information_field" id="pub_date">Original Publication Date: </p>
+<p class="top_information_field" id="source">Source: </p>
+
+<table class="solution_grid">
+<tr>
+<%
+  row_num = 1
+  col_num = 1
+  @puzzle.grid.each_char do |i|
+    if i.eql? "|"
+      row_num += 1
+      col_num = 1
+      %></tr><tr><%
+    elsif i.eql? "."
+      %><td class="black_square" id="<%=row_num%>_<%=col_num%>">&nbsp;</td><%
+      col_num += 1
+    else
+      %><td class="white_square" id="<%=row_num%>_<%=col_num%>"><%=i%></td><%
+      col_num += 1
+    end
+  end
+%>
+</tr>
+</table>
+<p class="bottom_information_field" id="copyright">&nbsp;</p>
+<p id="notepad">Notepad: </p>
+<p id="my_notes">Peter's notes: </p>
+<p id="meta_solution">Solution: </p>
+<p id="meta_explanation">Explanation: </p>
+<br /><br />
+<table class="clue_list">
+<tr>
+<th>Across</th>
+<th>Down</th>
+</tr>
+<tr>
+<td id="a_clues"></td>
+<td id="d_clues"></td>
+</tr>
+</table>
+</div>

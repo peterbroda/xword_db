@@ -1,5 +1,8 @@
 class Puzzle < ActiveRecord::Base
-  attr_accessible :xpf_file
+  attr_accessible :grid
 
-  validates :xpf_file,	:presence => true
+  validates :grid,	:presence => true
+
+#  has_and_belongs_to_many :constructors
+#  has_and_belongs_to_many :editors
 end
