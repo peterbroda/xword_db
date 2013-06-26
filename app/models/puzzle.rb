@@ -3,6 +3,6 @@ class Puzzle < ActiveRecord::Base
 
   validates :grid,	:presence => true
 
-#  has_and_belongs_to_many :constructors
+  has_and_belongs_to_many :constructors
 #  has_and_belongs_to_many :editors
 end
