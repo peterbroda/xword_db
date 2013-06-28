@@ -1,0 +1,7 @@
+<h2><%= @constructor.name %></h2>
+<p><%= @constructor.bio %></p>
+<ul>
+  @constructor.puzzles.each do |p|
+    %><li><%= link_to p.title, puzzle_path(p) %></li><%
+  end
+</ul>

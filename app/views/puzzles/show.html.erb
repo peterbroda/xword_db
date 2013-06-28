@@ -2,8 +2,20 @@
 <p><a href="xpf_list.html">Back to XPF List</a></p>
 <div class="puzzle">
 <h2 class="top_information_field" id="title"><%= @puzzle.title %></h2>
-<p class="top_information_field" id="author">Author: </p>
-<p class="top_information_field" id="editor">Editor: </p>
+<p class="top_information_field" id="constructor">Constructor(s): 
+<%
+  @puzzle.constructors.each do |c|
+    %><%= link_to c.name, constructor_path(c) %><%
+  end
+%>
+</p>
+<p class="top_information_field" id="editor">Editor(s): 
+<%
+  @puzzle.editors.each do |e|    
+    %><%= link_to e.name, editor_path(e) %><%
+  end
+%>
+</p>
 <p class="top_information_field" id="publisher">Publisher: </p>
 <p class="top_information_field" id="pub_date">Original Publication Date: </p>
 <p class="top_information_field" id="source">Source: </p>

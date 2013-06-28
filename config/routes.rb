@@ -1,5 +1,15 @@
 XwordDb::Application.routes.draw do
+  get "editors/new"
+
+#  get "constructors/new"
+
   resources :puzzles
+  resources :constructors
+  resources :editors
+
+  get '/puzzles/id',		to: 'puzzles#show', as: 'puzzle'
+  get '/constructors/:id', 	to: 'constructors#show', as: 'constructor'
+  get '/editors/:id', 		to: 'editors#show', as: 'editor'
 
   root to: 'static_pages#home'
 
