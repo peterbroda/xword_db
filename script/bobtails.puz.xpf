@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Conforms to Universal Crossword Puzzle Format XPF Version 1.0 -->
+<Puzzles Version="1.0">
+<Puzzle>
+<Type>normal</Type>
+<Title>Bobtails</Title>
+<Author>Peter Broda - thecrossnerd.blogspot.com</Author>
+<Editor>Peter Broda</Editor>
+<Copyright>&#169;2012</Copyright>
+<Publisher>The Cross Nerd</Publisher>
+<Date>2013-04-03</Date>
+<Size>
+<Rows>15</Rows>
+<Cols>15</Cols>
+</Size>
+<Grid>
+<Row>HAH.URSI.FEEDON</Row>
+<Row>ECO.PAWN.ALPINE</Row>
+<Row>CUBICLES.SLICED</Row>
+<Row>TRANSFATSTACK..</Row>
+<Row>OARS..REI...MBE</Row>
+<Row>RST.HIJACKFROST</Row>
+<Row>...SALAD.OLIVES</Row>
+<Row>AMMETER.DRAPERY</Row>
+<Row>BEAMED.MOATS...</Row>
+<Row>RESIDEBURNS.LOG</Row>
+<Row>AKS...IBM..MERE</Row>
+<Row>..BABYFACEPLANT</Row>
+<Row>APOLLO.RESHAPES</Row>
+<Row>DOOLEY.ASTI.IRA</Row>
+<Row>MIKADO.KTEL.NYT</Row>
+</Grid>
+<Clues>
+<Clue Row="1" Col="1" Num="1" Dir="Across" Ans="HAH">"A likely story!"</Clue>
+<Clue Row="1" Col="1" Num="1" Dir="Down" Ans="HECTOR">Composer Berlioz</Clue>
+<Clue Row="1" Col="2" Num="2" Dir="Down" Ans="ACURAS">ZDX and RDX, for two</Clue>
+<Clue Row="1" Col="3" Num="3" Dir="Down" Ans="HOBART">Capital of Tasmania</Clue>
+<Clue Row="1" Col="5" Num="4" Dir="Across" Ans="URSI">Latin bears</Clue>
+<Clue Row="1" Col="5" Num="4" Dir="Down" Ans="UPCS">Supermarket lines?: Abbr.</Clue>
+<Clue Row="1" Col="6" Num="5" Dir="Down" Ans="RALF">Schumacher of Formula One racing</Clue>
+<Clue Row="1" Col="7" Num="6" Dir="Down" Ans="SWEARJAR">Where you'll pay for a "fuck"?</Clue>
+<Clue Row="1" Col="8" Num="7" Dir="Down" Ans="INSTEAD">Rather</Clue>
+<Clue Row="1" Col="10" Num="8" Dir="Across" Ans="FEEDON">Eat</Clue>
+<Clue Row="1" Col="10" Num="8" Dir="Down" Ans="FAST">Don't eat</Clue>
+<Clue Row="1" Col="11" Num="9" Dir="Down" Ans="ELLA">She won a Grammy for her version of "Mack the Knife" despite forgetting the words</Clue>
+<Clue Row="1" Col="12" Num="10" Dir="Down" Ans="EPIC">"___ Meal Time" (over-the-top YouTube cooking show)</Clue>
+<Clue Row="1" Col="13" Num="11" Dir="Down" Ans="DICKMOVE">Low blow, in modern slang</Clue>
+<Clue Row="1" Col="14" Num="12" Dir="Down" Ans="ONE">Top of the charts</Clue>
+<Clue Row="1" Col="15" Num="13" Dir="Down" Ans="NED">Homer's neighbor</Clue>
+<Clue Row="2" Col="1" Num="14" Dir="Across" Ans="ECO">Prefix seen on seemingly every product out there, nowadays</Clue>
+<Clue Row="2" Col="5" Num="15" Dir="Across" Ans="PAWN">Chess piece that can't move backward</Clue>
+<Clue Row="2" Col="10" Num="16" Dir="Across" Ans="ALPINE">Category for moguls?</Clue>
+<Clue Row="3" Col="1" Num="17" Dir="Across" Ans="CUBICLES">Data entry cells?</Clue>
+<Clue Row="3" Col="4" Num="18" Dir="Down" Ans="INS">Love-___ (old hippie gatherings)</Clue>
+<Clue Row="3" Col="10" Num="19" Dir="Across" Ans="SLICED">Made wedges, perhaps</Clue>
+<Clue Row="4" Col="1" Num="20" Dir="Across" Ans="TRANSFATSTACK">Vietnamese gangster's wad of cash?</Clue>
+<Clue Row="4" Col="9" Num="21" Dir="Down" Ans="SIC">[I'm aware that it's misspelled]</Clue>
+<Clue Row="5" Col="1" Num="22" Dir="Across" Ans="OARS">Outboard alternatives</Clue>
+<Clue Row="5" Col="7" Num="23" Dir="Across" Ans="REI">King, in Lisbon</Clue>
+<Clue Row="5" Col="13" Num="24" Dir="Across" Ans="MBE">U.K. honor</Clue>
+<Clue Row="5" Col="14" Num="25" Dir="Down" Ans="BSER">Liar, briefly</Clue>
+<Clue Row="5" Col="15" Num="26" Dir="Down" Ans="ETSY">Homemade jewelry website</Clue>
+<Clue Row="6" Col="1" Num="27" Dir="Across" Ans="RST">UV preceders</Clue>
+<Clue Row="6" Col="5" Num="28" Dir="Across" Ans="HIJACKFROST">"Welcome back, winter weather!"?</Clue>
+<Clue Row="6" Col="5" Num="28" Dir="Down" Ans="HATED">Like war criminals, for the most part</Clue>
+<Clue Row="6" Col="6" Num="29" Dir="Down" Ans="ILEDE">___-France (region that isn't literally an island)</Clue>
+<Clue Row="6" Col="10" Num="30" Dir="Down" Ans="KORAN">What a Hafiz has memorized in its entirety</Clue>
+<Clue Row="6" Col="11" Num="31" Dir="Down" Ans="FLATS">Some "Coronation Street" dwellings</Clue>
+<Clue Row="6" Col="12" Num="32" Dir="Down" Ans="RIPS">Marks, as a used ticket</Clue>
+<Clue Row="7" Col="4" Num="33" Dir="Across" Ans="SALAD">French or Italian might be found on it</Clue>
+<Clue Row="7" Col="4" Num="33" Dir="Down" Ans="SEMI">It may be driven by a dude in an ugly flat-brimmed hat</Clue>
+<Clue Row="7" Col="10" Num="34" Dir="Across" Ans="OLIVES">Drink garnishes</Clue>
+<Clue Row="8" Col="1" Num="35" Dir="Across" Ans="AMMETER">Source of current information?</Clue>
+<Clue Row="8" Col="1" Num="35" Dir="Down" Ans="ABRA">Trick opening?</Clue>
+<Clue Row="8" Col="2" Num="36" Dir="Down" Ans="MEEK">Biblical heirs, proverbially</Clue>
+<Clue Row="8" Col="3" Num="37" Dir="Down" Ans="MASSBOOK">It may be given out at the beginning of service</Clue>
+<Clue Row="8" Col="9" Num="38" Dir="Across" Ans="DRAPERY">Window dressing?</Clue>
+<Clue Row="8" Col="9" Num="38" Dir="Down" Ans="DORMCEST">Sex with someone living close by, in college residence slang</Clue>
+<Clue Row="9" Col="1" Num="39" Dir="Across" Ans="BEAMED">Did Scotty's job</Clue>
+<Clue Row="9" Col="8" Num="40" Dir="Across" Ans="MOATS">They surround the Forbidden City and Angkor Wat</Clue>
+<Clue Row="9" Col="8" Num="40" Dir="Down" Ans="MUBARAK">Big name in Arab Spring news</Clue>
+<Clue Row="10" Col="1" Num="41" Dir="Across" Ans="RESIDEBURNS">Heading on a memo from Prof. X to Wolverine about Mutant Academy grooming practices?</Clue>
+<Clue Row="10" Col="7" Num="42" Dir="Down" Ans="BIF">___ Naked (Canadian rocker who sang "I Love Myself Today")</Clue>
+<Clue Row="10" Col="13" Num="43" Dir="Across" Ans="LOG">"Splash Mountain" conveyance</Clue>
+<Clue Row="10" Col="13" Num="43" Dir="Down" Ans="LEAPIN">Do a cannonball, maybe</Clue>
+<Clue Row="10" Col="14" Num="44" Dir="Down" Ans="ORNERY">In need of a smoke, perhaps</Clue>
+<Clue Row="10" Col="15" Num="45" Dir="Down" Ans="GETSAT">Suggests</Clue>
+<Clue Row="11" Col="1" Num="46" Dir="Across" Ans="AKS">Widely used assault rifles, briefly</Clue>
+<Clue Row="11" Col="7" Num="47" Dir="Across" Ans="IBM">Creator of Watson</Clue>
+<Clue Row="11" Col="12" Num="48" Dir="Across" Ans="MERE">Utter</Clue>
+<Clue Row="11" Col="12" Num="48" Dir="Down" Ans="MLA">Word nerds' org. with a style guide</Clue>
+<Clue Row="12" Col="3" Num="49" Dir="Across" Ans="BABYFACEPLANT">Result of an infant running before they can walk?</Clue>
+<Clue Row="12" Col="4" Num="50" Dir="Down" Ans="ALLA">"It was ___ dream..."</Clue>
+<Clue Row="12" Col="5" Num="51" Dir="Down" Ans="BLED">Required stitches</Clue>
+<Clue Row="12" Col="6" Num="52" Dir="Down" Ans="YOYO">One going around the world</Clue>
+<Clue Row="12" Col="10" Num="53" Dir="Down" Ans="ESTE">Where el sol rises</Clue>
+<Clue Row="12" Col="11" Num="54" Dir="Down" Ans="PHIL">Spector in the Rock and Roll Hall of Fame (and a California state prison)</Clue>
+<Clue Row="13" Col="1" Num="55" Dir="Across" Ans="APOLLO">Harlem theater where 9-Down made her singing debut</Clue>
+<Clue Row="13" Col="1" Num="55" Dir="Down" Ans="ADM">Ackbar of the "Star Wars" universe, for one: Abbr.</Clue>
+<Clue Row="13" Col="2" Num="56" Dir="Down" Ans="POI">Luau dish</Clue>
+<Clue Row="13" Col="8" Num="57" Dir="Across" Ans="RESHAPES">Has cosmetic surgery done on, maybe</Clue>
+<Clue Row="14" Col="1" Num="58" Dir="Across" Ans="DOOLEY">"Tom ___" (#1 hit for The Kingston Trio)</Clue>
+<Clue Row="14" Col="8" Num="59" Dir="Across" Ans="ASTI">Italian wine area</Clue>
+<Clue Row="14" Col="13" Num="60" Dir="Across" Ans="IRA">Target of the Black and Tans, initially</Clue>
+<Clue Row="15" Col="1" Num="61" Dir="Across" Ans="MIKADO">Gilbert and Sullivan comic opera set in Japan, with "The"</Clue>
+<Clue Row="15" Col="8" Num="62" Dir="Across" Ans="KTEL">"As Seen on TV" record label whose founder grew up on a farm in Saskatchewan</Clue>
+<Clue Row="15" Col="13" Num="63" Dir="Across" Ans="NYT">Where a crossword containing 11-Down would never be published: Abbr.</Clue>
+
+</Clues>
+</Puzzle>
+</Puzzles>

@@ -1,0 +1,12 @@
+<h2><%= @source.name %></h2>
+<%= link_to "Homepage", @source.url %>
+<p><%= @source.description %></p>
+<hr/>
+<p><b>Puzzles found at <%= @source.name %>:</b></p>
+<ul><%
+  @source.puzzles.each do |p|
+    %><li><%= link_to p.title, puzzle_path(p) %></li><%
+  end
+%></ul>
+
+

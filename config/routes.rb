@@ -6,10 +6,12 @@ XwordDb::Application.routes.draw do
   resources :puzzles
   resources :constructors
   resources :editors
+  resources :sources
 
-  get '/puzzles/id',		to: 'puzzles#show', as: 'puzzle'
+  get '/puzzles/:id',		to: 'puzzles#show', as: 'puzzle'
   get '/constructors/:id', 	to: 'constructors#show', as: 'constructor'
   get '/editors/:id', 		to: 'editors#show', as: 'editor'
+  get '/sources/:id',		to: 'sources#show', as: 'source'
 
   root to: 'static_pages#home'
 
