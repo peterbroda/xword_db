@@ -8,13 +8,20 @@
     <th>Publication Date</th>
   </tr>
 <%
-  @constructor.puzzles.each do |p|
+  @puzzles_by_year.each_pair do |key, value|
     %>
       <tr>
-        <td><%= link_to p.title, puzzle_path(p) %></td>
-        <td style="text-align:center"><%= p.publication_date %></td>
+	<td colspan="2" style="text-align:center"><p><b><%= key %></b></p></td>
       </tr>
-    <%
+      <%
+      value.each do |p|
+	%>
+	<tr>
+          <td><%= link_to p.title, puzzle_path(p) %></td>
+          <td style="text-align:center"><%= p.publication_date %></td>	    
+	</tr>
+	<%
+      end     
   end
 %>
 </table>
@@ -29,4 +36,3 @@
   end
 %>
 </ul>
-

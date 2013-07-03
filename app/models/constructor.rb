@@ -3,4 +3,5 @@ class Constructor < ActiveRecord::Base
 
   has_and_belongs_to_many :puzzles
   has_and_belongs_to_many :sources
+
 end
