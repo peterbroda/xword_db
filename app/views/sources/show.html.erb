@@ -1,12 +1,45 @@
 <h2><%= @source.name %></h2>
 <%= link_to "Homepage", @source.url %>
 <p><%= @source.description %></p>
-<hr/>
-<p><b>Puzzles found at <%= @source.name %>:</b></p>
-<ul><%
-  @source.puzzles.each do |p|
-    %><li><%= link_to p.title, puzzle_path(p) %></li><%
-  end
-%></ul>
 
+<hr/>
+
+<p><b>Constructors associated with <%= @source.name %></b></p>
+<ul>
+<%
+  @source.constructors.each do |con|
+    %><li><%= link_to con.name, constructor_path(con) %></li><%
+  end
+%>
+</ul>
+
+<hr/>
+
+<p><b>Puzzles found at <%= @source.name %>:</b></p>
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Publication Date</th>
+  </tr>
+<%
+  @source.puzzles.each do |p|
+    %>
+      <tr>
+        <td><%= link_to p.title, puzzle_path(p) %></td>
+        <td style="text-align:center"><%= p.publication_date %></td>
+      </tr>
+    <%
+  end
+%>
+</table>
+
+<hr/>
+<h3>All Available Sources</h3>
+<ul>
+<%
+  Source.find(:all).each do |src|
+    %><li><%= link_to src.name, source_path(src) %></li><%  
+  end
+%>
+</ul>
 

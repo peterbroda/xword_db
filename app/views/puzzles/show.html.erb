@@ -17,7 +17,7 @@
 %>
 </p>
 <p class="top_information_field" id="publisher">Publisher: </p>
-<p class="top_information_field" id="pub_date">Original Publication Date: </p>
+<p class="top_information_field" id="pub_date">Original Publication Date: <%= @puzzle.publication_date %></p>
 <p class="top_information_field" id="source">Source: 
 <%
   @puzzle.sources.each do |src|    

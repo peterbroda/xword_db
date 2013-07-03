@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702202004) do
+ActiveRecord::Schema.define(:version => 20130703020820) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(:version => 20130702202004) do
 
   add_index "constructors_puzzles", ["constructor_id"], :name => "index_constructors_puzzles_on_constructor_id"
   add_index "constructors_puzzles", ["puzzle_id"], :name => "index_constructors_puzzles_on_puzzle_id"
+
+  create_table "constructors_sources", :id => false, :force => true do |t|
+    t.integer "constructor_id"
+    t.integer "source_id"
+  end
+
+  add_index "constructors_sources", ["constructor_id"], :name => "index_constructors_sources_on_constructor_id"
+  add_index "constructors_sources", ["source_id"], :name => "index_constructors_sources_on_source_id"
 
   create_table "editors", :force => true do |t|
     t.string   "name"
@@ -44,16 +52,20 @@ ActiveRecord::Schema.define(:version => 20130702202004) do
   add_index "editors_puzzles", ["puzzle_id"], :name => "index_editors_puzzles_on_puzzle_id"
 
   create_table "puzzles", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "title"
     t.string   "grid"
+    t.date     "publication_date"
   end
 
   create_table "puzzles_sources", :id => false, :force => true do |t|
     t.integer "puzzle_id"
     t.integer "source_id"
   end
+
+  add_index "puzzles_sources", ["puzzle_id"], :name => "index_puzzles_sources_on_puzzle_id"
+  add_index "puzzles_sources", ["source_id"], :name => "index_puzzles_sources_on_source_id"
 
   create_table "sources", :force => true do |t|
     t.string   "name"
