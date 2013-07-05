@@ -15,23 +15,9 @@
 
 <hr/>
 
-<p><b>Puzzles found at <%= @source.name %>:</b></p>
-<table style="width:100%">
-  <tr>
-    <th>Title</th>
-    <th>Publication Date</th>
-  </tr>
-<%
-  @source.puzzles.each do |p|
-    %>
-      <tr>
-        <td><%= link_to p.title, puzzle_path(p) %></td>
-        <td style="text-align:center"><%= p.publication_date %></td>
-      </tr>
-    <%
-  end
-%>
-</table>
+<p><b>Puzzles from <%= @source.name %>:</b></p>
+
+<%= render partial: "/partials/list_puzzles", locals: {puzzles_by_year: @puzzles_by_year, page_source: "source"} %>
 
 <hr/>
 <h3>All Available Sources</h3>

@@ -1,0 +1,58 @@
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Publication Date</th>
+    <th>Constructor(s)</th>
+    <% if page_source.eql? "constructor" %>
+    <th>Source(s)</th>
+    <% end %>
+  </tr>
+<%
+  puzzles_by_year.each_pair do |key, value|
+    %>
+      <tr>
+	<% if page_source.eql? "source" %>
+	        <td colspan="3" style="text-align:center"><p><b><%= key %></b></p></td>
+	<% else %>
+	        <td colspan="4" style="text-align:center"><p><b><%= key %></b></p></td>
+	<% end %>
+      </tr>
+      <%
+      value.each do |p|
+        %>
+        <tr>
+          <td><%= link_to p.title, puzzle_path(p) %></td>
+          <td style="text-align:center"><%= p.publication_date %></td>
+	  <td style="text-align:center">
+	  <%
+	    p.constructors.each_index do |i|
+	      %>
+		<%= link_to p.constructors[i].name, constructor_path(p.constructors[i]) %>
+		<%
+		if ((i+1) < p.constructors.length)
+		  %>--<%
+		end		
+	    end
+	  %>
+	  </td>
+	  <% if page_source.eql? "constructor" %>
+	    <td style="text-align:center">
+	    <%
+	      p.sources.each_index do |i|
+	        %>
+		  <%= link_to p.sources[i].name, source_path(p.sources[i]) %>
+		  <%
+		  if ((i+1) < p.sources.length)
+		    %>--<%
+	  	  end		
+	      end		
+	    %>
+	    </td>
+	  <% end %>
+        </tr>
+        <%
+      end
+  end
+%>
+</table>
+

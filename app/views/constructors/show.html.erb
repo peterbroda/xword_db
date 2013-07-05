@@ -1,30 +1,10 @@
 <h2><%= @constructor.name %></h2>
 <p><%= @constructor.bio %></p>
 <hr/>
-<p><b>Puzzles constructed by <%= @constructor.name %>:</b></p>
-<table style="width:100%">
-  <tr>
-    <th>Title</th>
-    <th>Publication Date</th>
-  </tr>
-<%
-  @puzzles_by_year.each_pair do |key, value|
-    %>
-      <tr>
-	<td colspan="2" style="text-align:center"><p><b><%= key %></b></p></td>
-      </tr>
-      <%
-      value.each do |p|
-	%>
-	<tr>
-          <td><%= link_to p.title, puzzle_path(p) %></td>
-          <td style="text-align:center"><%= p.publication_date %></td>	    
-	</tr>
-	<%
-      end     
-  end
-%>
-</table>
+
+<p><b>Puzzles on which <%= @constructor.name %> is listed as a constructor:</b></p>
+
+<%= render partial: "/partials/list_puzzles", locals: {puzzles_by_year: @puzzles_by_year, page_source: "constructor"} %>
 
 <hr/>
 
@@ -36,3 +16,7 @@
   end
 %>
 </ul>
+
+<script>
+$( "#accordion" ).accordion();
+</script>
