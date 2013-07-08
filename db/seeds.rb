@@ -17,6 +17,11 @@ Constructor.create(name: 'Francis Heaney', bio: 'Bio for Francis')
 Constructor.create(name: 'Byron Walden', bio: 'Bio for Byron')
 Constructor.create(name: 'Drew Lawn', bio: 'Bio for Drew')
 Constructor.create(name: 'Milo Beckman', bio: 'Bio for Milo')
+Constructor.create(name: 'Pete Muller', bio: 'Bio for Pete')
+Constructor.create(name: 'Joon Pahk', bio: 'Bio for Joon')
+Constructor.create(name: 'Patrick Blindauer', bio: 'Bio for PB2')
+Constructor.create(name: 'Henry Hook', bio: 'Bio for Henry')
+
 
 neville_constructors = [Constructor.find_by_name('Neville Fogarty'), Constructor.find_by_name('Andy Kravis')]
 crossnerd_constructors = [Constructor.find_by_name('Erik Agard'), Constructor.find_by_name('Peter Broda'), Constructor.find_by_name('Steve Riley'), Constructor.find_by_name('Drew Lawn')]
@@ -47,6 +52,7 @@ Source.create(name: 'The Cross Nerd', url: 'http://thecrossnerd.blogspot.com', d
 Source.create(name: 'The Onion AV Club', url: '#', description: 'now-defunct original AV club', constructors: av_constructors)
 Source.create(name: 'American Values Club', url: 'http://www.avxword.com/', description: 'The American Values Club xword is a reincarnation of the beloved but now dead Onion A.V. Club xword feature, edited by Ben Tausig.', constructors: av_constructors)
 Source.create(name: 'Campus Crosswords', url: '#', description: 'Campus Crosswords description', constructors: cc_constructors)
+Source.create(name: 'Matt Gaffney\'s Weekly Crossword Contest', url: 'http://xwordcontest.com/', description: 'Meta puzzle every Friday', :constructors => Constructor.where(:name => 'Matt Gaffney'))
 
 nev_src = Source.new
 nev_src.name = "Neville Fogarty"

@@ -10,5 +10,6 @@ namespace :xword_db do
     require "/home/peter/xword_db/db/IW_2011_seeds.rb"
     require "/home/peter/xword_db/db/IW_2012_seeds.rb"
     require "/home/peter/xword_db/db/CN_all_seeds.rb"
+    require "/home/peter/xword_db/db/MGWCC_all_seeds.rb"
   end
 end
