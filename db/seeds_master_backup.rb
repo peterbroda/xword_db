@@ -17,6 +17,13 @@ Constructor.create(name: 'Francis Heaney', bio: 'Bio for Francis')
 Constructor.create(name: 'Byron Walden', bio: 'Bio for Byron')
 Constructor.create(name: 'Drew Lawn', bio: 'Bio for Drew')
 Constructor.create(name: 'Milo Beckman', bio: 'Bio for Milo')
+Constructor.create(name: 'Pete Muller', bio: 'Bio for Pete')
+Constructor.create(name: 'Joon Pahk', bio: 'Bio for Joon')
+Constructor.create(name: 'Patrick Blindauer', bio: 'Bio for PB2')
+Constructor.create(name: 'Henry Hook', bio: 'Bio for Henry')
+Constructor.create(name: 'Bob Klahn', bio: 'Bio for Bob')
+Constructor.create(name: 'Martin Ashwood-Smith', bio: 'Bio for Martin')
+Constructor.create(name: 'Todd McClary', bio: 'Bio for Todd')
 
 neville_constructors = [Constructor.find_by_name('Neville Fogarty'), Constructor.find_by_name('Andy Kravis')]
 crossnerd_constructors = [Constructor.find_by_name('Erik Agard'), Constructor.find_by_name('Peter Broda'), Constructor.find_by_name('Steve Riley'), Constructor.find_by_name('Drew Lawn')]
@@ -47,7 +54,11 @@ Source.create(name: 'The Cross Nerd', url: 'http://thecrossnerd.blogspot.com', d
 Source.create(name: 'The Onion AV Club', url: '#', description: 'now-defunct original AV club', constructors: av_constructors)
 Source.create(name: 'American Values Club', url: 'http://www.avxword.com/', description: 'The American Values Club xword is a reincarnation of the beloved but now dead Onion A.V. Club xword feature, edited by Ben Tausig.', constructors: av_constructors)
 Source.create(name: 'Campus Crosswords', url: '#', description: 'Campus Crosswords description', constructors: cc_constructors)
-Source.create(name: 'Matt Gaffney\'s Weekly Crossword Contest', url: 'http://xwordcontest.com/', description: 'Meta puzzle every Friday', constructors: :constructors => Constructor.where(:name => 'Matt Gaffney'))
+Source.create(name: 'Matt Gaffney\'s Weekly Crossword Contest', url: 'http://xwordcontest.com/', description: 'Meta puzzle every Friday', :constructors => Constructor.where(:name => 'Matt Gaffney'))
+Source.create(name: 'The Wrath of Klahn', url: '', description: 'Puzzles from the World\'s Toughest Clue Writer', :constructors => Constructor.where(:name => 'Bob Klahn'))
+Source.create(name: 'Triple-Stack Crosswords', url: '', description: 'Triple-stacks galore', :constructors => Constructor.where(:name => 'Martin Ashwood-Smith'))
+Source.create(name: 'The Autofill Project', url: 'http://autofillproject.wordpress.com/', description: 'A journal of crossword database management', :constructors => Constructor.where(:name => 'Todd McClary'))
+Source.create(name: 'Andy Kravis, Cruciverbalist at Law', url: 'http://cruciverbalistatlaw.blogspot.ca/', description: 'New puzzle every weekend', :constructors => Constructor.where(:name => 'Andy Kravis'))
 
 nev_src = Source.new
 nev_src.name = "Neville Fogarty"
