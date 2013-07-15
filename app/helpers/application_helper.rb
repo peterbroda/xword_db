@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(page_title)
-    base_title = "Xword Database"
+    base_title = "Cross Examination"
     if page_title.empty?
 	base_title
     else

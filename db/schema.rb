@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703020820) do
+ActiveRecord::Schema.define(:version => 20130715010529) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -51,12 +51,27 @@ ActiveRecord::Schema.define(:version => 20130703020820) do
   add_index "editors_puzzles", ["editor_id"], :name => "index_editors_puzzles_on_editor_id"
   add_index "editors_puzzles", ["puzzle_id"], :name => "index_editors_puzzles_on_puzzle_id"
 
+  create_table "entries", :force => true do |t|
+    t.text     "clue"
+    t.string   "answer"
+    t.integer  "number"
+    t.string   "dir"
+    t.integer  "row"
+    t.integer  "col"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "puzzle_id"
+  end
+
+  add_index "entries", ["puzzle_id"], :name => "index_puzzle_id"
+
   create_table "puzzles", :force => true do |t|
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "title"
     t.string   "grid"
     t.date     "publication_date"
+    t.text     "special_features"
   end
 
   create_table "puzzles_sources", :id => false, :force => true do |t|

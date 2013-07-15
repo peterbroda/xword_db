@@ -1,24 +1,33 @@
 table.solution_grid {
 	border: 3px solid black;
-	border-collapse: collapse;
-	background-color: white;
+	/*border-collapse: collapse;*/
 	margin-right: auto;
 	margin-left: auto;
 }
 
 table.solution_grid td {
 	border: 1px solid black;
-	width: 30px;
-	height: 30px;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
 }
 
-.black_square {
+div.black_square {
 	background-color: black;
+	border: 1px solid black;
 }
 
-.white_square {
-	text-align: center;
-	background-color: white;
+div.white_square {
+/*	background-color: white;*/
+	border: 1px solid white; /* need a border all the time so that circled squares aren't larger */
+}
+
+div.circle {
+	border-color: black;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px; 
 }
 
 .top_information_field {
@@ -34,13 +43,48 @@ table.solution_grid td {
 }
 
 div.number {
-	font-size: xx-small;
-#	float: left;
-	position: relative;
-	left: -7px;
-	top: -1px;
+	font-size: 6pt;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 0px;
+	padding: 0px;
+/*	position: relative;*/
+	width: 32px;
+	height: 10px;
+	line-height: 10px;
 }
 
 div.letter {
-	
+/*	position: relative;*/
+	width: 32px;
+	height: 22px;
+	font-size: medium;
+	font-weight: bold;
+	text-align: center;
+}
+
+table.clue_table {
+	td {
+		vertical-align: top;
+		padding: 15px;
+	}
+}
+
+ul.clue_list {
+	list-style-type: none;
+}
+
+span.clue_and_answer {
+/*	display: inline-block;*/
+/*	width: 300px;*/
+}
+
+span.clue_answer {
+	font-weight: bold;
+}
+
+span.clue_number {
+	display: inline-block;
+	width: 35px;
+	text-align: right;
 }

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  clue: MyText
+  answer: MyString
+  number: 1
+  dir: 
+  row: 1
+  col: 1
+
+two:
+  clue: MyText
+  answer: MyString
+  number: 1
+  dir: 
+  row: 1
+  col: 1
