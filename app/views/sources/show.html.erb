@@ -19,13 +19,3 @@
 
 <%= render partial: "/partials/list_puzzles", locals: {puzzles_by_year: @puzzles_by_year, page_source: "source"} %>
 
-<hr/>
-<h3>All Available Sources</h3>
-<ul>
-<%
-  Source.find(:all).each do |src|
-    %><li><%= link_to src.name, source_path(src) %></li><%  
-  end
-%>
-</ul>
-

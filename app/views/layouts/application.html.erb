@@ -9,8 +9,29 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+	<ul class="nav nav-list">
+	  <li>A link</li>
+	  <li>A link</li>
+	  <li>A link</li>
+	  <li>A link</li>
+	</ul>
+      </div>
+      <div class="span8">
+	<%= yield %>
+      </div>
+      <div class="span2">
+	<div class="sidebar-nav-fixed">
+	  <div class="well">
+	    <%= render 'partials/source_sidebar' %>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
   <div class="container">
-    <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
   </div>

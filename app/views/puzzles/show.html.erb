@@ -124,7 +124,7 @@
 	  %><li>	      
 	      <span class="clue_number"><%= c.number %>.&nbsp;</span>
 	      <span class="clue_and_answer">
-		<span class="clue_text"><%= c.clue %>&nbsp;</span> 	      
+		<span class="clue_text"><%= c.clue.html_safe %>&nbsp;</span> 	      
 	        <span class="clue_answer"><%= c.answer %></span>
 	      </span>
 	  </li><%
@@ -139,7 +139,7 @@
 	  %><li>	      
 	      <span class="clue_number"><%= c.number %>.&nbsp;</span>
 	      <span class="clue_and_answer">
-		<span class="clue_text"><%= c.clue %>&nbsp;</span> 	      
+		<span class="clue_text"><%= c.clue.html_safe %>&nbsp;</span> 	      
 	        <span class="clue_answer"><%= c.answer %></span>
 	      </span>
 	  </li><%
@@ -149,5 +149,6 @@
   </td>
 </tr>
 </table>
+
 </div>
 

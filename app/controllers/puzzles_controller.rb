@@ -46,9 +46,15 @@ class PuzzlesController < ApplicationController
         else	# everything else - ie. contents of white square
 	  this_gs.class_name = "white_square"
 	  this_gs.id_name = row_num.to_s + "_" + col_num.to_s
-	  this_gs.contents = i
+	  this_gs.contents = i	  
 	  if !spec_feat[this_gs.id_name].nil?
-	    this_gs.class_name += " circle"
+	    if spec_feat[this_gs.id_name].eql?("C")
+	      this_gs.class_name += " circle"
+	    end
+	    if spec_feat[this_gs.id_name].start_with?("R")
+	      this_gs.class_name += " rebus"
+	      this_gs.contents = spec_feat[this_gs.id_name].gsub(/^./, '')
+	    end
 	  end
 	  col_num += 1
 	  current_row.push(this_gs)

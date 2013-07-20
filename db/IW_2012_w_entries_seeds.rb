@@ -308,7 +308,7 @@ clues_Labor_Movement_CR_5_31_12.push(Entry.create(row: 14, col: 1, dir: 'Across'
 clues_Labor_Movement_CR_5_31_12.push(Entry.create(row: 14, col: 8, dir: 'Across', answer: 'SRIRACHA', number: 65, clue: '"Rooster sauce"'))
 clues_Labor_Movement_CR_5_31_12.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'CLOSER', number: 66, clue: 'With 67-Across, how the contractions in this puzzle move'))
 clues_Labor_Movement_CR_5_31_12.push(Entry.create(row: 15, col: 8, dir: 'Across', answer: 'TOGETHER', number: 67, clue: 'See 66-Across'))
-spec_feat_LM = "4_1:C|4_2:C|4_3:C|4_4:C|4_5:C|4_12:C|4_13:C|4_14:C|4_15:C|8_3:C|8_4:C|8_7:C|8_8:C|8_9:C|8_10:C|8_11:C|12_4:C|12_5:C|12_6:C|12_7:C|12_9:C|12_10:C|12_11:C|12_12:C|"
+spec_feat_LM = "4_1:C|4_2:C|4_3:C|4_4:C|4_5:C|4_12:C|4_13:C|4_14:C|4_15:C|8_3:C|8_4:C|8_7:C|8_8:C|8_9:C|8_10:C|8_11:C|12_4:C|12_5:C|12_6:C|12_7:C|12_9:C|12_10:C|12_11:C|12_12:C"
 Puzzle.create(title: 'Labor Movement', grid: 'INTHESEA.MATHIS|CARALARM.IMEANT|EMERITUS.LIEDTO|TIMESUP.YESMAAM|ENO.EPT.ASH.TIP|AGRA..SNL...ALE|...TAT.OEUF.LSD|..IMOKYOUREOK..|POT.LOOK.LES...|OLA...USB..UPTO|LDL.KAN.OZS.EEN|IFICANT.LETSSEE|TOASTS.RELOCATE|IONIZE.SRIRACHA|CLOSER.TOGETHER', :constructors => Constructor.where(:name => 'Ben Tausig'), :sources => Source.where(:name => 'Ink Well'), publication_date: '2012/5/31', entries: clues_Labor_Movement_CR_5_31_12, special_features: spec_feat_LM)
 clues_Spring_Time_CR_2_29_12 = Array.new
 clues_Spring_Time_CR_2_29_12.push(Entry.create(row: 1, col: 1, dir: 'Across', answer: 'HOW', number: 1, clue: '"What\'s your plan?"'))
@@ -387,4 +387,5 @@ clues_Spring_Time_CR_2_29_12.push(Entry.create(row: 14, col: 8, dir: 'Across', a
 clues_Spring_Time_CR_2_29_12.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'TARGET', number: 65, clue: 'Retailer with a red-and-white logo'))
 clues_Spring_Time_CR_2_29_12.push(Entry.create(row: 15, col: 8, dir: 'Across', answer: 'HMOS', number: 66, clue: 'Med. care providers'))
 clues_Spring_Time_CR_2_29_12.push(Entry.create(row: 15, col: 13, dir: 'Across', answer: 'AKA', number: 67, clue: 'James Osterberg, ___ Iggy Pop'))
-Puzzle.create(title: 'Spring Time', grid: 'HOW.LEIA.NUDNIK|THEBIEBS.ONEIDA|TSARTREK.NIBLET|POKER..AMPQUEST|...CECE.ACUT...|ETCHSAVVY.ELDER|CART.NEO.ASPIRE|OXO.AWLMART.DAY|NEWBIE.IWO.HOSE|ODDER.WTOSHAKES|...IFSO.LEAP...|AFTJOKES..OPTIC|REHIRE.USBLEASE|ATONCE.CALENDAR|TARGET.HMOS.AKA', :constructors => Constructor.where(:name => 'Ben Tausig'), :sources => Source.where(:name => 'Ink Well'), publication_date: '2012/2/29', entries: clues_Spring_Time_CR_2_29_12)
+spec_feat_ST = "3_2:C|4_9:C|6_2:C|8_6:C|10_8:C|12_2:C|13_9:C"
+Puzzle.create(title: 'Spring Time', grid: 'HOW.LEIA.NUDNIK|THEBIEBS.ONEIDA|TSARTREK.NIBLET|POKER..AMPQUEST|...CECE.ACUT...|ETCHSAVVY.ELDER|CART.NEO.ASPIRE|OXO.AWLMART.DAY|NEWBIE.IWO.HOSE|ODDER.WTOSHAKES|...IFSO.LEAP...|AFTJOKES..OPTIC|REHIRE.USBLEASE|ATONCE.CALENDAR|TARGET.HMOS.AKA', :constructors => Constructor.where(:name => 'Ben Tausig'), :sources => Source.where(:name => 'Ink Well'), publication_date: '2012/2/29', entries: clues_Spring_Time_CR_2_29_12, special_features: spec_feat_ST)
