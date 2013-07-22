@@ -36,3 +36,4 @@ Source.create(name: 'The Chronicle of Higher Education', url: 'http://chronicle.
 Source.create(name: 'Frank Longo Vowelless Crosswords', url: '#', description: 'Vowelless Crosswords', :constructors => Constructor.where(:name => 'Frank Longo'))
 Source.create(name: 'Triple Play Puzzles', url: 'http://www.tripleplaypuzzles.com', description: 'Trip Payne\'s site', :constructors => Constructor.where(:name => 'Trip Payne'))
 Source.create(name: 'Neville Fogarty', url: 'http://nevillefogarty.wordpress.com', description: 'Puzzles by Neville. Updated every Friday', constructors: neville_constructors)
+Source.create(name: '20 Under 30', url: 'http://www.20under30.com')
