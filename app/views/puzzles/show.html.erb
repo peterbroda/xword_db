@@ -1,22 +1,26 @@
 <% provide(:title, @puzzle.title) %>
 <p><a href="xpf_list.html">Back to XPF List</a></p>
 <div class="puzzle">
-<h2 class="top_information_field" id="title"><%= @puzzle.title %></h2>
-<p class="top_information_field" id="constructor">Constructor(s): 
+<h2 class="top_information_field" id="puzzle_title"><%= @puzzle.title %></h2>
+<div class="top_information_field" id="person_info">
+<span class="top_information_field" id="constructor">Constructor(s): 
 <%
   @puzzle.constructors.each do |c|
     %><%= link_to c.name, constructor_path(c) %><%
   end
 %>
-</p>
-<p class="top_information_field" id="editor">Editor(s): 
+</span>
+|
+<span class="top_information_field" id="editor">Editor(s): 
 <%
   @puzzle.editors.each do |e|    
     %><%= link_to e.name, editor_path(e) %><%
   end
 %>
-</p>
-<p class="top_information_field" id="publisher">Publisher: </p>
+</span>
+|
+<span class="top_information_field" id="publisher">Publisher: </span>
+</div>
 <p class="top_information_field" id="pub_date">Original Publication Date: <%= @puzzle.publication_date %></p>
 <p class="top_information_field" id="source">Source: 
 <%
@@ -45,8 +49,23 @@
 %>
 </p>
 
+
+<p class="top_information_field" id="puzzle_instructions">
+<%
+  if !@puzzle.instructions.nil?
+    %>Instructions: <%= @puzzle.instructions.html_safe %><%
+  end
+%>
+</p>
+
 <!-- below is the old show grid method
-<table class="solution_grid">
+<%
+  if @special_type.eql?("outer")
+    %><table class="solution_grid_with_outer"><%
+  else
+    %><table class="solution_grid"><%
+  end
+%>
 <tr>
 <%
   row_num = 1
@@ -73,13 +92,19 @@
 </table>
 -->
 
-<table class="solution_grid">
+<%
+  if @special_type.eql?("outer")
+    %><table class="solution_grid_with_outer"><%
+  else
+    %><table class="solution_grid"><%
+  end
+%>
 <%
   @the_grid.each do |this_row|
     %><tr><%
     this_row.each do |this_square|
       %>
-	<td>
+	<td class="<%= this_square.class_name %>">
 	<div class="<%= this_square.class_name %>" id="<%= this_square.id_name %>">
 	  <%
 #	    if this_square.class_name.eql?("black_square")
@@ -98,7 +123,6 @@
     %></tr><%
   end
 %>
-</tr>
 </table>
 
 <!--
@@ -109,6 +133,16 @@
 <p id="meta_explanation">Explanation: </p>
 -->
 
+<%
+  if !@puzzle.explanation.nil?
+    %><div class="theme_explanation"><%
+      if !@meta_answer.nil?
+        %><p>Meta Answer: <b><%= @meta_answer %></b></p><%
+      end
+      %><p><%= @theme_explanation.html_safe %></p>
+    </div><%
+  end
+%>
 <hr />
 
 <table class="clue_table">

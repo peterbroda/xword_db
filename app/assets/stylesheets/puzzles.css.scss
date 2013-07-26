@@ -1,10 +1,13 @@
+/*-----------*/
+/*   grid    */
+/*-----------*/
+
 table.solution_grid {
 	border: 3px solid black;
 	/*border-collapse: collapse;*/
 	margin-right: auto;
 	margin-left: auto;
 }
-
 table.solution_grid td {
 	border: 1px solid black;
 	padding: 0px;
@@ -12,9 +15,28 @@ table.solution_grid td {
 	height: 32px;
 	overflow: hidden;
 }
-
+table.solution_grid_with_outer {
+	border: none;
+	margin-right: auto;
+	margin-left: auto;
+}
+table.solution_grid_with_outer td.white_square, td.black_square {
+	border: 1px solid black;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
+}
+td.no_display {
+	border: none;
+}
 div.black_square {
 	background-color: black;
+	border: 1px solid black;
+}
+div.black_square_with_letter {
+	background-color: black;
+	color: white;
 	border: 1px solid black;
 }
 
@@ -30,17 +52,6 @@ div.circle {
 	border-radius: 16px; 
 }
 
-.top_information_field {
-	text-align: center;
-	color: #07D;
-	margin: 3px;
-}
-
-.bottom_information_field {
-	text-align: center;
-	color: #000;
-	font-size: small;
-}
 
 div.number {
 	font-size: 6pt;
@@ -62,6 +73,44 @@ div.letter {
 	font-weight: bold;
 	text-align: center;
 }
+
+
+/*-----------*/
+/*   info    */
+/*-----------*/
+
+#person_info {
+
+}
+
+#puzzle_title {
+	font-weight: bold;
+}
+
+.top_information_field {
+	text-align: center;
+	color: #000;
+	margin: 3px;
+}
+
+.bottom_information_field {
+	text-align: center;
+	color: #000;
+	font-size: small;
+}
+
+.theme_explanation {
+	border: 1px solid #07D;
+	background-color: #CDCFFF;
+	margin-top: 15px;
+	padding: 15px;
+	text-align: left;
+}
+
+
+/*-----------*/
+/*   clues   */
+/*-----------*/
 
 table.clue_table {
 	td {

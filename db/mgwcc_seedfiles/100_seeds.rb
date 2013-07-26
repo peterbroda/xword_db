@@ -47,4 +47,6 @@ clues_mgwcc100_unscrambled.push(Entry.create(row: 10, col: 9, dir: 'Across', ans
 clues_mgwcc100_unscrambled.push(Entry.create(row: 11, col: 1, dir: 'Across', answer: 'POS', number: 40, clue: '+, briefly'))
 clues_mgwcc100_unscrambled.push(Entry.create(row: 11, col: 5, dir: 'Across', answer: 'DRY', number: 41, clue: 'Like some wine'))
 clues_mgwcc100_unscrambled.push(Entry.create(row: 11, col: 9, dir: 'Across', answer: 'COY', number: 42, clue: 'Playing hard to get'))
-Puzzle.create(title: 'MGWCC #100 - "One Hundred Weeks of Solvitude"', grid: 'HEH.LUV.EPA|AXE.ONO.LAT|RIM.DOT.IVE|ELIDE.IBSEN|MENU.INJEST|...BINGO...|SQUAWK.RAFT|CURIO.ANZIO|RIG.UFW.TED|ATE.LAR.ERA|POS.DRY.COY', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2010/5/14', entries: clues_mgwcc100_unscrambled)
+instructions = 'Coming soon...'
+explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+Puzzle.create(title: 'MGWCC #100 - "One Hundred Weeks of Solvitude"', grid: 'HEH.LUV.EPA|AXE.ONO.LAT|RIM.DOT.IVE|ELIDE.IBSEN|MENU.INJEST|...BINGO...|SQUAWK.RAFT|CURIO.ANZIO|RIG.UFW.TED|ATE.LAR.ERA|POS.DRY.COY', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2010/5/14', entries: clues_mgwcc100_unscrambled, instructions: instructions, explanation: explanation)

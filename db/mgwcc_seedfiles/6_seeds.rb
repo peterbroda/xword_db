@@ -19,7 +19,7 @@ clues_mgwcc006_unscrambled.push(Entry.create(row: 2, col: 9, dir: 'Across', answ
 clues_mgwcc006_unscrambled.push(Entry.create(row: 2, col: 13, dir: 'Across', answer: 'GEL', number: 15, clue: 'Product, often'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 3, col: 1, dir: 'Across', answer: 'SPICER', number: 16, clue: 'Late San Francisco poet Jack'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 3, col: 8, dir: 'Across', answer: 'SETITOFF', number: 17, clue: '1996 movie about four bank robbers'))
-clues_mgwcc006_unscrambled.push(Entry.create(row: 3, col: 8, dir: 'Down', answer: 'SHIPS', number: 17, clue: 'Transmits, as to the other side of a body of water'))
+clues_mgwcc006_unscrambled.push(Entry.create(row: 3, col: 8, dir: 'Down', answer: 'SHIPS / SHIPSACROSS', number: 17, clue: 'Transmits, as to the other side of a body of water'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 3, col: 12, dir: 'Down', answer: 'TRANSATLANTIC', number: 18, clue: 'Like some flights'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 4, col: 1, dir: 'Across', answer: 'MAGICK', number: 19, clue: 'Occult activity'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 4, col: 8, dir: 'Across', answer: 'HUMERI', number: 20, clue: 'Skeleton parts'))
@@ -38,7 +38,7 @@ clues_mgwcc006_unscrambled.push(Entry.create(row: 7, col: 4, dir: 'Across', answ
 clues_mgwcc006_unscrambled.push(Entry.create(row: 7, col: 5, dir: 'Down', answer: 'ANTS', number: 30, clue: 'Fire ___'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 7, col: 10, dir: 'Across', answer: 'MASADA', number: 31, clue: 'Site of a noted mass suicide'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 7, col: 10, dir: 'Down', answer: 'MARX', number: 31, clue: 'Richard with three #1 hits in 1988-89'))
-clues_mgwcc006_unscrambled.push(Entry.create(row: 8, col: 3, dir: 'Across', answer: 'PANAM', number: 32, clue: 'It revolutionized 20th-century global transportation'))
+clues_mgwcc006_unscrambled.push(Entry.create(row: 8, col: 3, dir: 'Across', answer: 'PANAM / PANAMACANAL', number: 32, clue: 'It revolutionized 20th-century global transportation'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 8, col: 3, dir: 'Down', answer: 'PUTUPJOB', number: 32, clue: 'Scam'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 8, col: 9, dir: 'Across', answer: 'CANAL', number: 33, clue: '___+ (French TV channel)'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 8, col: 9, dir: 'Down', answer: 'CAIN', number: 33, clue: 'Jealous brother'))
@@ -73,4 +73,7 @@ clues_mgwcc006_unscrambled.push(Entry.create(row: 14, col: 10, dir: 'Across', an
 clues_mgwcc006_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'EBB', number: 55, clue: 'Go back'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 15, col: 5, dir: 'Across', answer: 'ZED', number: 56, clue: 'Capital of Zimbabwe'))
 clues_mgwcc006_unscrambled.push(Entry.create(row: 15, col: 10, dir: 'Across', answer: 'NICEOF', number: 57, clue: 'A kind gesture from'))
-Puzzle.create(title: 'MGWCC #6 - "Can You Dig It?"', grid: 'DISPEL..ONE.ERE|IMPALA..NOR.GEL|SPICER.SETITOFF|MAGICK.HUMERI..|ALOFT.PIPE.ADDS|YETI.BOPS.SNEAK|...CARES.MASADA|..PANAM.CANAL..|COURTS.CARET...|VITAS.PRIX.LAFF|SCUD.MUON.QATAR|..PISANS.AUNTIE|ADJOURNS.MATURE|WOO.ENE..ISINTO|EBB.ZED..NICEOF', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2008/7/25', entries: clues_mgwcc006_unscrambled)
+spec_feat = "8_8:BA"
+instructions = 'This week\'s crossword grid is missing one letter of the alphabet. Which one is it?'
+explanation = '<MA>A</MA><TEXT>The letter A can be substituted for the central black square, which connects the two central across entries (32 and 33, PANAM and CANAL) into PANAMA CANAL and the two central down entries (17 and 36, SHIPS and CROSS) into SHIPS ACROSS, both of which still satisfy the clue for the just the first answer in each case. The two longest entries, PACIFICA RADIO (4-Down) and TRANSATLANTIC (18-Down), contain the names of the oceans connected by the Panama Canal (and in their proper geographic locations, as well). Additionally, ERIE (9-Down) and SUEZ (47-Down), both names of significant man-made canals, are symmetrically placed in the grid. Interestingly, although Matt\'s intended solution grid was pangrammatic (thus forcing the solver to look elsewhere for the "missing" letter), the answers ACE and COO for 49-Down ("Marvel": AWE) and 52-Across ("Coax": WOO) also satisfy their respective clues. Since the W at the intersection is the only one in the grid, some solvers reasonably submitted W as an answer. Matt accepted this as correct as well.</TEXT>'
+Puzzle.create(title: 'MGWCC #6 - "Can You Dig It?"', grid: 'DISPEL..ONE.ERE|IMPALA..NOR.GEL|SPICER.SETITOFF|MAGICK.HUMERI..|ALOFT.PIPE.ADDS|YETI.BOPS.SNEAK|...CARES.MASADA|..PANAM.CANAL..|COURTS.CARET...|VITAS.PRIX.LAFF|SCUD.MUON.QATAR|..PISANS.AUNTIE|ADJOURNS.MATURE|WOO.ENE..ISINTO|EBB.ZED..NICEOF', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2008/7/25', entries: clues_mgwcc006_unscrambled, instructions: instructions, explanation: explanation, special_features: spec_feat)
