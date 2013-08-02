@@ -73,6 +73,6 @@ clues_mgwcc039_unscrambled.push(Entry.create(row: 14, col: 12, dir: 'Across', an
 clues_mgwcc039_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'SALSA', number: 64, clue: 'Tostito\'s target'))
 clues_mgwcc039_unscrambled.push(Entry.create(row: 15, col: 7, dir: 'Across', answer: 'ADAR', number: 65, clue: '___ Sheni (Hebrew month)'))
 clues_mgwcc039_unscrambled.push(Entry.create(row: 15, col: 12, dir: 'Across', answer: 'SPAS', number: 66, clue: 'Day ___'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer word is four letters long.'
+explanation = '<MA>ACPT (American Crossword Puzzle Tournament, in case you didn\'t know)</MA><TEXT>Each theme answer begins with a permutation of the letters in the answer. Additionally, the clue for 26-Across hints at the answer.</TEXT>'
 Puzzle.create(title: 'MGWCC #39 - "On Your Marks, Get Set, Begin"', grid: 'MIME.CBER.AQABA|APEX.RILE.LUCAN|CATPEOPLE.LITHE|...LLCOOLJ.EPIC|DEPOSED..AMTRAK|OMAR...MANOLO..|RACES.SAFETYPIN|KIT.PATCASH.ENE|SLOGANEER.YARDS|..FRIARS...SLIT|MASONS..SAYSYES|ARTS.SULUSEA...|REESE.CAPTAINEO|KNEES.LURE.LARK|SALSA.ADAR.SPAS', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/3/13', entries: clues_mgwcc039_unscrambled, instructions: instructions, explanation: explanation)

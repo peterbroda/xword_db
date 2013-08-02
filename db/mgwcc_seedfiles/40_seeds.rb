@@ -69,6 +69,6 @@ clues_mgwcc040_unscrambled.push(Entry.create(row: 14, col: 1, dir: 'Across', ans
 clues_mgwcc040_unscrambled.push(Entry.create(row: 14, col: 9, dir: 'Across', answer: 'SCREENS', number: 63, clue: 'TV parts'))
 clues_mgwcc040_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'SENTRAS', number: 64, clue: 'Nissan models'))
 clues_mgwcc040_unscrambled.push(Entry.create(row: 15, col: 10, dir: 'Across', answer: 'HEARSE', number: 65, clue: 'Wheels for a coffin'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer phrase is two words and a total of eleven letters long.'
+explanation = '<MA>TYLER HINMAN</MA><TEXT>17-Across hints at the answer (Tyler Hinman had just won his fifth consecutive ACPT championship the week prior), as does 58-Across. The latter clue also gives a cryptic instruction for finding the answer in the grid: removing the first letters ("beheading") of 1-Across, STYLER, and 7-Across, THINMAN (the "top two" answers in the grid), one is left with the answer.</TEXT>'
 Puzzle.create(title: 'MGWCC #40 - "And Still Champion"', grid: 'STYLER..THINMAN|TEEITUP.HONEYDO|THATSFIVEINAROW|HER..FAILD.TIPS|ORNOT.FLA.COATI|MAIMED.ARTY.DAT|ANNASUI.ARCE...|SIGHTED.MALLCOP|...ARTS.SPOKANE|APU.USAT.SPINET|LATIN.YEA.SNIDE|IRAS.AISLE..SOR|BEHEADTHETOPTWO|IVANIII.SCREENS|SENTRAS..HEARSE', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/3/20', entries: clues_mgwcc040_unscrambled, instructions: instructions, explanation: explanation)

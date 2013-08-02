@@ -89,6 +89,11 @@ class PuzzlesController < ApplicationController
 	    if spec_feat[this_gs.id_name].start_with?("N") #number with out clue
 	      @grid_numbers[this_gs.id_name] = spec_feat[this_gs.id_name].gsub(/^./, '')
 	    end
+	    if spec_feat[this_gs.id_name].start_with?("O") #
+	      if !spec_feat[this_gs.id_name].eql?("OD")
+		this_gs.class_name = "no_display" # we overwrite in this case so that the css works
+	      end
+	    end
 	  end
 	  col_num += 1
 	  current_row.push(this_gs)

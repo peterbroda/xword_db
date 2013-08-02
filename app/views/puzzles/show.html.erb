@@ -1,6 +1,12 @@
 <% provide(:title, @puzzle.title) %>
 <p><a href="xpf_list.html">Back to XPF List</a></p>
 <div class="puzzle">
+
+
+<!--
+########### TOP INFORMATION FIELD ####################
+-->
+
 <h2 class="top_information_field" id="puzzle_title"><%= @puzzle.title %></h2>
 <div class="top_information_field" id="person_info">
 <span class="top_information_field" id="constructor">Constructor(s): 
@@ -29,6 +35,11 @@
   end
 %>
 </p>
+
+
+<!--
+########### PREV/NEXT PUZZLE LINKS ####################
+-->
 <p class="top_information_field" id="next_prev_links">
 <%
   if !@prev_puzzle.nil?
@@ -49,7 +60,9 @@
 %>
 </p>
 
-
+<!--
+########### PUZZLE INSTRUCTIONS ####################
+-->
 <p class="top_information_field" id="puzzle_instructions">
 <%
   if !@puzzle.instructions.nil?
@@ -58,40 +71,9 @@
 %>
 </p>
 
-<!-- below is the old show grid method
-<%
-  if @special_type.eql?("outer")
-    %><table class="solution_grid_with_outer"><%
-  else
-    %><table class="solution_grid"><%
-  end
-%>
-<tr>
-<%
-  row_num = 1
-  col_num = 1
-  @puzzle.grid.each_char do |i|
-    if i.eql? "|"
-      row_num += 1
-      col_num = 1
-      %></tr><tr><%
-    elsif i.eql? "."
-      %><td class="black_square" id="<%=row_num%>_<%=col_num%>">&nbsp;</td><%
-      col_num += 1
-    else
-      %>
-	<td class="white_square" id="<%=row_num%>_<%=col_num%>">
-	  <div class="number"><%= @grid_numbers[row_num.to_s() + "_" + col_num.to_s()].html_safe %></div>
-	  <div class="letter"><%= i %></div>
-	</td><%
-      col_num += 1
-    end
-  end
-%>
-</tr>
-</table>
+<!--
+########### DISPLAY PUZZLE GRID ####################
 -->
-
 <%
   if @special_type.eql?("outer")
     %><table class="solution_grid_with_outer"><%
@@ -125,6 +107,10 @@
 %>
 </table>
 
+
+<!--
+########### BOTTOM INFORMATION FIELD ####################
+-->
 <!--
 <p class="bottom_information_field" id="copyright">&nbsp;</p>
 <p id="notepad">Notepad: </p>
@@ -133,6 +119,9 @@
 <p id="meta_explanation">Explanation: </p>
 -->
 
+<!--
+########### THEME EXPLANATION BOX ####################
+-->
 <%
   if !@puzzle.explanation.nil?
     %><div class="theme_explanation"><%
@@ -145,6 +134,10 @@
 %>
 <hr />
 
+
+<!--
+########### CLUE/ANSWER LIST ####################
+-->
 <table class="clue_table">
 <tr>
   <th>Across</th>

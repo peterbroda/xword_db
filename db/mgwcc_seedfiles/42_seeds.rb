@@ -73,6 +73,6 @@ clues_mgwcc042_unscrambled.push(Entry.create(row: 14, col: 12, dir: 'Across', an
 clues_mgwcc042_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'THIS', number: 67, clue: '"___ Diamond Ring" (1965 #1 hit)'))
 clues_mgwcc042_unscrambled.push(Entry.create(row: 15, col: 6, dir: 'Across', answer: 'DOONE', number: 68, clue: 'Word on some cookies'))
 clues_mgwcc042_unscrambled.push(Entry.create(row: 15, col: 12, dir: 'Across', answer: 'LEWD', number: 69, clue: 'Gross'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer word is an American city with eight letters in its name. '
+explanation = '<MA>BILLINGS</MA><TEXT>The four theme entries each consist of two five-letter words. Change one letter in each of those words, and you\'re left with the name of an American city: <ul><li>SALES/SALEM</li><li>GLINT/FLINT</li><li>OLDEN/OGDEN</li><li>TEMPI/TEMPE</li><li>BACON/MACON</li><li>BITTE/BUTTE</li><li>NOISE/BOISE</li><li>LOVER/DOVER</li></ul>The replaced letters anagram to the answer.</TEXT>'
 Puzzle.create(title: 'MGWCC #42 - "This Town Has Changed"', grid: 'HOGG.DOCKS.UNIT|AJAR.OSHEA.POSH|SALESGLINT.HILO|PILEITON.IBISES|...NRA.OBSOLETE|GOODEGG.OFALL..|ABLY.SAVOYS.OSU|RIDES.ZIS.TIVOS|PEE.AGEGAP.RENE|..NABOB.TENORED|GETSITON.NUN...|FRESNO.ADAMWEST|LIME.BACONBITTE|ACPT.ETHIC.LRON|THIS.DOONE.LEWD', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/4/3', entries: clues_mgwcc042_unscrambled, instructions: instructions, explanation: explanation)

@@ -21,5 +21,7 @@ require "/home/peter/xword_db/db/source_seeds_master.rb"
 #    require "/home/peter/xword_db/db/CHE_all_seeds.rb"
 #    require "/home/peter/xword_db/db/FL_vwllss_seeds.rb"
 #    require "/home/peter/xword_db/db/TP_tripleplay_seeds.rb"
-    require "/home/peter/xword_db/db/2030_all_seeds.rb"
+#    require "/home/peter/xword_db/db/2030_all_seeds.rb"
 #    require "/home/peter/xword_db/db/mgwcc_all_seedfiles.rb"
+    require "/home/peter/xword_db/db/inkwell_all_seedfiles.rb"
+
