@@ -1,12 +1,11 @@
 <% provide(:title, @puzzle.title) %>
-<p><a href="xpf_list.html">Back to XPF List</a></p>
 <div class="puzzle">
 
 
 <!--
 ########### TOP INFORMATION FIELD ####################
 -->
-
+<!--
 <h2 class="top_information_field" id="puzzle_title"><%= @puzzle.title %></h2>
 <div class="top_information_field" id="person_info">
 <span class="top_information_field" id="constructor">Constructor(s): 
@@ -35,78 +34,81 @@
   end
 %>
 </p>
+-->
 
+
+
+
+<div id="puzzle_grid_and_info">
+
+  <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @puzzle.sources[0].name, constructors: @puzzle.constructors, size: @width.to_s + "x" + @height.to_s, type: @puzzle.puzzle_type} %>
 
 <!--
 ########### PREV/NEXT PUZZLE LINKS ####################
 -->
-<p class="top_information_field" id="next_prev_links">
-<%
-  if !@prev_puzzle.nil?
-%>
-  <%= link_to "Previous Puzzle", puzzle_path(@prev_puzzle) %>
-<%
-  end
-  if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
-%>
-&nbsp;&nbsp;|&nbsp;&nbsp;
-<%
-  end
-  if !@next_puzzle.nil?
-%>
-  <%= link_to "Next Puzzle", puzzle_path(@next_puzzle)%>
-<%
-  end
-%>
-</p>
+  <p class="top_information_field" id="next_prev_links">
+  <%
+    if !@prev_puzzle.nil?
+      %><%= link_to "Previous Puzzle", puzzle_path(@prev_puzzle) %><%
+    end
+    if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
+      %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
+    end
+    if !@next_puzzle.nil?
+      %><%= link_to "Next Puzzle", puzzle_path(@next_puzzle)%><%
+    end
+  %>
+  </p>
 
 <!--
 ########### PUZZLE INSTRUCTIONS ####################
 -->
-<p class="top_information_field" id="puzzle_instructions">
-<%
-  if !@puzzle.instructions.nil?
-    %>Instructions: <%= @puzzle.instructions.html_safe %><%
-  end
-%>
-</p>
+  <p class="top_information_field" id="puzzle_instructions">
+  <%
+    if !@puzzle.instructions.nil?
+      %>Instructions: <%= @puzzle.instructions.html_safe %><%
+    end
+  %>
+  </p>
 
 <!--
 ########### DISPLAY PUZZLE GRID ####################
 -->
-<%
-  if @special_type.eql?("outer")
-    %><table class="solution_grid_with_outer"><%
-  else
-    %><table class="solution_grid"><%
-  end
-%>
-<%
-  @the_grid.each do |this_row|
-    %><tr><%
-    this_row.each do |this_square|
-      %>
-	<td class="<%= this_square.class_name %>">
-	<div class="<%= this_square.class_name %>" id="<%= this_square.id_name %>">
-	  <%
-#	    if this_square.class_name.eql?("black_square")
-#	      %>&nbsp;<%
-#	    else
-	      %>
-		<div class="number"><%= @grid_numbers[this_square.id_name].html_safe %></div>
-		<div class="letter"><%= this_square.contents %></div>	      
-	      <%
-#	    end
-	  %>
-	</div>
-	</td>
-      <%
+  <div id="puzzle_grid">
+  <%
+    if @special_type.eql?("outer")
+      %><table class="solution_grid_with_outer"><%
+    else
+      %><table class="solution_grid"><%
     end
-    %></tr><%
-  end
-%>
-</table>
-
+  %>
+  <%
+    @the_grid.each do |this_row|
+      %><tr><%
+      this_row.each do |this_square|
+        %>
+	  <td class="<%= this_square.class_name %>">
+	  <div class="<%= this_square.class_name %>" id="<%= this_square.id_name %>">
+	    <%
+#	      if this_square.class_name.eql?("black_square")
+#	        %>&nbsp;<%
+#	      else
+	        %>
+		  <div class="number"><%= @grid_numbers[this_square.id_name].html_safe %></div>
+		  <div class="letter"><%= this_square.contents %></div>	      
+	        <%
+#	      end
+	    %>
+	  </div>
+	  </td>
+        <%
+      end
+      %></tr><%
+    end
+    %>
+    </table>
+  </div>
+  <div style="clear: both;">&nbsp;</div>
 
 <!--
 ########### BOTTOM INFORMATION FIELD ####################
@@ -133,6 +135,8 @@
   end
 %>
 <hr />
+
+</div> <!-- end of puzzle_grid_and_info -->
 
 
 <!--

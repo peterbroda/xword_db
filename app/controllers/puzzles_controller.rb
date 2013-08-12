@@ -7,6 +7,10 @@ class PuzzlesController < ApplicationController
     next_id = params[:id].to_i + 1
     prev_id = params[:id].to_i - 1
     @puzzle = Puzzle.find(params[:id])
+
+    @width = @puzzle.grid.split('|', 2)[0].length
+    @height = @puzzle.grid.split('|').count
+
     if Puzzle.exists?(next_id)
       @next_puzzle = Puzzle.find(next_id)
     else

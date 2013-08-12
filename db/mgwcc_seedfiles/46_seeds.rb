@@ -73,6 +73,6 @@ clues_mgwcc046_unscrambled.push(Entry.create(row: 14, col: 13, dir: 'Across', an
 clues_mgwcc046_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'BAD', number: 66, clue: '"___ dog!"'))
 clues_mgwcc046_unscrambled.push(Entry.create(row: 15, col: 5, dir: 'Across', answer: 'DRAGSON', number: 67, clue: 'Will...not...end...'))
 clues_mgwcc046_unscrambled.push(Entry.create(row: 15, col: 13, dir: 'Across', answer: 'ALY', number: 68, clue: 'Pop stars ___ & AJ'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer phrase consists of two interlocking words in this puzzle\'s fill, and explains the source of the theme entries. These two words total eleven letters.'
+explanation = '<MA>MAJOR ARCANA (44-A and 45-D)</MA><TEXT>Each theme answer ends with the name of a tarot card (DEVIL, LOVERS, HANGED MAN, STAR, CHARIOT). Those five come from the 22 tarot cards known as the MAJOR ARCANA.</TEXT>'
 Puzzle.create(title: 'MGWCC #46 - "I Can\'t Deal With This"', grid: 'SMU.APERIES.KAY|PAN.NAVARRO.EVE|ETC.GOODANDEVIL|CAL.ELL..EARLAP|THECLOVERS.GATE|RATO..ELI.BORED|AROMAS.ANTI....|.IMACHANGEDMAN.|....AUNT.NEALON|MAJOR.ARE..TITO|AROD.BLACKASTAR|DCCIII..OYS.ATE|LAUNCHARIOT.LAP|INN.EATINTO.ILL|BAD.DRAGSON.ALY', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/5/1', entries: clues_mgwcc046_unscrambled, instructions: instructions, explanation: explanation)

@@ -1,5 +1,6 @@
 <h3>All Available Sources</h3>
-<ul class="nav nav-list">
+<!--<ul class="nav navlist">-->
+<ul class="sidebar_nav">
 <%
   Source.find(:all).each do |src|
     %><li><%= link_to src.name, source_path(src) %></li><%

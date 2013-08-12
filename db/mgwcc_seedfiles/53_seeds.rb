@@ -73,6 +73,6 @@ clues_mgwcc053_unscrambled.push(Entry.create(row: 14, col: 10, dir: 'Across', an
 clues_mgwcc053_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'LEI', number: 66, clue: '"Did you get ___\'d?" (cheesy question asked of someone who\'s just returned from Hawaii)'))
 clues_mgwcc053_unscrambled.push(Entry.create(row: 15, col: 5, dir: 'Across', answer: 'MEAD', number: 67, clue: 'Drink made from honey'))
 clues_mgwcc053_unscrambled.push(Entry.create(row: 15, col: 10, dir: 'Across', answer: 'TERESA', number: 68, clue: 'Nun of Calcutta'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer is the grid entry that best describes this puzzle\'s five theme entries.'
+explanation = '<MA>ITUNES (47-Across)</MA><TEXT>Each theme answer is a song title with I as the only vowel.</TEXT>'
 Puzzle.create(title: 'MGWCC #53 - "Doctor My Eyes"', grid: 'RATEDG.VAIL.APU|AMELIO.ETNA.TAP|BILLSBILLSBILLS|ILL.CLOD...BALE|EAST.IFTHISISIT|STARIN..ECU.TDS|.ELAN.KIMONO...|..LIVINGINSIN..|...LESION.ELIS.|AVA.SIS..ITUNES|NIGHTSHIFT.PENT|IRAQ...LOST.FOE|MISSISSIPPIGIRL|ALS.SHEA.ALEVEL|LEI.MEAD.TERESA', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/6/19', entries: clues_mgwcc053_unscrambled, instructions: instructions, explanation: explanation)

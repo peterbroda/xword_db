@@ -75,6 +75,6 @@ clues_mgwcc048_unscrambled.push(Entry.create(row: 14, col: 11, dir: 'Across', an
 clues_mgwcc048_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'NED', number: 68, clue: '1998 Irish comedy "Waking ___ Devine"'))
 clues_mgwcc048_unscrambled.push(Entry.create(row: 15, col: 5, dir: 'Across', answer: 'SPEWS', number: 69, clue: 'Spits out'))
 clues_mgwcc048_unscrambled.push(Entry.create(row: 15, col: 11, dir: 'Across', answer: 'YIPES', number: 70, clue: '"Omigosh!"'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer is a common five-letter word that ties this puzzle\'s theme entries together -- and appears somewhere in today\'s blog post.'
+explanation = '<MA>WATCH</MA><TEXT>Each theme answer is a three-word phrase where each word begin with the same letter. These letters in order spell out the answer. The word WATCH was the fourth word in Matt\'s post about the solution to MGWCC #47.</TEXT>'
 Puzzle.create(title: 'MGWCC #48 - "Quite Quaint Quintet"', grid: 'NOTME.SIMPS.TOS|ABHOR.EBOOK.IRT|WEEWILLIEWINKIE|SYL.CEE....OKBY|..AGAINANDAGAIN|ASKA..ALIEN....|SHERPA.PLAN.PSU|TURNEDTHETABLES|ONS.SHOO.HORACE|....CORRS..ANTS|CHILICONCARNE..|OATY....ORE.TWA|HUBERTHHUMPHREY|ETA.BAUER.LOIRE|NED.SPEWS.YIPES', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/5/15', entries: clues_mgwcc048_unscrambled, instructions: instructions, explanation: explanation)

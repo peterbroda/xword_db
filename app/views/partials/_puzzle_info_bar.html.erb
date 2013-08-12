@@ -1,0 +1,34 @@
+<div id="puzzle_source"><%= source %></div>
+<div id="title_bar">
+  <div id="puzzle_title"><%= title %></div>
+  <div id="puzzle_date"><%= date %></div>
+</div>
+<div style="clear: both"></div>
+<div id="puzzle_small_info">
+  <div id="puzzle_constructors"> 
+  <%
+  constructors.each do |c|
+    if c.eql?(constructors[constructors.size-1]) && constructors.size > 1
+      %> and<%
+    end
+    %> <%= link_to c.name, constructor_path(c) %><%
+    if constructors.size > 2 && !c.eql?(constructors[constructors.size-1])
+      %>,<%
+    end
+  end
+  
+  %>
+  </div>
+  <div id=puzzle_size">
+    Size: <%= size %>
+  </div>
+  <div id=puzzle_type">
+    <%
+      if type.blank?
+	type = 'unknown'
+      end
+    %>
+    Type: <%= type %>
+  </div>
+
+</div><!-- end of puzzle_small_info -->

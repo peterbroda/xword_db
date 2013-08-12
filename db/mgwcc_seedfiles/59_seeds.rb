@@ -75,6 +75,6 @@ clues_mgwcc059_unscrambled.push(Entry.create(row: 14, col: 11, dir: 'Across', an
 clues_mgwcc059_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'GOD', number: 68, clue: 'Mercury or Mazda'))
 clues_mgwcc059_unscrambled.push(Entry.create(row: 15, col: 5, dir: 'Across', answer: 'SLAYS', number: 69, clue: 'Gets rid of'))
 clues_mgwcc059_unscrambled.push(Entry.create(row: 15, col: 11, dir: 'Across', answer: 'STASH', number: 70, clue: 'Smoke supply'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer is a famous arcade game of the 1980s.'
+explanation = '<MA>Q*BERT</MA><TEXT>Each theme entry is formed by adding a penstroke to one of the letters in a familiar phrase. EPIC becomes ERIC, DELI becomes DELT, OAT becomes QAT, PRAY becomes BRAY, and LEFT becomes LEET. The newly created letters, RTQBE, anagram to the answer.</TEXT>'
 Puzzle.create(title: 'MGWCC #59 - "Pick Up Lines"', grid: 'ILLBE.ABUMP.CAT|RAOUL.TAHOE.AXE|ERICFAILURE.VEX|SANO.KOSHERDELT|...LIANA.LSU...|STEIN.....AMBLE|CRACKLINQATBRAN|AUG..ARSON..ADD|BRAYFORAMIRACLE|SONAR.....ETHER|...LES.CLIFF...|MYLEETFOOT.ICES|POI.GAINASTROKE|EYE.ALLEN.ISLET|GOD.SLAYS.STASH', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/7/31', entries: clues_mgwcc059_unscrambled, instructions: instructions, explanation: explanation)

@@ -43,8 +43,8 @@ clues_mgwcc051_unscrambled.push(Entry.create(row: 7, col: 8, dir: 'Across', answ
 clues_mgwcc051_unscrambled.push(Entry.create(row: 7, col: 12, dir: 'Across', answer: 'ALAR', number: 37, clue: 'Daminozide, familiarly'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 7, col: 13, dir: 'Down', answer: 'LIRR', number: 38, clue: 'One way to Montauk: abbr.'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 7, col: 14, dir: 'Down', answer: 'ANET', number: 39, clue: 'Without ___ (precipitously)'))
-clues_mgwcc051_unscrambled.push(Entry.create(row: 7, col: 15, dir: 'Down', answer: 'RQDQ', number: 40, clue: 'Character played by the English dwarf Kenny Baker'))
-clues_mgwcc051_unscrambled.push(Entry.create(row: 8, col: 1, dir: 'Across', answer: 'EIGHTTHATENDINQ', number: 41, clue: 'What to look for to discover whodunit, where and how'))
+clues_mgwcc051_unscrambled.push(Entry.create(row: 7, col: 15, dir: 'Down', answer: 'R2D2', number: 40, clue: 'Character played by the English dwarf Kenny Baker'))
+clues_mgwcc051_unscrambled.push(Entry.create(row: 8, col: 1, dir: 'Across', answer: 'EIGHTTHATENDIN2', number: 41, clue: 'What to look for to discover whodunit, where and how'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 8, col: 7, dir: 'Down', answer: 'HIGH', number: 42, clue: '___ card'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 8, col: 11, dir: 'Down', answer: 'NOPES', number: 43, clue: 'Yeahs\' counterparts'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 9, col: 1, dir: 'Across', answer: 'PESO', number: 44, clue: 'Currency of the Philippines'))
@@ -53,7 +53,7 @@ clues_mgwcc051_unscrambled.push(Entry.create(row: 9, col: 10, dir: 'Across', ans
 clues_mgwcc051_unscrambled.push(Entry.create(row: 10, col: 4, dir: 'Across', answer: 'THIGHS', number: 47, clue: '"___ Wide Shut" (1999 pornographic film)'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 10, col: 5, dir: 'Down', answer: 'HIT', number: 48, clue: 'Strike'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 10, col: 9, dir: 'Down', answer: 'SERENA', number: 49, clue: 'Earthling related to Venus'))
-clues_mgwcc051_unscrambled.push(Entry.create(row: 10, col: 11, dir: 'Across', answer: 'PARTQ', number: 50, clue: 'Second half, perhaps'))
+clues_mgwcc051_unscrambled.push(Entry.create(row: 10, col: 11, dir: 'Across', answer: 'PART2', number: 50, clue: 'Second half, perhaps'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 11, col: 1, dir: 'Across', answer: 'LAM', number: 51, clue: 'Run'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 11, col: 1, dir: 'Down', answer: 'LATKA', number: 51, clue: '"Taxi" name'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 11, col: 2, dir: 'Down', answer: 'ALONG', number: 52, clue: 'Accompanying'))
@@ -79,6 +79,6 @@ clues_mgwcc051_unscrambled.push(Entry.create(row: 14, col: 12, dir: 'Across', an
 clues_mgwcc051_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'AGEY', number: 71, clue: 'New ___ (spiritual)'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 15, col: 6, dir: 'Across', answer: 'TOPAZ', number: 72, clue: 'Hitchcock film'))
 clues_mgwcc051_unscrambled.push(Entry.create(row: 15, col: 12, dir: 'Across', answer: 'POET', number: 73, clue: 'Pope or Bishop, notably'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
-Puzzle.create(title: 'MGWCC #51 - "Clues Are Clues"', grid: 'DORM.SACHA.HERO|IKEA.ALIBI.AQUA|SLAW.TUTOR.RUNT|SAMRAIMI.MODISH|....DEN.LAS.PAS|SALSA.ICESUP...|TROOPS.LES.ALAR|EIGHTTHATENDINQ|PESO.RIS.SOURED|...THIGHS.PARTQ|LAM.ICH.ENE....|ALCOTT.PROSPECT|TOGO.EARED.LUAU|KNEE.STENO.ORFF|AGEY.TOPAZ.POET', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/6/5', entries: clues_mgwcc051_unscrambled, instructions: instructions, explanation: explanation)
+instructions = 'This week\'s contest is a murder mystery based on the game Clue. Somebody killed Mr. Boddy -- but whodunit, which room did they do it in, and with what weapon? This week\'s contest answer is the answer to all three of those questions.'
+explanation = '<MA>Miss Scarlet, in the library, with the rope.</MA><TEXT>The EIGHT THAT END IN 2 at 41-Across refers to the eight clues whose number ends with a 2. Each of these clues can be satisfied by an alternate answer to the one that fits in the grid. Namely: <ul><li>2-down <b>MISS</b></li><li>12-down <b>SCARLET</b></li><li>22-across <b>IN</b></li><li>32-down <b>THE</b></li><li>42-down <b>LIBRARY</b></li><li>52-down <b>WITH</b></li><li>62-down <b>THE</b> (French for "tea")</li><li>72-across <b>ROPE</b></li></ul>These alternate answers spell out the meta answer.</TEXT>'
+Puzzle.create(title: 'MGWCC #51 - "Clues Are Clues"', grid: 'DORM.SACHA.HERO|IKEA.ALIBI.AQUA|SLAW.TUTOR.RUNT|SAMRAIMI.MODISH|....DEN.LAS.PAS|SALSA.ICESUP...|TROOPS.LES.ALAR|EIGHTTHATENDIN2|PESO.RIS.SOURED|...THIGHS.PART2|LAM.ICH.ENE....|ALCOTT.PROSPECT|TOGO.EARED.LUAU|KNEE.STENO.ORFF|AGEY.TOPAZ.POET', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/6/5', entries: clues_mgwcc051_unscrambled, instructions: instructions, explanation: explanation)

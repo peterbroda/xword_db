@@ -77,6 +77,6 @@ clues_mgwcc058_unscrambled.push(Entry.create(row: 14, col: 12, dir: 'Across', an
 clues_mgwcc058_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'MENSA', number: 67, clue: 'Sharp group'))
 clues_mgwcc058_unscrambled.push(Entry.create(row: 15, col: 7, dir: 'Across', answer: 'TIED', number: 68, clue: 'Two sets apiece, say'))
 clues_mgwcc058_unscrambled.push(Entry.create(row: 15, col: 12, dir: 'Across', answer: 'CUBE', number: 69, clue: 'More than square'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+instructions = 'This week\'s contest answer phrase consists of two symmetrically-placed grid entries that, taken together, form the clue for the theme answer at 38-across.'
+explanation = '<MA>JAMB CUBE (1- and 69-Across)</MA><TEXT>Each theme answer is a familiar phrase consisting of two consecutive two-letter words which have been re-interpreted as one word. SO TO becomes SOTO, GO ON becomes GOON, ME IN becomes MEIN, and BE AT becomes BEAT. 38-Across, then, can be read as DOOR DIE rather than DO OR DIE, which can be clued as "Jamb cube" (if DIE is taken to be the rolling game piece).</TEXT>'
 Puzzle.create(title: 'MGWCC #58 - "A Couple Coupled Couples"', grid: 'JAMB.DONA.PEPSI|OVER.IRAQ.LULLS|SOTOSPEAK.ATEUP|SNAKES.NHLTEAMS|...EXIT.AYERS..|ESPN.NOONE.PERU|APE.HTTP..HEGEL|RON.DOORDIE.OPT|LOCOS..ARNE.OAR|SKIN.JIHAD.ENYA|..LEVEL.WEPT...|COMMONLY.NOCOST|ONEAL.BEATPEACE|MCING.ETRE.THAT|MENSA.TIED.CUBE', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/7/24', entries: clues_mgwcc058_unscrambled, instructions: instructions, explanation: explanation)

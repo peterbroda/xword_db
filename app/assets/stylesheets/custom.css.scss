@@ -1,11 +1,18 @@
-@import "bootstrap";
+/*@import "bootstrap";*/
 
 /*-----------*/
 /* variables */
 /*-----------*/
 
+$white:		#FFF;
+$black:		#000;
 $lightGrey: 	#999;
 
+$darkHighlight:		#8D003B;
+$mediumHighlight:	#D9005B;
+$lightHighlight:	#EC3B86;
+$lighterHighlight:	#F099BC;
+$lightestHighlight:	#FBE6EE;
 
 
 /*--------*/
@@ -27,7 +34,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+/*  padding-top: 60px;*/
 }
 
 section {
@@ -52,7 +59,7 @@ textarea {
 /*------------*/
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  /*line-height: 1;*/
 }
 
 h1 {
@@ -76,6 +83,15 @@ p {
   line-height: 1.7em;
 }
 
+a {
+  color: $darkHighlight;
+  font-weight: bold;
+}
+a:hover {
+  color: $lighterHighlight;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 
 /*--------*/
@@ -128,6 +144,38 @@ footer {
 }
 
 
+
+
+
+
+/*----------*/
+/* sidebars */
+/*----------*/
+
+.source_sidebar {
+	
+	padding: 15px;
+	background-color: $lightestHighlight;
+	color: $black;
+}
+
+ul.sidebar_nav {
+  list-style: none inside none;
+  padding: 0px;
+}
+ul.sidebar_nav li {
+  margin-left: -25px;
+}
+ul.sidebar_nav li:hover {
+  background-color: $lighterHighlight;
+}
+ul.sidebar_nav li a {
+  color: $darkHighlight;
+  padding: 5px;
+}
+ul.sidebar_nav li a:hover {
+  color: $darkHighlight;
+}
 
 
 /*---------------*/
