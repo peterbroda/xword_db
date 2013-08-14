@@ -1,75 +1,32 @@
 <% provide(:title, @puzzle.title) %>
 <div class="puzzle">
 
-
 <!--
 ########### TOP INFORMATION FIELD ####################
 -->
+
 <!--
-<h2 class="top_information_field" id="puzzle_title"><%= @puzzle.title %></h2>
-<div class="top_information_field" id="person_info">
-<span class="top_information_field" id="constructor">Constructor(s): 
-<%
-  @puzzle.constructors.each do |c|
-    %><%= link_to c.name, constructor_path(c) %><%
-  end
-%>
-</span>
-|
-<span class="top_information_field" id="editor">Editor(s): 
-<%
-  @puzzle.editors.each do |e|    
-    %><%= link_to e.name, editor_path(e) %><%
-  end
-%>
-</span>
-|
-<span class="top_information_field" id="publisher">Publisher: </span>
-</div>
-<p class="top_information_field" id="pub_date">Original Publication Date: <%= @puzzle.publication_date %></p>
-<p class="top_information_field" id="source">Source: 
-<%
-  @puzzle.sources.each do |src|    
-    %><%= link_to src.name, source_path(src) %><%
-  end
-%>
-</p>
+########### PREV/NEXT PUZZLE LINKS ####################
 -->
-
-
+  <p id="next_prev_links">
+  <%
+    if !@prev_puzzle.nil?
+      %><%= link_to "<< Previous Puzzle", puzzle_path(@prev_puzzle) %><%
+    end
+    if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
+      %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
+    end
+    if !@next_puzzle.nil?
+      %><%= link_to "Next Puzzle >>", puzzle_path(@next_puzzle)%><%
+    end
+  %>
+  </p>
 
 
 <div id="puzzle_grid_and_info">
 
   <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @puzzle.sources[0].name, constructors: @puzzle.constructors, size: @width.to_s + "x" + @height.to_s, type: @puzzle.puzzle_type} %>
 
-<!--
-########### PREV/NEXT PUZZLE LINKS ####################
--->
-  <p class="top_information_field" id="next_prev_links">
-  <%
-    if !@prev_puzzle.nil?
-      %><%= link_to "Previous Puzzle", puzzle_path(@prev_puzzle) %><%
-    end
-    if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
-      %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
-    end
-    if !@next_puzzle.nil?
-      %><%= link_to "Next Puzzle", puzzle_path(@next_puzzle)%><%
-    end
-  %>
-  </p>
-
-<!--
-########### PUZZLE INSTRUCTIONS ####################
--->
-  <p class="top_information_field" id="puzzle_instructions">
-  <%
-    if !@puzzle.instructions.nil?
-      %>Instructions: <%= @puzzle.instructions.html_safe %><%
-    end
-  %>
-  </p>
 
 <!--
 ########### DISPLAY PUZZLE GRID ####################
@@ -108,7 +65,9 @@
     %>
     </table>
   </div>
+
   <div style="clear: both;">&nbsp;</div>
+
 
 <!--
 ########### BOTTOM INFORMATION FIELD ####################
@@ -137,6 +96,48 @@
 <hr />
 
 </div> <!-- end of puzzle_grid_and_info -->
+
+
+<!--
+########### RIGHT INFORMATION FIELD ####################
+-->
+
+  <div id="puzzle_small_info">
+    <table id="small_info_table">
+      <tr>
+	<td class="small_field_name">
+	  Average word length
+	</td>
+	<td class="small_field_value">
+	  5.5
+	</td>
+      </tr>
+      <tr>
+	<td class="small_field_name">
+	  Scrabble average
+	</td>
+	<td class="small_field_value">
+	  3.5
+	</td>
+      </tr>
+      <tr>
+	<td class="small_field_name">
+	  Some other field
+	</td>
+	<td class="small_field_value">
+	  ???
+	</td>
+      </tr>
+      <%
+	@letter_order.each do |l|
+	  %><tr><%
+	    %><td class="small_field_name"><%= l %></td><%
+	    %><td class="small_field_value"><%= @letter_counts[l] %></td><%
+	  %></tr><%
+	end
+      %>
+    </table>
+  </div>
 
 
 <!--

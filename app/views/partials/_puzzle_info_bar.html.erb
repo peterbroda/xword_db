@@ -1,10 +1,16 @@
-<div id="puzzle_source"><%= source %></div>
+<%
+  if source.eql?("Matt Gaffney's Weekly Crossword Contest")
+    %><div id="puzzle_source">MGWCC</div><%
+  else
+    %><div id="puzzle_source"><%= source.upcase %></div><%
+  end
+%>
 <div id="title_bar">
   <div id="puzzle_title"><%= title %></div>
   <div id="puzzle_date"><%= date %></div>
 </div>
 <div style="clear: both"></div>
-<div id="puzzle_small_info">
+<div id="puzzle_main_info">
   <div id="puzzle_constructors"> 
   <%
   constructors.each do |c|
@@ -19,16 +25,39 @@
   
   %>
   </div>
-  <div id=puzzle_size">
-    Size: <%= size %>
-  </div>
-  <div id=puzzle_type">
-    <%
-      if type.blank?
-	type = 'unknown'
-      end
-    %>
-    Type: <%= type %>
-  </div>
-
-</div><!-- end of puzzle_small_info -->
+  <table id="puzzle_info_table">
+    <tr>
+	<td class="info_field_name">SIZE</td>
+	<td class="info_field_value"><%= size %>
+    </tr>
+    <tr>
+	<td class="info_field_name">BLOCKS</td>
+	<td class="info_field_value"><%= @black_squares %>
+    </tr>
+    <tr>
+	<td class="info_field_name">WORDS</td>
+	<td class="info_field_value"><%= @word_count %>
+    </tr>
+    <tr>
+	<td class="info_field_name">TYPE</td>
+	<td class="info_field_value">
+    	  <%
+	    if type.blank?
+	      type = 'unknown'
+      	    end
+          %>
+	  <%= type %>
+	</td>
+  </tr>
+  <tr>
+    <td class="info_field_name">NOTES</td>
+    <td class="info_field_value">
+	<%
+    	if !@puzzle.instructions.nil?
+    	  %><%= @puzzle.instructions.html_safe %><%
+	end
+	%>
+    </td>
+  </tr>
+</table>
+</div><!-- end of puzzle_main_info -->

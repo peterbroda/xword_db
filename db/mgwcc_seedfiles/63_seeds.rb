@@ -73,6 +73,6 @@ clues_mgwcc063_unscrambled.push(Entry.create(row: 14, col: 12, dir: 'Across', an
 clues_mgwcc063_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'BEST', number: 56, clue: 'Defeat'))
 clues_mgwcc063_unscrambled.push(Entry.create(row: 15, col: 6, dir: 'Across', answer: 'SEEIT', number: 57, clue: '"Do we have visual confirmation?"'))
 clues_mgwcc063_unscrambled.push(Entry.create(row: 15, col: 12, dir: 'Across', answer: 'LEFT', number: 58, clue: 'Liberal'))
-instructions = 'Coming soon...'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
-Puzzle.create(title: 'MGWCC #63 - "Moral Hazard"', grid: 'BASE.LEAFS.CCLV|AROD.ITSUP.AREA|LIONSSHARE.RYAN|MANONTOP.CELINE|...ROOS.PINON..|.ASTON.PLAYSGOD|STOOP.KOALA.WHY|IRUN.LASIK.HOYA|AIR.DATED.PALED|MAGNESIA.SURFS.|..REEVE.HOSP...|GRAEME.SARASOTA|LAPD.GOLDENEGGS|OVEN.ABUJA.ALIS|BEST.SEEIT.LEFT', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/8/28', entries: clues_mgwcc063_unscrambled, instructions: instructions, explanation: explanation)
+instructions = 'This week\'s contest answer is formed by reversing one of the grid entries in today\'s puzzle.'
+explanation = '<MA>AESOP (27-Down reversed)</MA><TEXT>Each theme answer is a phrase originating from one of Aesop\'s fables.</TEXT>'
+Puzzle.create(title: '#63 - "Moral Hazard"', grid: 'BASE.LEAFS.CCLV|AROD.ITSUP.AREA|LIONSSHARE.RYAN|MANONTOP.CELINE|...ROOS.PINON..|.ASTON.PLAYSGOD|STOOP.KOALA.WHY|IRUN.LASIK.HOYA|AIR.DATED.PALED|MAGNESIA.SURFS.|..REEVE.HOSP...|GRAEME.SARASOTA|LAPD.GOLDENEGGS|OVEN.ABUJA.ALIS|BEST.SEEIT.LEFT', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/8/28', entries: clues_mgwcc063_unscrambled, instructions: instructions, explanation: explanation, puzzle_type: 'meta', puzzle_type: 'meta')

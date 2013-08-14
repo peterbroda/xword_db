@@ -20,11 +20,13 @@ require "/home/peter/xword_db/db/source_seeds_master.rb"
 #    require "/home/peter/xword_db/db/AK_cal_seeds.rb"
 #    require "/home/peter/xword_db/db/CHE_all_seeds.rb"
 #    require "/home/peter/xword_db/db/FL_vwllss_seeds.rb"
-    require "/home/peter/xword_db/db/TP_tripleplay_seeds.rb"
-    require "/home/peter/xword_db/db/2030_all_seeds.rb"
+#    require "/home/peter/xword_db/db/TP_tripleplay_seeds.rb"
+#    require "/home/peter/xword_db/db/2030_all_seeds.rb"
 #    require "/home/peter/xword_db/db/mgwcc_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/inkwell_all_seedfiles.rb"
-    require "/home/peter/xword_db/db/EA_all_seedfiles.rb"
+#    require "/home/peter/xword_db/db/EA_all_seedfiles.rb"
+    require "/home/peter/xword_db/db/NF_all_seedfiles.rb"
+=begin
 test_constructors1 = [
 	Constructor.find_by_name('Peter Broda'),
 	Constructor.find_by_name('Drew Lawn')
@@ -35,5 +37,6 @@ test_constructors2 = [
         Constructor.find_by_name('Steve Riley'),
         Constructor.find_by_name('Peter Broda')
 ]
-Puzzle.create(title: 'Testing 2', grid: 'HHH|HHH|HHH', constructors: test_constructors1, :sources => Source.where(:name => 'Ink Well'), publication_date: '2013-08-12')
-Puzzle.create(title: 'Testing 3', grid: 'HHH|HHH|HHH', constructors: test_constructors2, :sources => Source.where(:name => 'Ink Well'), publication_date: '2013-08-12')
+=end
+#Puzzle.create(title: 'Testing 2', grid: 'HHH|HHH|HHH', constructors: test_constructors1, :sources => Source.where(:name => 'Ink Well'), publication_date: '2013-08-12')
+#Puzzle.create(title: 'Testing 3', grid: 'HHH|HHH|HHH', constructors: test_constructors2, :sources => Source.where(:name => 'Ink Well'), publication_date: '2013-08-12')

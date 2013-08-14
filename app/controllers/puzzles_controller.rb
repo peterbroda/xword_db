@@ -10,6 +10,10 @@ class PuzzlesController < ApplicationController
 
     @width = @puzzle.grid.split('|', 2)[0].length
     @height = @puzzle.grid.split('|').count
+    @black_squares = @puzzle.grid.count '.'
+    @word_count = @puzzle.entries.count
+    @letter_counts = Hash.new(0);
+    @letter_order = ['E', 'T', 'A', 'O', 'I', 'N', 'S', 'H', 'R', 'D', 'L', 'C', 'U', 'M', 'W', 'F', 'G', 'Y', 'P', 'B', 'V', 'K', 'J', 'X', 'Q', 'Z']
 
     if Puzzle.exists?(next_id)
       @next_puzzle = Puzzle.find(next_id)
@@ -99,6 +103,7 @@ class PuzzlesController < ApplicationController
 	      end
 	    end
 	  end
+	  @letter_counts[i.upcase] += 1 # add to letter counts
 	  col_num += 1
 	  current_row.push(this_gs)
       end
