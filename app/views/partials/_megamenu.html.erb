@@ -1,0 +1,30 @@
+<div id="megamenu">
+<div id="black_megamenu_square">
+&nbsp;
+</div>
+<ul id="nav">
+  <li>
+	<a href="#">Home</a>
+  </li>
+  <li>
+	<a href="#">About</a>
+	<ul>
+	  <li><a href="#">About page</a></li>
+	  <li><a href="#">FAQs</a></li>
+	</ul>
+  </li>
+  <li>
+	<a href="#">Sources</a>
+	<ul>
+	  <%
+	    Source.find(:all).each do |src|
+	      %><li><%= link_to src.name, source_path(src) %></li><%
+	    end
+	  %>
+	</ul>
+  </li>
+</ul>
+
+<a href="#" id="logo">CROSS EXAMINATION</a>
+
+</div>

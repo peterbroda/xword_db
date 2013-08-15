@@ -68,13 +68,13 @@ textarea {
 /*------------*/
 
 a {
-  color: $darkHighlight;
+  color: #666;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
-  color: $lighterHighlight;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
 }
@@ -83,22 +83,6 @@ a:hover {
 /*--------*/
 /* header */
 /*--------*/
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: $white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: $white;
-    text-decoration: none;
-  }
-}
 
 
 /*--------*/
@@ -174,4 +158,99 @@ ul.sidebar_nav li a:hover {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+
+/****************/
+/*   MEGAMENU   */
+/****************/
+#megamenu {
+	text-align: right;
+	border-bottom: 2px solid #888;
+	float: right;
+	margin: 0px;
+	padding: 0px 50px 0px 0px;
+}
+
+#logo {
+  float: right;
+  font-family: "Arial";
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #DDD;
+  background-color: #888;
+  padding: 8px 12px 4px 12px;
+  text-transform: uppercase;
+  &:hover {
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+#black_megamenu_square {
+	background-color: #888;
+	height: 36px;
+	width: 38px;
+	float: left;
+	margin: 0px 25px 0px 50px;
+	padding: 0px;
+}
+#nav {
+	font-family: "Arial";
+	font-size: 1em;
+	list-style: none;
+	font-weight: bold;
+	margin: 0px 175px 0px 0px;
+	padding: 12px 0px 0px 0px;
+	position: relative;
+	top: 4px;
+	float: left;	
+	z-index: 5;
+}
+#nav li {
+	float: left;
+	position: relative;
+	padding: 0px 25px 0px 25px;
+}
+#nav a {
+/*	display: block;*/
+	color: #555;
+	background: #FFF;
+	text-decoration: none;
+}
+#nav a:hover {
+	color: #000;
+	text-decoration: none;
+}
+#nav ul {
+/*	width: 150px;*/
+	background: #FFF;
+	list-style: none;
+	text-align: left;
+	margin-left: 0px;
+	padding: 5px 0px 5px 0px;
+	border-left: 2px solid #999;
+	border-right: 1px solid #999;
+	position: absolute;
+	left: -9999px;
+}
+#nav ul li {
+	padding: 5px 15px 5px 15px;
+	float: none;
+	font-size: .75em;
+}
+#nav ul a {
+	padding: 5px;
+	white-space: nowrap;
+}
+#nav li:hover ul {
+	left: 0;
+}
+#nav li:hover a {
+}
+#nav li:hover ul a {
+	text-decoration: none;
+}
+#nav li:hover ul li a:hover {
+	background-color: #EEE;
 }

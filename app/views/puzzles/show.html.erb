@@ -1,37 +1,38 @@
 <% provide(:title, @puzzle.title) %>
+
 <div class="puzzle">
 
 <!--
 ########### TOP INFORMATION FIELD ####################
 -->
 
-<!--
-########### PREV/NEXT PUZZLE LINKS ####################
--->
-  <p id="next_prev_links">
-  <%
-    if !@prev_puzzle.nil?
-      %><%= link_to "<< Previous Puzzle", puzzle_path(@prev_puzzle) %><%
-    end
-    if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
-      %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
-    end
-    if !@next_puzzle.nil?
-      %><%= link_to "Next Puzzle >>", puzzle_path(@next_puzzle)%><%
-    end
-  %>
-  </p>
 
 
 <div id="puzzle_grid_and_info">
 
   <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @puzzle.sources[0].name, constructors: @puzzle.constructors, size: @width.to_s + "x" + @height.to_s, type: @puzzle.puzzle_type} %>
 
-
 <!--
 ########### DISPLAY PUZZLE GRID ####################
 -->
   <div id="puzzle_grid">
+
+<!--
+########### PREV/NEXT PUZZLE LINKS ####################
+-->
+  <div id="next_prev_links">
+  <%
+    if !@prev_puzzle.nil?
+      %><%= link_to "Previous Puzzle", puzzle_path(@prev_puzzle) %><%
+    end
+    if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
+      %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
+    end
+    if !@next_puzzle.nil?
+      %><%= link_to "Next Puzzle", puzzle_path(@next_puzzle)%><%
+    end
+  %>
+  </div>
   <%
     if @special_type.eql?("outer")
       %><table class="solution_grid_with_outer"><%
