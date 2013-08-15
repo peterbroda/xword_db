@@ -63,7 +63,7 @@ div.white_square {
 }
 
 div.circle {
-	border-color: black;
+	border-color: #666;
 	-webkit-border-radius: 16px;
 	-moz-border-radius: 16px;
 	border-radius: 16px; 
@@ -100,6 +100,7 @@ div#puzzle_grid_and_info {
 	position: relative;
 	top: -32px;
 /*	width: 75%;*/
+	min-width: 1200px;
 	font-family: "Arial";
 	max-width: 1200px;
 }
@@ -138,6 +139,7 @@ div#title_bar {
 	font-family: "Impact";
 	color: #EAEAEA;
 	z-index: -1;
+	white-space: nowrap;
 }
 #puzzle_main_info {
 	margin-left: 0px;
@@ -194,6 +196,7 @@ td.info_field_name {
 td.info_field_value {
 	color: #444;
 	text-align: left;
+	font-size: 1em;
 	font-weight: bold;
 	padding-left: 25px;
 	vertical-align: text-top;
@@ -219,29 +222,90 @@ td.info_field_value {
 /*   clues   */
 /*-----------*/
 
-table.clue_table {
+div.clues {
+}
+div.clue_column {
+	width: 50%;
+	font-family: "Arial";
+	font-size: 0.75em;
+	text-align: center;
+}
+span.clue_column_header {
+	font-size: 12pt;
+	color: #888;
+	font-weight: bold;
+}
+#across_clues {
+	float: left;
+}
+#down_clues {
+	float: right;
+}
+
+table.clue_list {
+	width: 100%;
+	margin-top: 15px;
+	border: none;
+	border-collapse: collapse;
 	td {
 		vertical-align: top;
-		padding: 15px;
-		width: 50%;
+		margin: 0px;
+		padding-bottom: 5px;
+	}
+	tr:hover td.clue_number {
+		background-color: #DDD;
+		color: #555;
+	}
+	tr:hover td.clue_answer {
+	  /* fallback */
+		  background-color: #EEE;
+	  /* Safari 4-5, Chrome 1-9 */
+		  background: -webkit-gradient(linear, left top, right top, from(#DDD), to(#FFF));
+	  /* Safari 5.1, Chrome 10+ */
+		  background: -webkit-linear-gradient(left, #FFF, #DDD);
+	  /* Firefox 3.6+ */
+		  background: -moz-linear-gradient(left, #FFF, #DDD);
+	  /* IE 10 */
+		  background: -ms-linear-gradient(left, #FFF, #DDD);
+	  /* Opera 11.10+ */
+		  background: -o-linear-gradient(left, #FFF, #DDD);
+	}
+	tr:hover td.clue_text {
+	  /* fallback */
+		  background-color: #EEE;
+	  /* Safari 4-5, Chrome 1-9 */
+		  background: -webkit-gradient(linear, left top, right top, from(#FFF), to(#DDD));
+	  /* Safari 5.1, Chrome 10+ */
+		  background: -webkit-linear-gradient(left, #DDD, #FFF);
+	  /* Firefox 3.6+ */
+		  background: -moz-linear-gradient(left, #DDD, #FFF);
+	  /* IE 10 */
+		  background: -ms-linear-gradient(left, #DDD, #FFF);
+	  /* Opera 11.10+ */
+		  background: -o-linear-gradient(left, #DDD, #FFF);
 	}
 }
-
-ul.clue_list {
-	list-style-type: none;
+td.clue_text {
+	text-align: left;
+	width: 45%;
+	color: #555;
+	padding-right: 25%;
 }
-
-span.clue_and_answer {
-/*	display: inline-block;*/
-/*	width: 300px;*/
+td.clue_answer {
+	width: 45%;
+	font-size: 1.2em;
+	text-align: right;
+	font-weight: bold;
+	word-break: keep-all;	
+}
+td.clue_number {
+	width: 10%;
+	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #AAA;
 }
 
 span.clue_answer {
 	font-weight: bold;
-}
-
-span.clue_number {
-	display: inline-block;
-	width: 35px;
-	text-align: right;
 }

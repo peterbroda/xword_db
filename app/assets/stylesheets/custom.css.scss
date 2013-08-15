@@ -62,6 +62,10 @@ textarea {
   clear: both;
 }
 
+::selection {
+	background: #555;
+	color: #FFF;
+}
 
 /*------------*/
 /* typography */
@@ -170,6 +174,7 @@ ul.sidebar_nav li a:hover {
 	float: right;
 	margin: 0px;
 	padding: 0px 50px 0px 0px;
+	min-width: 950px;
 }
 
 #logo {

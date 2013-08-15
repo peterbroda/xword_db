@@ -94,7 +94,6 @@
     </div><%
   end
 %>
-<hr />
 
 </div> <!-- end of puzzle_grid_and_info -->
 
@@ -102,7 +101,7 @@
 <!--
 ########### RIGHT INFORMATION FIELD ####################
 -->
-
+<!--
   <div id="puzzle_small_info">
     <table id="small_info_table">
       <tr>
@@ -139,49 +138,42 @@
       %>
     </table>
   </div>
-
+-->
 
 <!--
 ########### CLUE/ANSWER LIST ####################
 -->
-<table class="clue_table">
-<tr>
-  <th>Across</th>
-  <th>Down</th>
-</tr>
-<tr>
-  <td>
-    <ul class="clue_list">
+<div id="clues">
+  <div class="clue_column" id="across_clues">
+    <span class="clue_column_header">ACROSS</span>
+    <table class="clue_list">
     <% 
 	@a_clues.each do |c|
-	  %><li>	      
-	      <span class="clue_number"><%= c.number %>.&nbsp;</span>
-	      <span class="clue_and_answer">
-		<span class="clue_text"><%= c.clue.html_safe %>&nbsp;</span> 	      
-	        <span class="clue_answer"><%= c.answer %></span>
-	      </span>
-	  </li><%
+	  %><tr>	      
+	      <td class="clue_answer"><%= c.answer %></td>
+	      <td class="clue_number"><%= c.number %></td>
+	      <td class="clue_text"><%= c.clue.html_safe %></td>
+	  </tr><%
 	end
     %>
-    </ul>
-  </td>
-  <td>
-    <ul class="clue_list">
+    </table>
+  </div>
+  <div class="clue_column" id="down_clues">
+    <span class="clue_column_header">DOWN</span>
+    <table class="clue_list">
     <% 
 	@d_clues.each do |c|
-	  %><li>	      
-	      <span class="clue_number"><%= c.number %>.&nbsp;</span>
-	      <span class="clue_and_answer">
-		<span class="clue_text"><%= c.clue.html_safe %>&nbsp;</span> 	      
-	        <span class="clue_answer"><%= c.answer %></span>
-	      </span>
-	  </li><%
+	  %><tr>	      
+	      <td class="clue_answer"><%= c.answer %></td>
+	      <td class="clue_number"><%= c.number %></td>
+	      <td class="clue_text"><%= c.clue.html_safe %></td>
+	  </tr><%
 	end
     %>
-    </ul>
-  </td>
-</tr>
-</table>
+    </table>
+  </div>
+  <div style="clear: both;">&nbsp;</div>
+</div> <!--end of clues div-->
 
-</div>
+</div><!-- end of puzzle div-->
 
