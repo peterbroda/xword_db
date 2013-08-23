@@ -25,15 +25,11 @@ class PuzzlesController < ApplicationController
       @white_squares = @puzzle.grid.count "A-Z"
     end
     if !@puzzle.word_count.nil?
-      @word_count = @puzzle.word_count
+
     else
       @word_count = @puzzle.entries.count
     end
-    if !@puzzle.avg_word_length.nil?
-      @avg_length = @puzzle.avg_word_length
-    else
-      @avg_length = ((@white_squares + @white_squares) / @word_count.to_f).round(2)
-    end
+    @avg_length = ((@white_squares + @white_squares) / @word_count.to_f).round(2)
     @letter_counts = Hash.new(0);
     @letter_order = ['E', 'T', 'A', 'O', 'I', 'N', 'S', 'H', 'R', 'D', 'L', 'C', 'U', 'M', 'W', 'F', 'G', 'Y', 'P', 'B', 'V', 'K', 'J', 'X', 'Q', 'Z']
 

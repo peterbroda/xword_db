@@ -1,15 +1,3 @@
-<%
-  if source.eql?("Matt Gaffney's Weekly Crossword Contest")
-    %><div id="puzzle_source">MGWCC</div><%
-  else
-    %><div id="puzzle_source"><%= source.upcase %></div><%
-  end
-%>
-<div id="title_bar">
-  <div id="puzzle_title"><%= title %></div>
-  <div id="puzzle_date"><%= date %></div>
-</div>
-<div style="clear: both"></div>
 <div id="puzzle_main_info">
   <div id="puzzle_constructors"> 
   <%
@@ -31,12 +19,20 @@
 	<td class="info_field_value"><%= size %>
     </tr>
     <tr>
+	<td class="info_field_name">WORDS</td>
+	<td class="info_field_value"><%= @word_count %>
+    </tr>
+    <tr>
 	<td class="info_field_name">BLOCKS</td>
 	<td class="info_field_value"><%= @black_squares %>
     </tr>
     <tr>
-	<td class="info_field_name">WORDS</td>
-	<td class="info_field_value"><%= @word_count %>
+	<td class="info_field_name">LETTERS</td>
+	<td class="info_field_value"><%= @white_squares %>
+    </tr>
+    <tr>
+	<td class="info_field_name">AVG. LENGTH</td>
+	<td class="info_field_value"><%= @avg_length %>
     </tr>
     <tr>
 	<td class="info_field_name">TYPE</td>
@@ -49,15 +45,23 @@
 	  <%= type %>
 	</td>
   </tr>
+  <% if !@puzzle.instructions.nil? %>
   <tr>
     <td class="info_field_name">NOTES</td>
-    <td class="info_field_value">
-	<%
-    	if !@puzzle.instructions.nil?
-    	  %><%= @puzzle.instructions.html_safe %><%
-	end
-	%>
-    </td>
+    <td class="info_field_value" id="long_info_text"><%= @puzzle.instructions.html_safe %></td>
   </tr>
+  <% end %>
+  <% if !@meta_answer.nil? %>
+  <tr>
+    <td class="info_field_name">ANSWER</td>
+    <td class="info_field_value" id="meta_answer"><%= @meta_answer.html_safe %></td>
+  </tr>
+  <% end %>
+  <% if !@theme_explanation.nil? %>
+  <tr>
+    <td class="info_field_name">HUH?</td>
+    <td class="info_field_value" id="long_info_text"><%= @theme_explanation.html_safe %></td>
+  </tr>
+  <% end %>
 </table>
 </div><!-- end of puzzle_main_info -->

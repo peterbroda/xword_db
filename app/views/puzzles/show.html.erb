@@ -10,7 +10,7 @@
 
 <div id="puzzle_grid_and_info">
 
-  <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @puzzle.sources[0].name, constructors: @puzzle.constructors, size: @width.to_s + "x" + @height.to_s, type: @puzzle.puzzle_type} %>
+  <%= render partial: "/partials/puzzle_title_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @source_display_name} %>
 
 <!--
 ########### DISPLAY PUZZLE GRID ####################
@@ -67,33 +67,9 @@
     </table>
   </div>
 
+  <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @source_display_name, constructors: @puzzle.constructors, size: @width.to_s + "x" + @height.to_s, type: @puzzle.puzzle_type} %>
+
   <div style="clear: both;">&nbsp;</div>
-
-
-<!--
-########### BOTTOM INFORMATION FIELD ####################
--->
-<!--
-<p class="bottom_information_field" id="copyright">&nbsp;</p>
-<p id="notepad">Notepad: </p>
-<p id="my_notes">Peter's notes: </p>
-<p id="meta_solution">Solution: </p>
-<p id="meta_explanation">Explanation: </p>
--->
-
-<!--
-########### THEME EXPLANATION BOX ####################
--->
-<%
-  if !@puzzle.explanation.nil?
-    %><div class="theme_explanation"><%
-      if !@meta_answer.nil?
-        %><p>Meta Answer: <b><%= @meta_answer %></b></p><%
-      end
-      %><p><%= @theme_explanation.html_safe %></p>
-    </div><%
-  end
-%>
 
 </div> <!-- end of puzzle_grid_and_info -->
 
@@ -150,9 +126,9 @@
     <% 
 	@a_clues.each do |c|
 	  %><tr>	      
-	      <td class="clue_answer"><%= c.answer %></td>
-	      <td class="clue_number"><%= c.number %></td>
 	      <td class="clue_text"><%= c.clue.html_safe %></td>
+	      <td class="clue_number"><%= c.number %></td>
+	      <td class="clue_answer"><%= c.answer %></td>
 	  </tr><%
 	end
     %>

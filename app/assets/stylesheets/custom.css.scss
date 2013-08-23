@@ -63,8 +63,7 @@ textarea {
 }
 
 ::selection {
-	background: #555;
-	color: #FFF;
+	color: #97473E;
 }
 
 /*------------*/
@@ -170,11 +169,11 @@ ul.sidebar_nav li a:hover {
 /****************/
 #megamenu {
 	text-align: right;
-	border-bottom: 2px solid #888;
+	border-bottom: 3px solid #888;
 	float: right;
 	margin: 0px;
 	padding: 0px 50px 0px 0px;
-	min-width: 950px;
+/*	min-width: 950px;*/
 }
 
 #logo {
@@ -219,12 +218,12 @@ ul.sidebar_nav li a:hover {
 }
 #nav a {
 /*	display: block;*/
-	color: #555;
+	color: #888;
 	background: #FFF;
 	text-decoration: none;
 }
 #nav a:hover {
-	color: #000;
+	color: #555;
 	text-decoration: none;
 }
 #nav ul {
@@ -233,8 +232,8 @@ ul.sidebar_nav li a:hover {
 	list-style: none;
 	text-align: left;
 	margin-left: 0px;
-	padding: 5px 0px 5px 0px;
-	border-left: 2px solid #999;
+	padding: 5px 0px 10px 0px;
+	border-left: 3px solid #999;
 	border-right: 1px solid #999;
 	position: absolute;
 	left: -9999px;

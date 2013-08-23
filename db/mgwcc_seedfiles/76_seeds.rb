@@ -74,5 +74,5 @@ clues_mgwcc076_unscrambled.push(Entry.create(row: 15, col: 1, dir: 'Across', ans
 clues_mgwcc076_unscrambled.push(Entry.create(row: 15, col: 6, dir: 'Across', answer: 'SENSE', number: 66, clue: 'Become aware of'))
 clues_mgwcc076_unscrambled.push(Entry.create(row: 15, col: 12, dir: 'Across', answer: 'VELO', number: 67, clue: 'Prefix with city or drome'))
 instructions = 'This week\'s contest answer is five letters long.'
-explanation = '<MA></MA><TEXT>Coming soon...</TEXT>'
+explanation = 'Coming soon...testing'
 Puzzle.create(title: '#76 - "On the Strait Where You Live"', grid: 'ORCS.STOMP.CHOW|NOAH.TIDAL.RAFE|ESTEHELENA.ANTI|SAC.EEL..YAWNER|..HELLISHISLAND|UPEND.SPOTS....|PASTIS.IOO.MIME|OPORTOJEFFERSON|NINE.PEG.FUMING|....THREW.ROTOR|MADAMOKLAHOMA..|ACIDIC..TAP.LOO|SUZI.LAKESERIES|ORZO.EVERT.EVIL|NAYS.SENSE.VELO', :constructors => Constructor.where(:name => 'Matt Gaffney'), :sources => Source.where(:name => 'Matt Gaffney\'s Weekly Crossword Contest'), publication_date: '2009/11/27', entries: clues_mgwcc076_unscrambled, instructions: instructions, explanation: explanation, puzzle_type: 'meta', puzzle_type: 'meta')

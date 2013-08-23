@@ -18,7 +18,11 @@
 	<ul>
 	  <%
 	    Source.find(:all).each do |src|
-	      %><li><%= link_to src.name, source_path(src) %></li><%
+	      if src.display_name.nil?
+		%><li><%= link_to src.name, source_path(src) %></li><%
+	      else
+		%><li><%= link_to src.display_name, source_path(src) %></li><%
+	      end
 	    end
 	  %>
 	</ul>

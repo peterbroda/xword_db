@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812214649) do
+ActiveRecord::Schema.define(:version => 20130822195657) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(:version => 20130812214649) do
   add_index "entries", ["puzzle_id"], :name => "index_puzzle_id"
 
   create_table "puzzles", :force => true do |t|
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "title"
     t.string   "grid"
     t.date     "publication_date"
@@ -75,6 +75,11 @@ ActiveRecord::Schema.define(:version => 20130812214649) do
     t.text     "instructions"
     t.text     "explanation"
     t.string   "puzzle_type"
+    t.float    "avg_word_length"
+    t.integer  "word_count"
+    t.integer  "block_count"
+    t.string   "size"
+    t.integer  "white_square_count"
   end
 
   create_table "puzzles_sources", :id => false, :force => true do |t|
@@ -89,8 +94,9 @@ ActiveRecord::Schema.define(:version => 20130812214649) do
     t.string   "name"
     t.string   "url"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "display_name"
   end
 
 end

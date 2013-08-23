@@ -106,6 +106,9 @@ div#puzzle_grid_and_info {
 }
 div#puzzle_grid {
 	margin-top: 32px;
+	margin-left: 65px;
+	margin-right: 0px;
+	float: right;
 }
 
 div#title_bar {
@@ -124,10 +127,11 @@ div#title_bar {
 	float: left;
 	padding-top: 0px;
 	margin-top: 0;
-	color: #333;
+	color: #793932;
 	font-family: "Arial";
 	font-size: 28pt;
 	padding-left: 20px;
+	font-weight: bold;
 }
 #puzzle_source {
 	margin-bottom: 0px;
@@ -144,10 +148,9 @@ div#title_bar {
 #puzzle_main_info {
 	margin-left: 0px;
 	margin-top: 20px;
-	float: left;
 	padding: 15px;
 	font-size: 15pt;
-	width: 350px;
+	min-width: 350px;
 }
 #puzzle_small_info {
 	float: right;
@@ -201,7 +204,14 @@ td.info_field_value {
 	padding-left: 25px;
 	vertical-align: text-top;
 }
-
+td#meta_answer {
+	color: #A15951;
+	font-size: 1.2em;
+}
+td#long_info_text {
+	font-size: 0.75em;
+	line-height: 1.5;
+}
 .bottom_information_field {
 	text-align: center;
 	color: #000;
@@ -225,7 +235,7 @@ td.info_field_value {
 div.clues {
 }
 div.clue_column {
-	width: 50%;
+	width: 49%;
 	font-family: "Arial";
 	font-size: 0.75em;
 	text-align: center;
@@ -241,7 +251,6 @@ span.clue_column_header {
 #down_clues {
 	float: right;
 }
-
 table.clue_list {
 	width: 100%;
 	margin-top: 15px;
@@ -256,11 +265,15 @@ table.clue_list {
 		background-color: #DDD;
 		color: #555;
 	}
+}
+
+
+#down_clues table.clue_list {
 	tr:hover td.clue_answer {
 	  /* fallback */
 		  background-color: #EEE;
 	  /* Safari 4-5, Chrome 1-9 */
-		  background: -webkit-gradient(linear, left top, right top, from(#DDD), to(#FFF));
+		  background: -webkit-gradient(linear, left top, right top, from(#FFF), to(#DDD));
 	  /* Safari 5.1, Chrome 10+ */
 		  background: -webkit-linear-gradient(left, #FFF, #DDD);
 	  /* Firefox 3.6+ */
@@ -274,7 +287,7 @@ table.clue_list {
 	  /* fallback */
 		  background-color: #EEE;
 	  /* Safari 4-5, Chrome 1-9 */
-		  background: -webkit-gradient(linear, left top, right top, from(#FFF), to(#DDD));
+		  background: -webkit-gradient(linear, left top, right top, from(#DDD), to(#FFF));
 	  /* Safari 5.1, Chrome 10+ */
 		  background: -webkit-linear-gradient(left, #DDD, #FFF);
 	  /* Firefox 3.6+ */
@@ -285,18 +298,61 @@ table.clue_list {
 		  background: -o-linear-gradient(left, #DDD, #FFF);
 	}
 }
+
+#across_clues table.clue_list {
+	tr:hover td.clue_answer {
+	  /* fallback */
+		  background-color: #EEE;
+	  /* Safari 4-5, Chrome 1-9 */
+		  background: -webkit-gradient(linear, left top, right top, from(#DDD), to(#FFF));
+	  /* Safari 5.1, Chrome 10+ */
+		  background: -webkit-linear-gradient(left, #DDD, #FFF);
+	  /* Firefox 3.6+ */
+		  background: -moz-linear-gradient(left, #DDD, #FFF);
+	  /* IE 10 */
+		  background: -ms-linear-gradient(left, #DDD, #FFF);
+	  /* Opera 11.10+ */
+		  background: -o-linear-gradient(left, #DDD, #FFF);
+	}
+	tr:hover td.clue_text {
+	  /* fallback */
+		  background-color: #EEE;
+	  /* Safari 4-5, Chrome 1-9 */
+		  background: -webkit-gradient(linear, left top, right top, from(#FFF), to(#DDD));
+	  /* Safari 5.1, Chrome 10+ */
+		  background: -webkit-linear-gradient(left, #FFF, #DDD);
+	  /* Firefox 3.6+ */
+		  background: -moz-linear-gradient(left, #FFF, #DDD);
+	  /* IE 10 */
+		  background: -ms-linear-gradient(left, #FFF, #DDD);
+	  /* Opera 11.10+ */
+		  background: -o-linear-gradient(left, #FFF, #DDD);
+	}
+}
 td.clue_text {
-	text-align: left;
-	width: 45%;
+	width: 60%;
 	color: #555;
+}
+
+#down_clues td.clue_text {
+	text-align: left;
 	padding-right: 25%;
 }
-td.clue_answer {
-	width: 45%;
-	font-size: 1.2em;
+#across_clues td.clue_text {
 	text-align: right;
+	padding-left: 25%;
+}
+td.clue_answer {
+	width: 30%;
+	font-size: 1.2em;
 	font-weight: bold;
 	word-break: keep-all;	
+}
+#down_clues td.clue_answer {
+	text-align: right;
+}
+#across_clues td.clue_answer {
+	text-align: left;
 }
 td.clue_number {
 	width: 10%;
@@ -304,8 +360,4 @@ td.clue_number {
 	padding-right: 10px;
 	padding-left: 10px;
 	color: #AAA;
-}
-
-span.clue_answer {
-	font-weight: bold;
 }
