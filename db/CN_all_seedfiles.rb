@@ -1,5 +1,6 @@
 puts "Processing 4g_coverage_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/4g_coverage_seeds.rb"
+=begin
 puts "Processing A_load_of_Bs_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/A_load_of_Bs_seeds.rb"
 puts "Processing bobtails_seeds.rb...\n"
@@ -120,3 +121,4 @@ puts "Processing whatdoyouthinkyouredoing_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/whatdoyouthinkyouredoing_seeds.rb"
 puts "Processing xnerd_themeless_14_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/xnerd_themeless_14_seeds.rb"
+=end

@@ -7,11 +7,13 @@ XwordDb::Application.routes.draw do
   resources :constructors
   resources :editors
   resources :sources
+  resources :words
 
   get '/puzzles/:id',		to: 'puzzles#show', as: 'puzzle'
   get '/constructors/:id', 	to: 'constructors#show', as: 'constructor'
   get '/editors/:id', 		to: 'editors#show', as: 'editor'
   get '/sources/:id',		to: 'sources#show', as: 'source'
+  get '/words/:id',		to: 'words#show', as: 'word'
 
   root to: 'static_pages#home'
 
