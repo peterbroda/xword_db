@@ -258,3 +258,35 @@ ul.sidebar_nav li a:hover {
 #nav li:hover ul li a:hover {
 	background-color: #EEE;
 }
+
+
+/********************/
+/*   PRESENTATION   */
+/********************/
+
+.large_list_table {
+        border: none;
+        border-collapse: collapse;
+        margin: 15px;
+
+        td {
+                padding-right: 20px;
+                padding-left: 20px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+        }
+        th {
+                padding-bottom: 20px;
+        }
+
+	tr.llt_light {
+		td {
+			background-color: #FFF;
+		}
+	}
+	tr.llt_dark {
+		td {
+			background-color: #EEE;
+		}
+	}
+}

@@ -1,12 +1,12 @@
 puts "Processing 4g_coverage_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/4g_coverage_seeds.rb"
-=begin
 puts "Processing A_load_of_Bs_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/A_load_of_Bs_seeds.rb"
 puts "Processing bobtails_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/bobtails_seeds.rb"
 puts "Processing campus_crosswords_feb2_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/campus_crosswords_feb2_seeds.rb"
+=begin
 puts "Processing campus_crosswords_jan25_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/campus_crosswords_jan25_seeds.rb"
 puts "Processing consider_yourself_blessed_seeds.rb...\n"

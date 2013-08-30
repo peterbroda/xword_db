@@ -117,6 +117,58 @@
 -->
 
 <!--
+########### THEME ANSWER LIST ####################
+-->
+<% if @puzzle.puzzle_type.eql? "themed" %>
+
+<div id="theme_answers">
+  <table class="theme_answer_list">
+  <%
+  @puzzle.entries.each do |ent|
+    if ent.entry_type.eql? "theme"
+      this_grid_answers = Array.new
+      this_base_phrases = Array.new
+      ent.solvables.each do |ans|
+	if ans.word_type.include? "base_phrase"
+	  this_base_phrases.push(ans.word)
+	end
+	if ans.word_type.include? "answer"
+	  this_grid_answers.push(ans.word)
+	end
+      end
+      %>
+	<tr>
+	  <td class="theme_clue_list"><%= ent.clue %></td>
+	  <td class="theme_grid_answer_list"><%
+	    this_grid_answers.each do |ans|
+	      %><%= link_to ans.grid_text, word_path(ans.id) %><%
+	      if !ans.eql?(this_grid_answers.last)
+		%> / <%
+	      end
+	    end
+	  %></td>
+	  <% if this_base_phrases.size > 0 %>
+	    <td class="theme_base_phrase_list"><%
+	      this_base_phrases.each do |ans|
+	        %><%= link_to ans.grid_text, word_path(ans.id) %><%
+	        if !ans.eql?(this_base_phrases.last)
+		  %> / <%
+	        end
+	      end
+	    %></td>
+	  <% end %>
+	</tr>
+      <%
+    end
+  end
+  %>
+  </table>
+
+</div>
+
+<% end %>
+
+<!--
 ########### CLUE/ANSWER LIST ####################
 -->
 <div id="clues">
@@ -128,7 +180,7 @@
 	  %><tr>	      
 	      <td class="clue_text"><%= c.clue.html_safe %></td>
 	      <td class="clue_number"><%= c.number %></td>
-	      <td class="clue_answer"><%= c.answer %></td>
+	      <td class="clue_answer"><%= link_to c.solvables.first.word.grid_text, word_path(c.solvables.first.word.id) %></td>
 	  </tr><%
 	end
     %>
@@ -139,8 +191,8 @@
     <table class="clue_list">
     <% 
 	@d_clues.each do |c|
-	  %><tr>	      
-	      <td class="clue_answer"><%= c.answer %></td>
+	  %><tr>
+	      <td class="clue_answer"><%= link_to c.solvables.first.word.grid_text, word_path(c.solvables.first.word.id) %></td>
 	      <td class="clue_number"><%= c.number %></td>
 	      <td class="clue_text"><%= c.clue.html_safe %></td>
 	  </tr><%

@@ -1,3 +1,14 @@
+<% 
+  if @source.display_name.nil?
+    provide(:title, @source.name)
+  else
+    provide(:title, @source.display_name)
+  end
+%>
+
+<div class="source_record">
+
+
 <h2><%= @source.name %></h2>
 <%= link_to "Homepage", @source.url %>
 <p><%= @source.description %></p>
@@ -19,3 +30,4 @@
 
 <%= render partial: "/partials/list_puzzles", locals: {puzzles_by_year: @puzzles_by_year, page_source: "source"} %>
 
+</div>

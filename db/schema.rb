@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130825071624) do
+ActiveRecord::Schema.define(:version => 20130827180345) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130825071624) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "puzzle_id"
+    t.string   "entry_type"
   end
 
   add_index "entries", ["puzzle_id"], :name => "index_puzzle_id"
@@ -95,7 +96,7 @@ ActiveRecord::Schema.define(:version => 20130825071624) do
     t.integer  "word_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "type"
+    t.string   "word_type"
   end
 
   create_table "sources", :force => true do |t|

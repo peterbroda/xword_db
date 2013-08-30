@@ -1,4 +1,3 @@
-=begin
 puts "Processing 02_ABBEY_ROAD_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/02_ABBEY_ROAD_seeds.rb"
 puts "Processing 03_FOREVER_UNCLEAN_seeds.rb...\n"
@@ -91,7 +90,6 @@ puts "Processing tlsn_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/tlsn_seeds.rb"
 puts "Processing whos_hungry_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/whos_hungry_seeds.rb"
-=end
 puts "Processing 21x_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/21x_seeds.rb"
 puts "Processing destiny_seeds.rb...\n"

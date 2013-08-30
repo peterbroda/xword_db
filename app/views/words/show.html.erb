@@ -1,5 +1,45 @@
 <% provide(:title, @word.grid_text) %>
 
+<div class="word_record">
+
 <p>Word in the grid: <%= @word.grid_text %></p>
 <p>Full word: <%= @word.full_text %></p>
+<table id="word_appearances_table" class="large_list_table">
+  <tr>
+    <th>Word</th>
+    <th>Clue</th>
+    <th>Constructor(s)</th>
+    <th>Puzzle</th>
+    <th>Source</th>
+  </tr>
+  <%
+    row_color = "dark";
+    @word.entries.each do |e|
+      %><tr class="llt_<%= row_color %>"><%
+	%><td class="word_answer"><%= link_to e.answer, puzzle_path(e.puzzle) %></td><%
+	%><td class="word_clue"><%= e.clue %></td><%
+	%><td class="word_constructors"><%
+	  e.puzzle.constructors.each do |c|
+	    if c.eql?(e.puzzle.constructors[e.puzzle.constructors.size-1]) && e.puzzle.constructors.size > 1
+	      %> and<%
+	    end
+	    %> <%= link_to c.name, constructor_path(c) %><%
+	    if e.puzzle.constructors.size > 2 && !c.eql?(e.puzzle.constructors[e.puzzle.constructors.size-1])
+	      %>,<%
+	    end
+	  end
+	%></td><%
+	%><td class="word_puzzle"><%= link_to e.puzzle.title, puzzle_path(e.puzzle) %></td><%
+	%><td class="word_puzzle"><%= link_to e.puzzle.sources.first.name, source_path(e.puzzle.sources.first) %></td><%
+      %></tr><%
+      if row_color.eql?("dark")
+	row_color = "light"
+      elsif row_color.eql?("light")
+	row_color = "dark"
+      end
 
+    end
+  %>
+</table>
+
+</div>

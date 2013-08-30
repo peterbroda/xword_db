@@ -12,7 +12,7 @@ require "/home/peter/xword_db/db/word_seeds_master.rb"
 #    require "/home/peter/xword_db/db/IW_2011_seeds.rb"
 #    require "/home/peter/xword_db/db/IW_2012_seeds.rb"
 #    require "/home/peter/xword_db/db/IW_2012_w_entries_seeds.rb"
-    require "/home/peter/xword_db/db/CN_all_seedfiles.rb"
+#    require "/home/peter/xword_db/db/CN_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/BK_wrath_seeds.rb"
 #    require "/home/peter/xword_db/db/MAS_triple_seeds.rb"
 #    require "/home/peter/xword_db/db/TM_autofill_seeds.rb"
@@ -25,6 +25,7 @@ require "/home/peter/xword_db/db/word_seeds_master.rb"
 #    require "/home/peter/xword_db/db/inkwell_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/EA_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/NF_all_seedfiles.rb"
+    require "/home/peter/xword_db/db/AV_old_all_seedfiles.rb"
 =begin
 test_constructors1 = [
 	Constructor.find_by_name('Peter Broda'),

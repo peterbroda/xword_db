@@ -116,6 +116,9 @@ div#title_bar {
 	height: 25px;
 	border-top: 2px solid #555;
 }
+#puzzle_constructors {
+	color: #999;
+}
 #puzzle_date {
 	float: right;
 	font-family: "Arial";
@@ -360,4 +363,30 @@ td.clue_number {
 	padding-right: 10px;
 	padding-left: 10px;
 	color: #AAA;
+}
+
+div#theme_answers {
+	font-family: "Arial";
+	font-size: 0.75em;
+	color: #555;
+}
+table.theme_answer_list {
+	margin-bottom: 25px;
+	border-collapse: collapse;
+	border: none;
+	td {
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+}
+td.theme_clue_list {
+	text-align: right;
+}
+td.theme_grid_answer_list {
+
+}
+td.theme_base_phrase_list {
+	border-left: 1px solid #DDD;
 }
