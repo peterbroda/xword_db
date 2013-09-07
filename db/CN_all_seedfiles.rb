@@ -6,7 +6,6 @@ puts "Processing bobtails_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/bobtails_seeds.rb"
 puts "Processing campus_crosswords_feb2_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/campus_crosswords_feb2_seeds.rb"
-=begin
 puts "Processing campus_crosswords_jan25_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/campus_crosswords_jan25_seeds.rb"
 puts "Processing consider_yourself_blessed_seeds.rb...\n"
@@ -121,4 +120,3 @@ puts "Processing whatdoyouthinkyouredoing_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/whatdoyouthinkyouredoing_seeds.rb"
 puts "Processing xnerd_themeless_14_seeds.rb...\n"
 require "/home/peter/xword_db/db/CN_seedfiles/xnerd_themeless_14_seeds.rb"
-=end

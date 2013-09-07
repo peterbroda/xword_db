@@ -25,7 +25,9 @@ require "/home/peter/xword_db/db/word_seeds_master.rb"
 #    require "/home/peter/xword_db/db/inkwell_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/EA_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/NF_all_seedfiles.rb"
-    require "/home/peter/xword_db/db/AV_old_all_seedfiles.rb"
+#    require "/home/peter/xword_db/db/AV_old_all_seedfiles.rb"
+    require "/home/peter/xword_db/db/BEQ_all_seedfiles.rb"
+
 =begin
 test_constructors1 = [
 	Constructor.find_by_name('Peter Broda'),

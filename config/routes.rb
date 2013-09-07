@@ -17,6 +17,7 @@ XwordDb::Application.routes.draw do
 
   root to: 'static_pages#home'
 
+#  match '/constructors',	to: 'constructors#list_all'
   match '/articles',	to: 'cross_training#articles'
   match '/resources',	to: 'cross_training#resources'
   match '/search',	to: 'cross_examination#search'

@@ -14,7 +14,8 @@
 	</ul>
   </li>
   <li>
-	<a href="#">Sources</a>
+	<%= link_to 'Sources', sources_path %>
+	<!--<a href="#">Sources</a>-->
 	<ul>
 	  <%
 	    Source.find(:all).each do |src|
@@ -26,6 +27,9 @@
 	    end
 	  %>
 	</ul>
+  </li>
+  <li>
+	<%= link_to 'Constructors', constructors_path %></li>
   </li>
 </ul>
 

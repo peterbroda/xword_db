@@ -69,7 +69,6 @@ div.circle {
 	border-radius: 16px; 
 }
 
-
 div.number {
 	font-size: 6pt;
 	font-weight: bold;
@@ -86,9 +85,12 @@ div.letter {
 /*	position: relative;*/
 	width: 32px;
 	height: 22px;
-	font-size: medium;
+	font-size: 1em;
 	font-weight: bold;
 	text-align: center;
+}
+.rebus div.letter {
+	font-size: 0.75em;
 }
 
 

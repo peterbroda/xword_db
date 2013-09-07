@@ -260,9 +260,36 @@ ul.sidebar_nav li a:hover {
 }
 
 
-/********************/
-/*   PRESENTATION   */
-/********************/
+/*****************************/
+/*   RESOURCE PRESENTATION   */
+/*****************************/
+div.resource_page_body {
+	font-family: "Arial";
+}
+
+.resource_page_header {
+        color: #793932;
+        font-size: 28pt;
+        font-weight: bold;
+	float: left;
+	margin-right: 25px;
+	margin-left: 15px;
+}
+.resource_page_subheader {
+	color: #BBB;
+	font-weight: bold;
+	font-size: 1em;
+}
+.resource_page_title_bar {
+	border-top: 2px solid #555;
+}
+.resource_list_header {
+	color: #888;
+}
+.resource_list {
+	list-style: none;
+}
+
 
 .large_list_table {
         border: none;
