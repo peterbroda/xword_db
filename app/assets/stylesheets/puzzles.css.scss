@@ -128,15 +128,24 @@ div#title_bar {
 	margin: 10px;
 	color: #777;
 }
-#puzzle_title {
+#puzzle_title_block {
 	float: left;
 	padding-top: 0px;
-	margin-top: 0;
+	margin-top: 0px;
+	padding-left: 20px;
+}
+#puzzle_title {
 	color: #793932;
 	font-family: "Arial";
 	font-size: 28pt;
-	padding-left: 20px;
 	font-weight: bold;
+}
+#puzzle_subtitle {
+	color: #BC9C98;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-left: 40px;
+	line-height: 1;
 }
 #puzzle_source {
 	margin-bottom: 0px;

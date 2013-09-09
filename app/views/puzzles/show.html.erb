@@ -10,7 +10,7 @@
 
 <div id="puzzle_grid_and_info">
 
-  <%= render partial: "/partials/puzzle_title_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @source_display_name} %>
+  <%= render partial: "/partials/puzzle_title_bar", locals: {title: @puzzle.title, subtitle: @puzzle.subtitle, date: @puzzle.publication_date, source: @source_display_name} %>
 
 <!--
 ########### DISPLAY PUZZLE GRID ####################
@@ -67,7 +67,14 @@
     </table>
   </div>
 
-  <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @source_display_name, constructors: @puzzle.constructors, size: @width.to_s + "x" + @height.to_s, type: @puzzle.puzzle_type} %>
+  <%
+    if @width.to_i < 0 || @height.to_i < 0
+      size_arg = 'N/A'
+    else
+      size_arg = @width.to_s + "x" + @height.to_s
+    end
+  %>
+  <%= render partial: "/partials/puzzle_info_bar", locals: {title: @puzzle.title, date: @puzzle.publication_date, source: @source_display_name, constructors: @puzzle.constructors, size: size_arg, type: @puzzle.puzzle_type} %>
 
   <div style="clear: both;">&nbsp;</div>
 

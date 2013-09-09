@@ -17,7 +17,7 @@
     @word.entries.each do |e|
       %><tr class="llt_<%= row_color %>"><%
 	%><td class="word_answer"><%= link_to e.answer, puzzle_path(e.puzzle) %></td><%
-	%><td class="word_clue"><%= e.clue %></td><%
+	%><td class="word_clue"><%= e.clue.html_safe %></td><%
 	%><td class="word_constructors"><%
 	  e.puzzle.constructors.each do |c|
 	    if c.eql?(e.puzzle.constructors[e.puzzle.constructors.size-1]) && e.puzzle.constructors.size > 1

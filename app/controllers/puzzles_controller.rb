@@ -9,28 +9,46 @@ class PuzzlesController < ApplicationController
     @puzzle = Puzzle.find(params[:id])
 
     if !@puzzle.size.nil?
-
+      if @puzzle.size.eql?('N/A')
+	@width = -1
+	@height = -1
+      else
+        @width = @puzzle.size.split('x')[0]
+        @height = @puzzle.size.split('x')[1]
+      end
     else
       @width = @puzzle.grid.split('|', 2)[0].length
       @height = @puzzle.grid.split('|').count
     end
     if !@puzzle.block_count.nil?
       @black_squares = @puzzle.block_count
+      if @black_squares < 0
+        @black_squares = 'N/A'
+      end
     else
       @black_squares = @puzzle.grid.count '.'
     end
     if !@puzzle.white_square_count.nil?
       @white_squares = @puzzle.white_square_count
+      if @white_squares < 0
+        @white_squares = 'N/A'
+      end
     else
       @white_squares = @puzzle.grid.count "A-Z"
     end
     if !@puzzle.word_count.nil?
       @word_count = @puzzle.word_count
+      if @word_count < 0
+        @word_count = 'N/A'
+      end
     else
       @word_count = @puzzle.entries.count
     end
     if !@puzzle.avg_word_length.nil?
       @avg_length = @puzzle.avg_word_length
+      if @avg_length < 0
+        @avg_length = 'N/A'
+      end
     else
       @avg_length = ((@white_squares + @white_squares) / @word_count.to_f).round(2)
     end
