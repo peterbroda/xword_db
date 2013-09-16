@@ -35,12 +35,12 @@ html {
 
 body {
 /*  padding-top: 60px;*/
+	font-family: "Arial";
 }
 
 #wrapper {
 	margin-left: auto;
 	margin-right: auto;
-	
 }
 
 section {
@@ -173,16 +173,17 @@ ul.sidebar_nav li a:hover {
 	float: right;
 	margin: 0px;
 	padding: 0px 50px 0px 0px;
-/*	min-width: 950px;*/
+	min-width: 1090px;
 }
-
 #logo {
   float: right;
+  color: #DDD;
+}
+#logo, #black_megamenu_square {
   font-family: "Arial";
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1;
-  color: #DDD;
   background-color: #888;
   padding: 8px 12px 4px 12px;
   text-transform: uppercase;
@@ -192,19 +193,39 @@ ul.sidebar_nav li a:hover {
   }
 }
 #black_megamenu_square {
-	background-color: #888;
-	height: 36px;
-	width: 38px;
+/*        height: 36px;
+	width: 38px;*/
 	float: left;
-	margin: 0px 25px 0px 50px;
+	color: #AAA;
+	margin: 0px 50px 0px 0px;
+}
+div#search_bar {
+	background-color: #F0F0F0;
+	float: left;
+	margin: 0px;
 	padding: 0px;
+}
+#search {
+	border: none;
+	background-color: #F0F0F0;
+	color: #A17470;
+	height: 36px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: right;
+	margin: 0px 10px 0px 0px;
+	padding: 0px;
+	line-height: 1;
+}
+#search:focus {
+	outline: none;
 }
 #nav {
 	font-family: "Arial";
 	font-size: 1em;
 	list-style: none;
 	font-weight: bold;
-	margin: 0px 175px 0px 0px;
+	margin: 0px 50px 0px 0px;
 	padding: 12px 0px 0px 0px;
 	position: relative;
 	top: 4px;
@@ -260,29 +281,44 @@ ul.sidebar_nav li a:hover {
 }
 
 
-/*****************************/
-/*   RESOURCE PRESENTATION   */
-/*****************************/
 div.resource_page_body {
 	font-family: "Arial";
 }
 
-.resource_page_header {
+
+/*************/
+/*   PAGES   */
+/*************/
+.page_header {
         color: #793932;
         font-size: 28pt;
         font-weight: bold;
-	float: left;
 	margin-right: 25px;
 	margin-left: 15px;
 }
-.resource_page_subheader {
+.page_altheader {
 	color: #BBB;
 	font-weight: bold;
 	font-size: 1em;
 }
-.resource_page_title_bar {
+div.page_subheader {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #BBB;
+}
+.page_title_bar {
 	border-top: 2px solid #555;
 }
+.page_text {
+        color: #777;
+        margin-left: 50px;
+        font-size: 1.2em;
+}
+
+
+/*****************************/
+/*   RESOURCE PRESENTATION   */
+/*****************************/
 .resource_list_header {
 	color: #888;
 }

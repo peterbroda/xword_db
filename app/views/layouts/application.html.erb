@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title><%= full_title(yield(:title)).html_safe %></title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
@@ -21,5 +22,11 @@
     <%= debug(params) if Rails.env.development? %>
   </div>
 </div>
+<script>
+  $("#black_megamenu_square").click(function(){
+    $("#search_form").trigger('submit.rails');  
+  });
+</script>
+
 </body>
 </html>

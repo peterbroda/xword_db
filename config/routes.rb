@@ -20,7 +20,10 @@ XwordDb::Application.routes.draw do
 #  match '/constructors',	to: 'constructors#list_all'
   match '/articles',	to: 'cross_training#articles'
   match '/resources',	to: 'cross_training#resources'
-  match '/search',	to: 'cross_examination#search'
+
+  match '/search',	to: 'words#search'
+  match '/puzzle_search',	to: 'puzzles#search'
+
   match '/display_puzzle',	to: 'cross_examination#display'
 
   match '/about',	to: 'static_pages#about'

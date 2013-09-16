@@ -10,4 +10,15 @@ class Puzzle < ActiveRecord::Base
   has_many :entries
 
   default_scope order('publication_date ASC')
+
+  def self.search(search_term, search_type)
+    if search_term && search_type
+      if search_type.eql?('type')
+	find(:all, :conditions => ['puzzle_type LIKE ?', "%#{search_term}%"])
+      end
+    else
+      []
+    end
+  end
+
 end

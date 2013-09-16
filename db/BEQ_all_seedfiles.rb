@@ -1,4 +1,3 @@
-=begin
 puts "Processing 001WhippingPosts_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/001WhippingPosts_seeds.rb"
 puts "Processing 002WaronDrugs_seeds.rb...\n"
@@ -277,10 +276,8 @@ puts "Processing 217ThemelessMonday_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/217ThemelessMonday_seeds.rb"
 puts "Processing 218WhatsLeft_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/218WhatsLeft_seeds.rb"
-=end
 puts "Processing 219GeorgiaOnMyMind_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/219GeorgiaOnMyMind_seeds.rb"
-=begin
 puts "Processing 21AlternativeMedicine_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/21AlternativeMedicine_seeds.rb"
 puts "Processing 220HoldEverything_seeds.rb...\n"
@@ -355,10 +352,8 @@ puts "Processing 253MergeRecords_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/253MergeRecords_seeds.rb"
 puts "Processing 254ThemelessMonday_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/254ThemelessMonday_seeds.rb"
-=end
 puts "Processing 255MiddleMan_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/255MiddleMan_seeds.rb"
-=begin
 puts "Processing 256ThemelessMonday_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/256ThemelessMonday_seeds.rb"
 puts "Processing 258ThemelessMonday_seeds.rb...\n"
@@ -843,10 +838,8 @@ puts "Processing 47NationalLeague_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/47NationalLeague_seeds.rb"
 puts "Processing 480ThemelessMonday_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/480ThemelessMonday_seeds.rb"
-=end
 puts "Processing 481EvenSteven_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/481EvenSteven_seeds.rb"
-=begin
 puts "Processing 482ThemelessMonday_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/482ThemelessMonday_seeds.rb"
 puts "Processing 483Whatevs_seeds.rb...\n"
@@ -1187,4 +1180,3 @@ puts "Processing WhatsInAName_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/WhatsInAName_seeds.rb"
 puts "Processing WheresTheBeef_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/WheresTheBeef_seeds.rb"
-=end

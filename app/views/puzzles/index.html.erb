@@ -1,0 +1,30 @@
+<% provide(:title, "Puzzles") %>
+
+<div class="page_title_bar">
+  <div class="page_header">Puzzles</div>
+  <div class="page_altheader">what else did you expect to find here?</div>
+</div>
+
+<div class="resource_page_body">
+
+<p class="resource_page_text">
+There are too many puzzles in the database to list them all here in a convenient way. Instead, try searching by various parameters.
+Also, you can try the word search in the title bar at the top of the page.
+</p>
+
+    <%
+      puzzle_types = [
+	['themed', 'themed'],
+	['freestyle', 'freestyle'],
+	['diagramless', 'diagramless'],
+	['vowelless', 'vowelless'],
+	['meta', 'meta']
+      ]
+    %>
+    <%= form_tag "/puzzle_search", :method => :get, :id => 'search_form' do %>
+      <%= select_tag :search_term, options_for_select(puzzle_types) %>
+      <%= hidden_field_tag :search_type, 'type' %>
+      <%= submit_tag 'search' %>
+    <% end %>
+
+</div>

@@ -1,0 +1,26 @@
+<% provide(:title, 'Search') %>
+
+<div class="word_record">
+
+<table id="word_appearances_table" class="large_list_table">
+  <tr>
+    <th>Word</th>
+    <th>Count</th>
+  </tr>
+  <%
+    row_color = "dark";
+    @results.each do |w|
+      %><tr class="llt_<%= row_color %>"><%
+        %><td class="word_answer"><%= link_to w.grid_text, word_path(w.id) %></td><%
+        %><td class="word_count"><%= @results.length %></td><%
+      %></tr><%
+      if row_color.eql?("dark")
+        row_color = "light"
+      elsif row_color.eql?("light")
+        row_color = "dark"
+      end
+    end
+  %>
+</table>
+
+</div>

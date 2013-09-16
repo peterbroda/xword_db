@@ -6,14 +6,18 @@
   end
 %>
 
+<div class="page_title_bar">
+  <div class="page_header"><%= @source.name %></div>
+  <div class="page_altheader"><%= link_to @source.url, @source.url %></div>
+</div>
+
 <div class="resource_page_body">
 
 <div class="source_record">
 
-
-<h2><%= @source.name %></h2>
-<%= link_to "Homepage", @source.url %>
-<p><%= @source.description %></p>
+<p class="resourc_page_text">
+<%= @source.description %>
+</p>
 
 <hr/>
 

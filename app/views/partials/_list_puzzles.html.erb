@@ -3,8 +3,8 @@
     <th>Title</th>
     <th>Publication Date</th>
     <th>Constructor(s)</th>
-    <% if page_source.eql? "constructor" %>
-    <th>Source(s)</th>
+    <% if (page_source.eql? "constructor") || (page_source.eql? "search") %>
+      <th>Source(s)</th>
     <% end %>
   </tr>
 <%

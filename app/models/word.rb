@@ -5,4 +5,12 @@ class Word < ActiveRecord::Base
 
   has_many :solvables
   has_many :entries, :through => :solvables
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['grid_text LIKE ?', "#{search}%"])
+    else
+      []
+    end
+  end
 end

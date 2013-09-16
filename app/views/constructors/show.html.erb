@@ -1,8 +1,14 @@
 <% provide(:title, @constructor.name) %>
 
-<h2><%= @constructor.name %></h2>
-<p><%= @constructor.bio %></p>
-<hr/>
+<div class="page_title_bar">
+  <div class="page_header"><%= @constructor.name %></div>
+</div>
+
+<div class="resource_page_body">
+
+<div class="resource_page_text">
+<%= @constructor.bio.html_safe %>
+</div>
 
 <p><b>Puzzles on which <%= @constructor.name %> is listed as a constructor:</b></p>
 
@@ -18,6 +24,8 @@
   end
 %>
 </ul>
+
+</div>
 
 <script>
 $( "#accordion" ).accordion();
