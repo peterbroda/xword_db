@@ -42,7 +42,7 @@
 	      type = 'unknown'
       	    end
           %>
-	  <%= type %>
+	  <a href="../puzzle_search?search_term=<%= type %>&search_type=type&commit=search"><%= type %></a>
 	</td>
   </tr>
   <% if !@puzzle.instructions.nil? %>
