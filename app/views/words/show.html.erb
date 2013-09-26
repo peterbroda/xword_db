@@ -16,7 +16,7 @@
     row_color = "dark";
     @word.entries.each do |e|
       %><tr class="llt_<%= row_color %>"><%
-	%><td class="word_answer"><%= link_to e.answer, puzzle_path(e.puzzle) %></td><%
+	%><td class="word_answer"><%= link_to e.answer, puzzle_path(e.puzzle.seq_no) %></td><%
 	%><td class="word_clue"><%= e.clue.html_safe %></td><%
 	%><td class="word_constructors"><%
 	  e.puzzle.constructors.each do |c|
@@ -29,7 +29,7 @@
 	    end
 	  end
 	%></td><%
-	%><td class="word_puzzle"><%= link_to e.puzzle.title, puzzle_path(e.puzzle) %></td><%
+	%><td class="word_puzzle"><%= link_to e.puzzle.title, puzzle_path(e.puzzle.seq_no) %></td><%
 	%><td class="word_puzzle"><%= link_to e.puzzle.sources.first.name, source_path(e.puzzle.sources.first) %></td><%
       %></tr><%
       if row_color.eql?("dark")

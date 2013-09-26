@@ -1,15 +1,11 @@
 <% provide(:title, 'Home') %>
 
-<div class="page_title_bar">
-  <div class="page_header">HOME</div>
-  <div class="page_altheader">you are here</div>
-</div>
+<%= render partial: "/partials/pages_header", locals: {title: 'HOME', subtitle: 'you are here'} %>
 
-<div class="static_page_body">
+<div class="page_body">
 
-<div class="static_page_text">
-Find me in app/views/static_pages/home.html.erb
-</div>
-
+  <div class="page_subheader">Announcements</div>
+    <%= render partial: "/partials/announcements" %>
+  </div>
 
 </div>

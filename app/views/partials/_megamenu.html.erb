@@ -7,18 +7,15 @@
   <a href="#" id="black_megamenu_square">?</a>
   <ul id="nav">
     <li>
-	<%= link_to 'Home', root_path %>
-    </li>
-    <li>
-	<%= link_to 'About', about_path %>
+	<%= link_to 'Puzzles', puzzles_path %>
 	<ul>
-	  <li><a href="#">About page</a></li>
-	  <li><a href="#">FAQs</a></li>
+	  <li><a href="#">Find by theme type</a></li>
+	  <li><a href="#">Find by answer words</a></li>
+	  <li><a href="#">Find by custom query</a></li>
 	</ul>
     </li>
     <li>
 	<%= link_to 'Sources', sources_path %>
-	<!--<a href="#">Sources</a>-->
 	<ul>
 	  <%
 	    Source.find(:all).each do |src|
@@ -35,10 +32,10 @@
 	<%= link_to 'Constructors', constructors_path %></li>
     </li>
     <li>
-	<%= link_to 'Puzzles', puzzles_path %></li>
+	<%= link_to 'About', about_path %>
     </li>
   </ul>
 
-  <a href="#" id="logo">CROSS EXAMINATION</a>
+  <%= link_to 'CROSS EXAMINATION', root_path, id: 'logo' %>
 
 </div>

@@ -19,7 +19,7 @@
       %></tr><%
       value.each do |p|
         %><tr class="llt_<%= row_color %>">
-          <td><%= link_to p.title, puzzle_path(p) %></td>
+          <td><%= link_to p.title, puzzle_path(p.seq_no) %></td>
           <td style="text-align:center"><%= p.publication_date %></td>
 	  <td style="text-align:center">
 	  <%

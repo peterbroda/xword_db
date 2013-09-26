@@ -1,35 +1,32 @@
 <% provide(:title, 'About') %>
 
-<div class="page_title_bar">
-  <div class="page_header">Q AND A</div>
-  <div class="page_altheader">wtf?</div>
-</div>
+<%= render partial: "/partials/pages_header", locals: {title: 'Q AND A', subtitle: 'wtf?'} %>
 
 <div class="page_body">
 
-<div class="page_subheader">Who?</div>
+<div class="page_subheader">[ Owl noise ]</div>
 <div class="page_text"> 
 I'm Peter Broda aka bananarchy, and I built and maintain this here site.
 </div>
 
-<div class="page_subheader">What?</div>
+<div class="page_subheader">[ Angkor ___ ]</div>
 <div class="page_text"> 
 It's a crossword puzzle database, similar to <%= link_to 'xwordinfo', 'http://www.xwordinfo.com', :target => '_blank' %> and <%= link_to 'cruciverb', 'http://www.cruciverb.com', :target => 'blank' %>, but containing puzzles not in either of those.
 </div>
 
-<div class="page_subheader">Where?</div>
+<div class="page_subheader">[ Get dressed in ]</div>
 <div class="page_text"> 
 Well, right here. However, you won't find any actual puzzles to solve here, just solutions and stats and meta-information.
 For information about where to go to solve any of the fine puzzles featured here, visit the <%= link_to 'sources', sources_path %> page and click on any name. 
 </div>
 
-<div class="page_subheader">Why?</div>
+<div class="page_subheader">[ Happy ending? ]</div>
 <div class="page_text"> 
-I built this site because it needed to exist.
+I built this site because it needed to exist. 
 There's a fair number of puzzles in here to get you started, but I will continue to add content and features.
 </div>
 
-<div class="page_subheader">When?</div>
+<div class="page_subheader">[ Small cyst ]</div>
 <div class="page_text"> 
 As often as I can. I will try to add newly published puzzles as promptly as possible, and there are a number of older puzzles that I have yet to add. Check back often.
 </div>

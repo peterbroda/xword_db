@@ -9,10 +9,10 @@
   </tr>
   <%
     row_color = "dark";
-    @results.each do |w|
+    @grouped_results.each do |w, c|
       %><tr class="llt_<%= row_color %>"><%
         %><td class="word_answer"><%= link_to w.grid_text, word_path(w.id) %></td><%
-        %><td class="word_count"><%= @results.length %></td><%
+        %><td class="word_count"><%= c %></td><%
       %></tr><%
       if row_color.eql?("dark")
         row_color = "light"

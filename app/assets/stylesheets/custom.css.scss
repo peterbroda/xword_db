@@ -41,6 +41,13 @@ body {
 #wrapper {
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
+}
+
+#body_wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
 }
 
 section {
@@ -173,7 +180,7 @@ ul.sidebar_nav li a:hover {
 	float: right;
 	margin: 0px;
 	padding: 0px 50px 0px 0px;
-	min-width: 1090px;
+	min-width: 960px;
 }
 #logo {
   float: right;
@@ -197,7 +204,7 @@ ul.sidebar_nav li a:hover {
 	width: 38px;*/
 	float: left;
 	color: #AAA;
-	margin: 0px 50px 0px 0px;
+	margin: 0px 25px 0px 0px;
 }
 div#search_bar {
 	background-color: #F0F0F0;
@@ -225,7 +232,7 @@ div#search_bar {
 	font-size: 1em;
 	list-style: none;
 	font-weight: bold;
-	margin: 0px 50px 0px 0px;
+	margin: 0px 25px 0px 0px;
 	padding: 12px 0px 0px 0px;
 	position: relative;
 	top: 4px;
@@ -235,7 +242,7 @@ div#search_bar {
 #nav li {
 	float: left;
 	position: relative;
-	padding: 0px 25px 0px 25px;
+	padding: 0px 10px 0px 10px;
 }
 #nav a {
 /*	display: block;*/
@@ -281,11 +288,6 @@ div#search_bar {
 }
 
 
-div.resource_page_body {
-	font-family: "Arial";
-}
-
-
 /*************/
 /*   PAGES   */
 /*************/
@@ -293,21 +295,34 @@ div.resource_page_body {
         color: #793932;
         font-size: 28pt;
         font-weight: bold;
-	margin-right: 25px;
-	margin-left: 15px;
 }
 .page_altheader {
-	color: #BBB;
+	color: #AAA;
 	font-weight: bold;
 	font-size: 1em;
 }
+div.page_header_line {
+	margin-top: 10px;
+	margin-right: 5px;
+	border-top: 2px solid #EEE;
+	float: left;
+	width: 100px;
+}
+
+div.page_body {
+	font-family: "Arial";
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
 div.page_subheader {
         font-size: 1.5em;
         font-weight: bold;
         color: #BBB;
+	margin-top: 40px;
+	margin-bottom: 15px;
 }
 .page_title_bar {
-	border-top: 2px solid #555;
 }
 .page_text {
         color: #777;
@@ -352,4 +367,23 @@ div.page_subheader {
 			background-color: #EEE;
 		}
 	}
+}
+
+/********************/
+/*   ANNOUNCEMENTS  */
+/********************/
+.announcement {
+	margin: 25px 0px 0px 0px;
+}
+.announcement_date {
+	border-top: 1px solid #CCC;
+	color: #999;
+	text-align: right;
+	padding-top: 5px;
+	font-size: 0.75em;
+}
+.announcement_text {
+        color: #777;
+        margin-left: 50px;
+        font-size: 1.2em;
 }

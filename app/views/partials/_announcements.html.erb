@@ -1,0 +1,20 @@
+<%
+ann_count = 0
+File.open("app/views/static_pages/announcement_list.txt").each { |this_line|
+    if ann_count < 4
+	if this_line.match('\-\-')
+	  this_line = this_line.gsub(/\-\-/, '')
+	  %>
+		<div class="announcement">
+		<div class="announcement_date"><%= this_line %></div>
+	  <%	
+	else
+	  ann_count += 1
+	  %>
+		<div class="announcement_text"><%= this_line.html_safe %></div>
+		</div> <!-- close the announcement div -->
+	  <%
+	end
+    end
+}
+%>

@@ -4,9 +4,12 @@ class PuzzlesController < ApplicationController
   def show
     @special_type = "normal"
 
-    next_id = params[:id].to_i + 1
-    prev_id = params[:id].to_i - 1
-    @puzzle = Puzzle.find(params[:id])
+    @puzzle = Puzzle.find_by_seq_no(params[:id])
+    next_id = params[:id].split('_')[0] + '_' + (params[:id].split('_')[1].to_i + 1).to_s
+    prev_id = params[:id].split('_')[0] + '_' + (params[:id].split('_')[1].to_i - 1).to_s
+    @next_puzzle = Puzzle.find_by_seq_no(next_id)
+    @prev_puzzle = Puzzle.find_by_seq_no(prev_id)
+
 
     if !@puzzle.size.nil?
       if @puzzle.size.eql?('N/A')
@@ -61,16 +64,6 @@ class PuzzlesController < ApplicationController
       @source_display_name = @puzzle.sources[0].display_name
     end
 
-    if Puzzle.exists?(next_id)
-      @next_puzzle = Puzzle.find(next_id)
-    else
-      @next_puzzle = nil
-    end
-    if Puzzle.exists?(prev_id)
-      @prev_puzzle = Puzzle.find(prev_id)
-    else
-      @prev_puzzle = nil
-    end
 
 # fill arrays with clue content
     @a_clues = Array.new
@@ -136,11 +129,14 @@ class PuzzlesController < ApplicationController
 	    if spec_feat[this_gs.id_name].eql?("C")
 	      this_gs.class_name += " circle"
 	    end
+	    if spec_feat[this_gs.id_name].eql?("G")
+	      this_gs.class_name += " shaded"
+	    end
 	    if spec_feat[this_gs.id_name].start_with?("R") #rebus
 	      this_gs.class_name += " rebus"
 	      this_gs.contents = spec_feat[this_gs.id_name].gsub(/^./, '')
 	    end
-	    if spec_feat[this_gs.id_name].start_with?("N") #number with out clue
+	    if spec_feat[this_gs.id_name].start_with?("N") #number without clue
 	      @grid_numbers[this_gs.id_name] = spec_feat[this_gs.id_name].gsub(/^./, '')
 	    end
 	    if spec_feat[this_gs.id_name].start_with?("O") #

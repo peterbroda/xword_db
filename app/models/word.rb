@@ -8,7 +8,9 @@ class Word < ActiveRecord::Base
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['grid_text LIKE ?', "#{search}%"])
+      search = search.gsub("*", "%")
+      search = search.gsub("?", "_")
+      find(:all, :conditions => ['grid_text LIKE ?', "#{search}"])
     else
       []
     end
