@@ -6,13 +6,16 @@
 
 <div class="resource_page_body">
 
-<div class="resource_page_text">
+<div class="page_subheader">Who?</div>
+<div class="page_text">
 <%= @constructor.bio.html_safe %>
 </div>
 
-<p><b>Puzzles on which <%= @constructor.name %> is listed as a constructor:</b></p>
+<div class="page_subheader">
+Puzzles by <%= @constructor.name %>:
+</div>
 
-<%= render partial: "/partials/list_puzzles", locals: {puzzles_by_year: @puzzles_by_year, page_source: "constructor"} %>
+<%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_year, page_source: "constructor"} %>
 
 <hr/>
 

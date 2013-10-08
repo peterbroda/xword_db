@@ -59,6 +59,7 @@ div.black_square_with_letter {
 
 div.white_square {
 /*	background-color: white;*/
+	font-family: 'Arial', sans-serif;
 	border: 1px solid white; /* need a border all the time so that circled squares aren't larger */
 }
 
@@ -101,9 +102,8 @@ div.letter {
 div#puzzle_grid_and_info {
 	position: relative;
 	top: -32px;
-/*	width: 75%;*/
 	min-width: 1200px;
-	font-family: "Arial";
+	font-family: 'Ubuntu Condensed', 'Arial', sans-serif;
 	max-width: 1200px;
 }
 div#puzzle_grid {
@@ -123,7 +123,7 @@ div#title_bar {
 }
 #puzzle_date {
 	float: right;
-	font-family: "Arial";
+	font-family: 'Ubuntu Condensed', 'Arial', sans-serif;
 	font-size: 12pt;
 	margin: 10px;
 	color: #777;
@@ -136,14 +136,14 @@ div#title_bar {
 }
 #puzzle_title {
 	color: #793932;
-	font-family: "Arial";
-	font-size: 28pt;
+	font-family: 'Nunito', 'Arial', sans-serif;
+	font-size: 2.25em;
 	font-weight: bold;
 }
 #puzzle_subtitle {
 	color: #BC9C98;
+	font-family: 'Ubuntu Condensed', 'Arial', sans-serif;
 	font-size: 1.2em;
-	font-weight: bold;
 	margin-left: 40px;
 	line-height: 1;
 }
@@ -154,7 +154,7 @@ div#title_bar {
 	bottom: -32px;
 	right: -75px;
 	font-size: 6em;
-	font-family: "Impact";
+	font-family: "Impact", sans-serif;
 	color: #EAEAEA;
 	z-index: -1;
 	white-space: nowrap;
@@ -250,7 +250,7 @@ div.clues {
 }
 div.clue_column {
 	width: 49%;
-	font-family: "Arial";
+	font-family: 'Ubuntu Condensed', 'Arial';
 	font-size: 0.75em;
 	text-align: center;
 }
@@ -377,7 +377,7 @@ td.clue_number {
 }
 
 div#theme_answers {
-	font-family: "Arial";
+	font-family: 'Ubuntu Condensed', 'Arial', sans-serif;
 	font-size: 0.75em;
 	color: #555;
 }

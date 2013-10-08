@@ -53,7 +53,7 @@
 #	      else
 	        %>
 		  <div class="number"><%= @grid_numbers[this_square.id_name].html_safe %></div>
-		  <div class="letter"><%= this_square.contents %></div>	      
+		  <div class="letter"><%= this_square.contents.html_safe %></div>	      
 	        <%
 #	      end
 	    %>

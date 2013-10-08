@@ -63,5 +63,11 @@
     <td class="info_field_value" id="long_info_text"><%= @theme_explanation.html_safe %></td>
   </tr>
   <% end %>
+  <% if !@puzzle.theme_squares.nil? %>
+  <tr>
+    <td>&nbsp;</td>
+    <td class="info_field_value" id="highlight_button">Click to show theme squares</td>
+  </tr>
+  <% end %>
 </table>
 </div><!-- end of puzzle_main_info -->

@@ -90,6 +90,15 @@ class PuzzlesController < ApplicationController
 	end
       end
     end
+# get theme squares, if any
+    theme_squares = Hash.new    
+    if !@puzzle.theme_squares.nil?
+      @puzzle.theme_squares.split('|').each do |t|
+	theme_squares[t.split(':')[0]] = t.split(':')[1]
+      end
+    end
+
+
 
 # parse grid string and create array of grid_squares
     @the_grid = Array.new
@@ -144,7 +153,19 @@ class PuzzlesController < ApplicationController
 		this_gs.class_name = "no_display" # we overwrite in this case so that the css works
 	      end
 	    end
-	  end
+	  end # of spec_feat
+
+	  if !theme_squares[this_gs.id_name].nil?
+	    if theme_squares[this_gs.id_name].start_with?("H")
+	      this_gs.class_name += " highlight"
+	      if theme_squares[this_gs.id_name].start_with?("H2")
+		this_gs.class_name += "2"
+	      elsif theme_squares[this_gs.id_name].start_with?("H3")
+		this_gs.class_name += "3"
+	      end
+	    end
+	  end # of theme_squares
+
 	  @letter_counts[i.upcase] += 1 # add to letter counts
 	  col_num += 1
 	  current_row.push(this_gs)
@@ -184,4 +205,11 @@ class PuzzlesController < ApplicationController
 
   def analyze
   end
+
+  def render_popup_puzzle
+
+    @puzzle = Puzzle.find_by_seq_no(params[:id])
+    render :layout => false
+  end
+
 end

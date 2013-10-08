@@ -6,35 +6,22 @@
   end
 %>
 
-<div class="page_title_bar">
+<div class="page_title_bar"> <!-- can't use the partial here, because the subtitle is a link -->
   <div class="page_header"><%= @source.name %></div>
-  <div class="page_altheader"><%= link_to @source.url, @source.url %></div>
+  <div class="page_header_line">&nbsp;</div>
+  <div class="page_altheader"><%= link_to @source.url, @source.url, target: '_blank' %></div>
+  <div style="clear:both;">&nbsp;</div>
 </div>
 
 <div class="page_body">
 
-<div class="source_record">
+  <div class="source_record">
 
-<p class="resourc_page_text">
-<%= @source.description %>
-</p>
+    <div class="page_text">
+      <%= @source.description.html_safe %>
+    </div>
 
-<hr/>
+    <%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_year, page_source: "source"} %>
 
-<p><b>Constructors associated with <%= @source.name %></b></p>
-<ul>
-<%
-  @source.constructors.each do |con|
-    %><li><%= link_to con.name, constructor_path(con) %></li><%
-  end
-%>
-</ul>
-
-<hr/>
-
-<p><b>Puzzles from <%= @source.name %>:</b></p>
-
-<%= render partial: "/partials/list_puzzles", locals: {puzzles_by_year: @puzzles_by_year, page_source: "source"} %>
-
-</div>
+  </div>
 </div>

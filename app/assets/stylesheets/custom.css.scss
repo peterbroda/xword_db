@@ -35,7 +35,7 @@ html {
 
 body {
 /*  padding-top: 60px;*/
-	font-family: "Arial";
+	font-family: "Ubuntu Condensed", "Arial", sans-serif;
 }
 
 #wrapper {
@@ -47,7 +47,7 @@ body {
 #body_wrapper {
 	margin-left: auto;
 	margin-right: auto;
-	width: 960px;
+	width: 1200px;
 }
 
 section {
@@ -177,17 +177,16 @@ ul.sidebar_nav li a:hover {
 #megamenu {
 	text-align: right;
 	border-bottom: 3px solid #888;
-	float: right;
 	margin: 0px;
 	padding: 0px 50px 0px 0px;
-	min-width: 960px;
+	min-width: 1200px;
 }
 #logo {
   float: right;
   color: #DDD;
 }
 #logo, #black_megamenu_square {
-  font-family: "Arial";
+  font-family: 'Nunito', "Arial", sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1;
@@ -228,10 +227,9 @@ div#search_bar {
 	outline: none;
 }
 #nav {
-	font-family: "Arial";
-	font-size: 1em;
+	font-family: 'Nunito', 'Arial', sans-serif;
+	font-size: 0.9em;
 	list-style: none;
-	font-weight: bold;
 	margin: 0px 25px 0px 0px;
 	padding: 12px 0px 0px 0px;
 	position: relative;
@@ -292,8 +290,9 @@ div#search_bar {
 /*   PAGES   */
 /*************/
 .page_header {
+	font-family: 'Nunito', 'Arial', sans-serif;
         color: #793932;
-        font-size: 28pt;
+        font-size: 2.5em;
         font-weight: bold;
 }
 .page_altheader {
@@ -310,7 +309,7 @@ div.page_header_line {
 }
 
 div.page_body {
-	font-family: "Arial";
+	font-family: 'Ubuntu Condensed', "Arial", sans-serif;
 	margin-left: 100px;
 	margin-right: 100px;
 }
@@ -330,6 +329,39 @@ div.page_subheader {
         font-size: 1.2em;
 }
 
+div.popup_puzzle {
+        background: #FFF;
+        margin: 0px;
+        border: 2px solid #555;
+        position: absolute;
+        left: -9999px;
+	background-color: #FFF;
+}
+div.puzzle_link:hover div.popup_puzzle {
+	left: 200px;
+}
+
+table.mini_puzzle {
+	border-collapse: collapse;
+}
+table.mini_puzzle tr {
+}
+table.mini_puzzle td {
+	padding: 2px;
+	font-size: 0.5em;
+	font-weight: bold;
+	border: none;
+}
+td.mini_white {
+	background-color: #FFF !important;
+	color: #555;
+	font-family: "Arial", sans-serif;
+}
+td.mini_black {
+	background-color: #555 !important;
+}
+
+
 
 /*****************************/
 /*   RESOURCE PRESENTATION   */
@@ -346,15 +378,32 @@ div.page_subheader {
         border: none;
         border-collapse: collapse;
         margin: 15px;
+	text-align: center;
 
         td {
                 padding-right: 20px;
                 padding-left: 20px;
                 padding-top: 8px;
                 padding-bottom: 8px;
+		
+		&.llt_left {
+			text-align: left;
+		}
+		&.llt_right {
+			text-align: right;
+		}
+		&.llt_pub_date {
+			white-space: nowrap;
+		}
+		&.llt_answer_word {
+			font-weight: bold;
+		}
         }
         th {
-                padding-bottom: 20px;
+                padding-bottom: 2px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #BBB;
+		font-size: 0.75em;
         }
 
 	tr.llt_light {
@@ -366,6 +415,12 @@ div.page_subheader {
 		td {
 			background-color: #EEE;
 		}
+	}
+	td.llt_subheader
+	{
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.2em;
 	}
 }
 

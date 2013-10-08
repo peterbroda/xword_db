@@ -1,0 +1,38 @@
+Stuff to do:
+
+--figure out best way to do sitewide stats (pre-compute with every db addition, rather than computing for each page load)
+
+Features to add:
+
+STATS
+-----
+-sitewide stats
+--avg. word length (averaged over all puzzles)
+--avg. 15x15 wc
+--avg. 15x15 black count
+--etc...
+--# of constructors, words, puzzles, etc.
+
+
+
+
+LISTS
+-----
+--circles
+--rebus
+--asymmetry/weird symmetry
+--schrodinger
+--unches
+--no 3 or 4 letter words
+--repeated grid patterns
+--most common words
+--letters outside the grid
+
+HALL OF FAME
+------------
+--black count
+--pangrams/fewest letters
+--scrabble scores
+--fifteens/stacks
+--largest chunks of white space
+

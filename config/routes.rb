@@ -14,6 +14,8 @@ XwordDb::Application.routes.draw do
   get '/editors/:id', 		to: 'editors#show', as: 'editor'
   get '/sources/:id',		to: 'sources#show', as: 'source'
   get '/words/:id',		to: 'words#show', as: 'word'
+  get '/render_popup_puzzle/:id',	to: 'puzzles#render_popup_puzzle'
+
 
   root to: 'static_pages#home'
 
@@ -29,6 +31,11 @@ XwordDb::Application.routes.draw do
   match '/about',	to: 'static_pages#about'
   match '/help',	to: 'static_pages#help'
   match '/contact',	to: 'static_pages#contact'
+
+  match '/halloffame',	to: 'hall_of_fame#index'
+  match '/halloffame/wl',	to: 'hall_of_fame#avg_word_length', 	as: :hofwl
+  match '/halloffame/wc',	to: 'hall_of_fame#word_count',		as: :hofwc
+  match '/halloffame/personal',	to: 'hall_of_fame#personal',		as: :hofpersonal
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

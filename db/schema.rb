@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926061451) do
+ActiveRecord::Schema.define(:version => 20131006185540) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20130926061451) do
     t.integer  "white_square_count"
     t.string   "subtitle"
     t.string   "seq_no"
+    t.string   "theme_squares"
   end
 
   create_table "puzzles_sources", :id => false, :force => true do |t|

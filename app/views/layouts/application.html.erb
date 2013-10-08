@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title><%= full_title(yield(:title)).html_safe %></title>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,9 +13,8 @@
 <body>
 <!--  <%= render 'layouts/header' %> -->
 <div id="wrapper">
-  <%= render partial: "/partials/megamenu" %>
-  <div style="clear:both;">&nbsp;</div>
   <div id="body_wrapper">
+  <%= render partial: "/partials/megamenu" %>
 
     <%= yield %>
 

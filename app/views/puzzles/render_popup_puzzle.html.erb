@@ -1,0 +1,15 @@
+<table class="mini_puzzle">
+<%
+@puzzle.grid.split('|').each do |row|
+  %><tr><%
+  row.split('').each do |sq|
+    if sq.eql? '.'
+      %><td class="mini_black">&nbsp;</td><%
+    else
+      %><td class="mini_white"><%= sq %></td><%
+    end
+  end
+  %></tr><%
+end
+%>
+</table>

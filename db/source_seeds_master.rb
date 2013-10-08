@@ -27,7 +27,7 @@ Source.create(name: 'The Cross Nerd', display_name: 'Cross Nerd', url: 'http://t
 Source.create(name: 'The Onion AV Club', url: '#', description: 'now-defunct original AV club', constructors: av_constructors)
 Source.create(name: 'American Values Club', url: 'http://www.avxword.com/', description: 'The American Values Club xword is a reincarnation of the beloved but now dead Onion A.V. Club xword feature, edited by Ben Tausig.', constructors: av_constructors)
 Source.create(name: 'Campus Crosswords', url: '#', description: 'Campus Crosswords description', constructors: cc_constructors)
-Source.create(name: 'Matt Gaffney\'s Weekly Crossword Contest', display_name: 'MGWCC', url: 'http://xwordcontest.com/', description: 'Meta puzzle every Friday', :constructors => Constructor.where(:name => 'Matt Gaffney'))
+Source.create(name: 'Matt Gaffney\'s Weekly Crossword Contest', display_name: 'MGWCC', url: 'http://xwordcontest.com/', description: 'Meta contest puzzle every Friday', :constructors => Constructor.where(:name => 'Matt Gaffney'))
 Source.create(name: 'The Wrath of Klahn', url: '', description: 'Puzzles from the World\'s Toughest Clue Writer', :constructors => Constructor.where(:name => 'Bob Klahn'))
 Source.create(name: 'Triple-Stack Crosswords', url: '', description: 'Triple-stacks galore', :constructors => Constructor.where(:name => 'Martin Ashwood-Smith'))
 Source.create(name: 'The Autofill Project', url: 'http://autofillproject.wordpress.com/', description: 'A journal of crossword database management', :constructors => Constructor.where(:name => 'Todd McClary'))
@@ -37,5 +37,7 @@ Source.create(name: 'Frank Longo Vowelless Crosswords', display_name: 'Longo Vwl
 Source.create(name: 'Triple Play Puzzles', url: 'http://www.tripleplaypuzzles.com', description: 'Trip Payne\'s site', :constructors => Constructor.where(:name => 'Trip Payne'))
 Source.create(name: 'Neville Fogarty', url: 'http://nevillefogarty.wordpress.com', description: 'Puzzles by Neville. Updated every Friday', constructors: neville_constructors)
 Source.create(name: '20 Under 30', url: 'http://www.20under30.com')
-Source.create(name: 'Brendan Emmett Quigley', display_name: 'BEQ', url: 'http://www.brendanemmettquigley.com/')
-Source.create(name: 'Jonesin', display_name: 'Jonesin\'', url: 'http://www.jonesincrosswords.com/')
+beq_desc = 'Professional puzzlemaker Brendan Emmett Quigley has been posting at least two free puzzles every week on his website since late 2008.<br/>Currently, he runs a freestyle puzzle on Monday and a themed puzzle on Thursday, although variety and guest-constructed puzzles are common.'
+Source.create(name: 'Brendan Emmett Quigley', display_name: 'BEQ', url: 'http://www.brendanemmettquigley.com/', description: beq_desc)
+jz_desc = 'Started in 2004, the Jonesin\' syndicated puzzle is the longest-running indie puzzle series that I know of. Written by Matt Jones and edited by Matt Gaffney, the weekly puzzles are generally 15x15 themed, with a freestyle every few months.'
+Source.create(name: 'Jonesin', display_name: 'Jonesin\'', url: 'http://www.jonesincrosswords.com/', description: jz_desc)

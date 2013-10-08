@@ -3,25 +3,32 @@
     <th>Title</th>
     <th>Publication Date</th>
     <th>Constructor(s)</th>
-    <% if (page_source.eql? "constructor") || (page_source.eql? "search") %>
+    <% if (page_source.eql? "constructor") || (page_source.eql? "search") || (page_source.match("hof")) %>
       <th>Source(s)</th>
     <% end %>
   </tr>
 <%
-  row_color = "dark"
-  puzzles_by_year.each_pair do |key, value|
+  row_color = "light"
+  puzzles_sorted.each_pair do |key, value|
       %><tr><%
 	if page_source.eql? "source" 
-		%><td colspan="3" style="text-align:center"><p><b><%= key %></b></p></td><%
+		%><td colspan="3" class="llt_subheader"><p><%= key %></p></td><%
+	elsif page_source.match("hof")
+		%><td colspan="5" class="llt_subheader"><p><%= key %></p></td><%
 	else
-	        %><td colspan="4" style="text-align:center"><p><b><%= key %></b></p></td><%
+	        %><td colspan="4" class="llt_subheader"><p><%= key %></p></td><%
 	end
       %></tr><%
       value.each do |p|
         %><tr class="llt_<%= row_color %>">
-          <td><%= link_to p.title, puzzle_path(p.seq_no) %></td>
-          <td style="text-align:center"><%= p.publication_date %></td>
-	  <td style="text-align:center">
+          <td class="llt_left">
+	    <div class="puzzle_link" id="<%= p.seq_no %>">
+		<%= link_to p.title.html_safe, puzzle_path(p.seq_no) %>
+		<div class="popup_puzzle" id ="<%= p.seq_no %>">Loading...</div>
+	    </div>
+	  </td>
+          <td class="llt_pub_date"><%= p.publication_date %></td>
+	  <td>
 	  <%
 	    p.constructors.each_index do |i|
 	      %>
@@ -33,16 +40,16 @@
 	    end
 	  %>
 	  </td>
-	  <% if page_source.eql? "constructor" %>
-	    <td style="text-align:center">
+	  <% if !page_source.eql? "source" %>
+	    <td>
 	    <%
 	      p.sources.each_index do |i|
 	        %>
-		  <%= link_to p.sources[i].name, source_path(p.sources[i]) %>
+		  <%= link_to p.sources[i].display_name, source_path(p.sources[i]) %>
 		  <%
 		  if ((i+1) < p.sources.length)
 		    %>--<%
-	  	  end		
+	  	  end
 	      end		
 	    %>
 	    </td>

@@ -2,3 +2,7 @@
 --missing number 1
 
 See instructions for #62 - need a link to Brendan's puzzle
+
+#117- schrodinger puzzle
+
+#148 - apostrophes in rebus squares. All works fine, but not sure whether to include the apostrophe in answer or solvable field. Consider search.
