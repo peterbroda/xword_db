@@ -5,6 +5,13 @@
 <p>Word in the grid: <%= @word.grid_text %></p>
 <p>Full word: <%= @word.full_text %></p>
 
-<%= render partial: "/partials/list_words", locals: {word_list: @word.entries} %>
+<%= render partial: "/partials/list_words", locals: {solvable_list: @word.solvables} %> 
+
+<!--
+We send a list of solvables, because we need both the entry and word info. 
+Using solvables also helps for Schrodinger puzzles, where the entry.answer column will have 'CLINTON/BOBDOLE' and the entry will have 2 solvables. Since at this point we
+know which of the 2 we're interested in (if we searched for BOBDOLE, we don't want CLINTON as a search result), we would lose information were we to send a list of
+entries.
+-->
 
 </div>

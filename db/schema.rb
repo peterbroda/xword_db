@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006185540) do
+ActiveRecord::Schema.define(:version => 20131019230237) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -35,21 +35,6 @@ ActiveRecord::Schema.define(:version => 20131006185540) do
 
   add_index "constructors_sources", ["constructor_id"], :name => "index_constructors_sources_on_constructor_id"
   add_index "constructors_sources", ["source_id"], :name => "index_constructors_sources_on_source_id"
-
-  create_table "editors", :force => true do |t|
-    t.string   "name"
-    t.string   "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "editors_puzzles", :id => false, :force => true do |t|
-    t.integer "editor_id"
-    t.integer "puzzle_id"
-  end
-
-  add_index "editors_puzzles", ["editor_id"], :name => "index_editors_puzzles_on_editor_id"
-  add_index "editors_puzzles", ["puzzle_id"], :name => "index_editors_puzzles_on_puzzle_id"
 
   create_table "entries", :force => true do |t|
     t.text     "clue"
@@ -109,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20131006185540) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "display_name"
+    t.string   "editor"
   end
 
   create_table "words", :force => true do |t|

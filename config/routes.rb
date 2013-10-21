@@ -35,7 +35,9 @@ XwordDb::Application.routes.draw do
   match '/halloffame',	to: 'hall_of_fame#index'
   match '/halloffame/wl',	to: 'hall_of_fame#avg_word_length', 	as: :hofwl
   match '/halloffame/wc',	to: 'hall_of_fame#word_count',		as: :hofwc
+  match '/halloffame/bc',	to: 'hall_of_fame#block_count',		as: :hofbc
   match '/halloffame/personal',	to: 'hall_of_fame#personal',		as: :hofpersonal
+  match '/halloffame/interesting',	to: 'hall_of_fame#interesting',		as: :hofint
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

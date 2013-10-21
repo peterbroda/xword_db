@@ -1,4 +1,4 @@
-<table class="large_list_table" id="source_puzzle_list">
+<table class="large_list_table" id="puzzle_list">
   <tr>
     <th>Title</th>
     <th>Publication Date</th>
@@ -6,17 +6,18 @@
     <% if (page_source.eql? "constructor") || (page_source.eql? "search") || (page_source.match("hof")) %>
       <th>Source(s)</th>
     <% end %>
+    <th>Stats</th>
   </tr>
 <%
   row_color = "light"
   puzzles_sorted.each_pair do |key, value|
       %><tr><%
 	if page_source.eql? "source" 
-		%><td colspan="3" class="llt_subheader"><p><%= key %></p></td><%
+		%><td colspan="4" class="llt_subheader"><%= key.html_safe %></td><%
 	elsif page_source.match("hof")
-		%><td colspan="5" class="llt_subheader"><p><%= key %></p></td><%
+		%><td colspan="5" class="llt_subheader"><%= key.html_safe %></td><%
 	else
-	        %><td colspan="4" class="llt_subheader"><p><%= key %></p></td><%
+	        %><td colspan="5" class="llt_subheader"><%= key.html_safe %></td><%
 	end
       %></tr><%
       value.each do |p|
@@ -54,6 +55,7 @@
 	    %>
 	    </td>
 	  <% end %>
+          <td class="llt_stats"><%= p.size %> - <%= p.word_count %>/<%= p.block_count %>, <%= p.avg_word_length %></td>
         </tr>
         <%
       	if row_color.eql?("dark")

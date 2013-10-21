@@ -148,21 +148,29 @@ class PuzzlesController < ApplicationController
 	    if spec_feat[this_gs.id_name].start_with?("N") #number without clue
 	      @grid_numbers[this_gs.id_name] = spec_feat[this_gs.id_name].gsub(/^./, '')
 	    end
-	    if spec_feat[this_gs.id_name].start_with?("O") #
+	    if spec_feat[this_gs.id_name].start_with?("O") #outside the grid
 	      if !spec_feat[this_gs.id_name].eql?("OD")
 		this_gs.class_name = "no_display" # we overwrite in this case so that the css works
 	      end
 	    end
+	    if spec_feat[this_gs.id_name].start_with?("S") #schrodinger square
+	      this_gs.class_name += " schrodinger"
+	      spec_feat[this_gs.id_name] =  spec_feat[this_gs.id_name].gsub(/\//, '_') + 'xxxx' # use 9999 as a delimiter
+	      this_gs.class_name += spec_feat[this_gs.id_name].gsub(/^./, '') #for now we'll just store the letters on the end of the class name. We'll peel these off and create an inner div with the letters as ID in the view
+	    end
 	  end # of spec_feat
 
 	  if !theme_squares[this_gs.id_name].nil?
-	    if theme_squares[this_gs.id_name].start_with?("H")
-	      this_gs.class_name += " highlight"
-	      if theme_squares[this_gs.id_name].start_with?("H2")
-		this_gs.class_name += "2"
-	      elsif theme_squares[this_gs.id_name].start_with?("H3")
-		this_gs.class_name += "3"
-	      end
+	    if theme_squares[this_gs.id_name].eql?("H")
+	      this_gs.class_name += " highlight1"
+	    elsif theme_squares[this_gs.id_name].eql?("H2")
+	      this_gs.class_name += " highlight2"
+	    elsif theme_squares[this_gs.id_name].eql?("H3")
+	      this_gs.class_name += " highlight3"
+	    elsif theme_squares[this_gs.id_name].eql?("HB")
+	      this_gs.class_name += " highlightB"
+	    elsif theme_squares[this_gs.id_name].eql?("HC")
+	      this_gs.class_name += " highlightC"
 	    end
 	  end # of theme_squares
 

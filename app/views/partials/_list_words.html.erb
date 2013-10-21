@@ -8,35 +8,35 @@
   </tr>
   <%
     row_color = "light"
-    word_list.each do |e|
+    solvable_list.each do |s|
       %>
 	<tr class="llt_<%= row_color %>">
 	  <td class="llt_answer_word">
-            <div class="puzzle_link" id="<%= e.puzzle.seq_no %>">
-                <%= link_to e.answer, puzzle_path(e.puzzle.seq_no) %>
-                <div class="popup_puzzle" id ="<%= e.puzzle.seq_no %>">Loading...</div>
+            <div class="puzzle_link" id="<%= s.entry.puzzle.seq_no %>">
+                <%= link_to s.word.grid_text, puzzle_path(s.entry.puzzle.seq_no) %>
+                <div class="popup_puzzle" id ="<%= s.entry.puzzle.seq_no %>">Loading...</div>
             </div>
 	  </td>
-          <td class="llt_left"><%= e.clue.html_safe %></td>
+          <td class="llt_left"><%= s.entry.clue.html_safe %></td>
           <td>
 	  <%
-            e.puzzle.constructors.each do |c|
-              if c.eql?(e.puzzle.constructors.last) && e.puzzle.constructors.size > 1
+            s.entry.puzzle.constructors.each do |c|
+              if c.eql?(s.entry.puzzle.constructors.last) && s.entry.puzzle.constructors.size > 1
                 %> and<%
               end
               %> <%= link_to c.name, constructor_path(c) %><%
-              if e.puzzle.constructors.size > 2 && !c.eql?(e.puzzle.constructors.last)
+              if s.entry.puzzle.constructors.size > 2 && !c.eql?(s.entry.puzzle.constructors.last)
                 %>,<%
               end
             end
 	  %>
           </td>
           <td>
-            <div class="puzzle_link" id="<%= e.puzzle.seq_no %>">
-                <%= link_to e.puzzle.title, puzzle_path(e.puzzle.seq_no) %>
-                <div class="popup_puzzle" id ="<%= e.puzzle.seq_no %>">Loading...</div>
+            <div class="puzzle_link" id="<%= s.entry.puzzle.seq_no %>">
+                <%= link_to s.entry.puzzle.title, puzzle_path(s.entry.puzzle.seq_no) %>
+                <div class="popup_puzzle" id ="<%= s.entry.puzzle.seq_no %>">Loading...</div>
             </div>
-          <td><%= link_to e.puzzle.sources.first.display_name, source_path(e.puzzle.sources.first) %></td>
+          <td><%= link_to s.entry.puzzle.sources.first.display_name, source_path(s.entry.puzzle.sources.first) %></td>
         </tr>
       <%
       if row_color.eql?("dark")

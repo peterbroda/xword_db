@@ -53,7 +53,17 @@
 #	      else
 	        %>
 		  <div class="number"><%= @grid_numbers[this_square.id_name].html_safe %></div>
-		  <div class="letter"><%= this_square.contents.html_safe %></div>	      
+
+		  <%
+		  if this_square.class_name.include? "schrodinger"
+		    letter_class = "letter schrodinger"
+		    letter_id = this_square.class_name.gsub(/^.*schrodinger(.*)xxxx.*$/, '\1')
+		  else
+		    letter_class = "letter"
+		    letter_id = ""
+		  end
+		  %>
+		  <div class="<%= letter_class %>" id="<%= letter_id %>"><%= this_square.contents.html_safe %></div>	      
 	        <%
 #	      end
 	    %>
@@ -187,7 +197,7 @@
 	  %><tr>	      
 	      <td class="clue_text"><%= c.clue.html_safe %></td>
 	      <td class="clue_number"><%= c.number %></td>
-	      <td class="clue_answer"><%= link_to c.solvables.first.word.grid_text, word_path(c.solvables.first.word.id) %></td>
+	      <td class="clue_answer"><%= link_to c.answer, word_path(c.solvables.first.word.id) %></td>
 	  </tr><%
 	end
     %>
@@ -199,7 +209,7 @@
     <% 
 	@d_clues.each do |c|
 	  %><tr>
-	      <td class="clue_answer"><%= link_to c.solvables.first.word.grid_text, word_path(c.solvables.first.word.id) %></td>
+	      <td class="clue_answer"><%= link_to c.answer, word_path(c.solvables.first.word.id) %></td>
 	      <td class="clue_number"><%= c.number %></td>
 	      <td class="clue_text"><%= c.clue.html_safe %></td>
 	  </tr><%

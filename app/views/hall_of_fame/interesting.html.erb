@@ -1,0 +1,16 @@
+<% provide(:title, "Hall of Fame") %>
+
+<%= render partial: "/partials/pages_header", locals: {title: 'HALL OF FAME', subtitle: 'hmm, interesting...'} %>
+
+<div class="resource_page_body">
+
+  <div class="page_text">
+Puzzles with unusual features.
+  </div>
+
+  <%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_type, page_source: "hofpers"} %>
+
+
+
+</div>
+

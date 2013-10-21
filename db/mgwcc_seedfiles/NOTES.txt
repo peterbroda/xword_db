@@ -1,8 +1,12 @@
 --need to correct the dates (a few are correct: 35, 56, 60)
 --missing number 1
 
-See instructions for #62 - need a link to Brendan's puzzle
-
-#117- schrodinger puzzle
-
 #148 - apostrophes in rebus squares. All works fine, but not sure whether to include the apostrophe in answer or solvable field. Consider search.
+
+#173 - not sure what to do with this grid, in terms of visuals. Answers and solvables are all fixed, though
+
+#178 - maybe use the highlight button to highlight the words in the flavour text?
+
+#195 - figure out the outside letters (GEMS)
+
+#203 - get colours on black squares

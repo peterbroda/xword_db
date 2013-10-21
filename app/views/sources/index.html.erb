@@ -1,16 +1,29 @@
 <% provide(:title, "Sources") %>
 
-<%= render partial: "/partials/pages_header", locals: {title: 'SOURCES', subtitle: 'where did you get these?'} %>
+<%= render partial: "/partials/pages_header", locals: {title: 'SOURCES', subtitle: 'where\'d you get those puzzles?'} %>
 
 <div class="resource_page_body">
 
-<div class="resource_list_header">The following sources are in the database:</div>
-<ul class="resource_list">
+<p class="resource_page_text">I currently have puzzles in the database from the sources listed below. Since many of these are ongoing series, my records may not always be quite up-to-date. However, I will continue to add the latest puzzles as promptly as I can, so check back often.</p>
+
+<div class="resource_list">
 <%
   Source.find(:all).each do |src|
-    %><li><%= link_to src.name, source_path(src) %></li><%
+    %>
+      <div class="resource_list_item">
+	<div class="resource_list_item_header">
+	  <%= link_to src.name, source_path(src) %>
+	</div>
+	<div class="resource_list_item_field">
+	  <span class="resource_list_item_key">Editor: </span><span class="resource_list_item_value"> <%= src.editor %></span>
+	</div>
+	<div class="resource_list_item_field">
+	  <span class="resource_list_item_key">Homepage: </span><span class="resource_list_item_value"><a target="_blank" href="<%= src.url %>"><%= src.url.gsub('http://', '\1') %></a></span>
+	</div>
+      </div>
+    <%
   end
 %>
-</ul>
+</div>
 
 </div>

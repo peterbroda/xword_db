@@ -15,7 +15,6 @@ require "/home/peter/xword_db/db/word_seeds_master.rb"
 #    require "/home/peter/xword_db/db/CN_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/BK_wrath_seeds.rb"
 #    require "/home/peter/xword_db/db/MAS_triple_seeds.rb"
-#    require "/home/peter/xword_db/db/TM_autofill_seeds.rb"
 #    require "/home/peter/xword_db/db/AK_cal_seeds.rb"
 #    require "/home/peter/xword_db/db/CHE_all_seeds.rb"
 #    require "/home/peter/xword_db/db/FL_vwllss_seeds.rb"
@@ -28,6 +27,7 @@ require "/home/peter/xword_db/db/word_seeds_master.rb"
 #    require "/home/peter/xword_db/db/AV_old_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/BEQ_all_seedfiles.rb"
 #    require "/home/peter/xword_db/db/JZ_all_seedfiles.rb"
+#    require "/home/peter/xword_db/db/autofill_all_seedfiles.rb"
 
 =begin
 test_constructors1 = [

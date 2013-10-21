@@ -11,14 +11,13 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
-<!--  <%= render 'layouts/header' %> -->
 <div id="wrapper">
-  <div id="body_wrapper">
   <%= render partial: "/partials/megamenu" %>
 
+  <div id="body_wrapper">
     <%= yield %>
-
   </div>
+
   <div class="container">
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
