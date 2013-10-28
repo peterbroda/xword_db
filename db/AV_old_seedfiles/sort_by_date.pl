@@ -37,7 +37,7 @@ my $count = 1;
 
 foreach (@all)
 {
-	print join("", $_, " - ", $map{$_}, " - AV_", $count, "\n");
+	print OUT join("", $_, " - ", $map{$_}, " - AV_", $count, "\n");
 	$count += 1;
 }
 

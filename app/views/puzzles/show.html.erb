@@ -20,19 +20,24 @@
 <!--
 ########### PREV/NEXT PUZZLE LINKS ####################
 -->
-  <div id="next_prev_links">
-  <%
-    if !@prev_puzzle.nil?
-      %><%= link_to "Previous Puzzle", puzzle_path(@prev_puzzle.seq_no) %><%
-    end
-    if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
-      %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
-    end
-    if !@next_puzzle.nil?
-      %><%= link_to "Next Puzzle", puzzle_path(@next_puzzle.seq_no)%><%
-    end
-  %>
-  </div>
+    <div id="next_prev_links">
+      <%
+        if !@prev_puzzle.nil?
+          %><%= link_to "Previous Puzzle", puzzle_path(@prev_puzzle.seq_no) %><%
+        end
+        if (!@prev_puzzle.nil?) && (!@next_puzzle.nil?)
+          %>&nbsp;&nbsp;|&nbsp;&nbsp;<%
+        end
+        if !@next_puzzle.nil?
+          %><%= link_to "Next Puzzle", puzzle_path(@next_puzzle.seq_no)%><%
+        end
+      %>
+    </div>
+
+<% if !@puzzle.static_grid.nil? %>
+	<%= render "/static_grids/" + @puzzle.static_grid %>
+<% else %>
+
   <%
     if @special_type.eql?("outer")
       %><table class="solution_grid_with_outer"><%
@@ -75,6 +80,8 @@
     end
     %>
     </table>
+
+<% end # of if for static_grids %>
   </div>
 
   <%

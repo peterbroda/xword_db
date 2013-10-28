@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131019230237) do
+ActiveRecord::Schema.define(:version => 20131025022347) do
 
   create_table "constructors", :force => true do |t|
     t.string   "name"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20131019230237) do
     t.string   "subtitle"
     t.string   "seq_no"
     t.string   "theme_squares"
+    t.string   "static_grid"
   end
 
   create_table "puzzles_sources", :id => false, :force => true do |t|

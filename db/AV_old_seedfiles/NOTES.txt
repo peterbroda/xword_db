@@ -1,1 +1,11 @@
+2008/04/03 - marriage proposal - write a blurb about it
+--http://www.yarnivore.com/francis/archives/001994.html
+2008/08/06 - enumerations after clues, for some reason. Get rid of them
+2008/11/12 - inauguration day puzzle - write a blurb
+2012/3/28 - the crazy up/down puzzle - figure out how to represent it
+
+
 2012/10/24 - two-way rebus
+
+
+*** make sure they all have theme types and stats

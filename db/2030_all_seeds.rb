@@ -1383,7 +1383,7 @@ clues_Tim_Polin.push(Entry.create(row: 15, col: 1, dir: 'Across', answer: 'ANEAR
 clues_Tim_Polin.push(Entry.create(row: 15, col: 7, dir: 'Across', answer: 'STAIR', number: 69, clue: 'Flight feature'))
 clues_Tim_Polin.push(Entry.create(row: 15, col: 13, dir: 'Across', answer: 'EMU', number: 70, clue: 'Aboriginal food bird'))
 spec_feat = '16_1:O|16_2:O|16_3:O|16_4:O|16_5:O|16_7:O|16_8:O|16_9:O|16_10:O|16_11:O|16_13:O|16_14:O|16_15:O'
-Puzzle.create(title: 'Twenty Under Thirty - Tim Polin', grid: 'HAD.SLEPT.FBOMB|ALI.TORAH.RUPEE|JDS.ELITE.EXERT|JACKNICHOLSON..|...ITT...OHM...|BURN.ASKTO..PDA|ASADA.TEAMSTERS|NEILL.RAP.PONDS|JOSEPHINE.AWARE|ONE..OPERA.ALES|...NPR...CTR...|..GIANTSSTADIUM|GLENS.ROHAN.NME|MOTET.ATEST.FAT|ANEAR.STAIR.EMU|JIMMY#HOFFA#RIP', :constructors => Constructor.where(:name => 'Tim Polin'), :sources => Source.where(:name => '20 Under 30'), publication_date: '2013-03-08', entries: clues_Tim_Polin, special_features: spec_feat)
+Puzzle.create(title: 'Twenty Under Thirty - Tim Polin', grid: 'HAD.SLEPT.FBOMB|ALI.TORAH.RUPEE|JDS.ELITE.EXERT|JACKNICHOLSON..|...ITT...OHM...|BURN.ASKTO..PDA|ASADA.TEAMSTERS|NEILL.RAP.PONDS|JOSEPHINE.AWARE|ONE..OPERA.ALES|...NPR...CTR...|..GIANTSSTADIUM|GLENS.ROHAN.NME|MOTET.ATEST.FAT|ANEAR.STAIR.EMU|JIMMY#HOFFA#RIP', :constructors => Constructor.where(:name => 'Tim Polin'), :sources => Source.where(:name => '20 Under 30'), publication_date: '2013-03-08', entries: clues_Tim_Polin, special_features: spec_feat) 
 clues_Tyler_Hinman = Array.new
 clues_Tyler_Hinman.push(Entry.create(row: 1, col: 1, dir: 'Across', answer: 'PHOTOBOMB', number: 1, clue: 'Jump in front of a shot'))
 clues_Tyler_Hinman.push(Entry.create(row: 1, col: 1, dir: 'Down', answer: 'PLANTAR', number: 1, clue: '___ fasciitis'))

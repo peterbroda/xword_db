@@ -1,5 +1,5 @@
 class Puzzle < ActiveRecord::Base
-  attr_accessible :grid, :title, :constructors, :sources, :publication_date, :entries, :special_features, :instructions, :explanation, :puzzle_type, :size, :word_count, :block_count, :avg_word_length, :white_square_count, :subtitle, :seq_no, :theme_squares
+  attr_accessible :grid, :title, :constructors, :sources, :publication_date, :entries, :special_features, :instructions, :explanation, :puzzle_type, :size, :word_count, :block_count, :avg_word_length, :white_square_count, :subtitle, :seq_no, :theme_squares, :static_grid
 
   validates :grid,	:presence => true
 
