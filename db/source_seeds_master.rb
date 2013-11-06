@@ -20,7 +20,7 @@ av_constructors = [
 	Constructor.find_by_name('Francis Heaney')
 ]
 
-Source.create(name: 'Ink Well', url: 'https://groups.google.com/group/inkwell', description: 'Ben Tausigs InkWell puzzles', :constructors => Constructor.where(:name => 'Ben Tausig'), editor: 'Ben Tausig')
+Source.create(name: 'Ink Well', display_name: 'Ink Well', url: 'https://groups.google.com/group/inkwell', description: 'Ben Tausigs InkWell puzzles', :constructors => Constructor.where(:name => 'Ben Tausig'), editor: 'Ben Tausig')
 Source.create(name: 'Anoa Place (Where We Can Go)', display_name: 'Anoa Place',  url: 'http://terpconnect.umd.edu/~eagard/home.html', description: '14-puzzle miniseries by Erik Agard', :constructors => Constructor.where(:name => 'Erik Agard'), editor: 'Erik Agard')
 Source.create(name: 'Glutton For Pun', display_name: 'Glutton For Pun', url: 'http://gluttonforpun.blogspot.com', description: 'Crossword puzzles that make you laugh. Updated every Wednesday', :constructors => Constructor.where(:name => 'Erik Agard'), editor: 'Erik Agard')
 Source.create(name: 'The Cross Nerd', display_name: 'Cross Nerd', url: 'http://thecrossnerd.blogspot.com', description: 'A sassy and irreverent take on crossword puzzles. Reviews, musings, epiphanies, and a new free puzzle every Tuesday morning.', constructors: crossnerd_constructors, editor: 'Peter Broda')
