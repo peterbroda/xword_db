@@ -1,70 +1,56 @@
-<table class="large_list_table" id="puzzle_list">
-  <tr>
-    <th>Title</th>
-    <th>Publication Date</th>
-    <th>Constructor(s)</th>
-    <% if (page_source.eql? "constructor") || (page_source.eql? "search") || (page_source.match("hof")) %>
-      <th>Source(s)</th>
-    <% end %>
-    <th>Stats</th>
-  </tr>
-<%
-  row_color = "light"
-  puzzles_sorted.each_pair do |key, value|
-      %><tr><%
-	if page_source.eql? "source" 
-		%><td colspan="4" class="llt_subheader"><%= key.html_safe %></td><%
-	elsif page_source.match("hof")
-		%><td colspan="5" class="llt_subheader"><%= key.html_safe %></td><%
-	else
-	        %><td colspan="5" class="llt_subheader"><%= key.html_safe %></td><%
-	end
-      %></tr><%
-      value.each do |p|
-        %><tr class="llt_<%= row_color %>">
-          <td class="llt_left">
-	    <div class="puzzle_link" id="<%= p.seq_no %>">
-		<%= link_to p.title.html_safe, puzzle_path(p.seq_no) %>
-		<div class="popup_puzzle" id ="<%= p.seq_no %>">Loading...</div>
-	    </div>
-	  </td>
-          <td class="llt_pub_date"><%= p.publication_date %></td>
-	  <td>
-	  <%
-	    p.constructors.each_index do |i|
-	      %>
-		<%= link_to p.constructors[i].name, constructor_path(p.constructors[i]) %>
-		<%
-		if ((i+1) < p.constructors.length)
-		  %>--<%
-		end		
-	    end
-	  %>
-	  </td>
-	  <% if !page_source.eql? "source" %>
-	    <td>
-	    <%
-	      p.sources.each_index do |i|
-	        %>
-		  <%= link_to p.sources[i].display_name, source_path(p.sources[i]) %>
-		  <%
-		  if ((i+1) < p.sources.length)
-		    %>--<%
-	  	  end
-	      end		
-	    %>
-	    </td>
-	  <% end %>
-          <td class="llt_stats"><%= p.size %> - <%= p.word_count %>/<%= p.block_count %>, <%= p.avg_word_length %></td>
-        </tr>
-        <%
-      	if row_color.eql?("dark")
-        	row_color = "light"
-      	elsif row_color.eql?("light")
-        	row_color = "dark"
-	end
-      end
-  end
-%>
-</table>
+<div class="puzzle_list">
 
+  <div class="puzzle_list_preview_wrapper">
+    <div class="puzzle_list_preview">
+    </div>
+  </div>
+
+  <div class="puzzle_list_recordlist">
+    <% puzzles_sorted.each_pair do |key, value| %>
+      <div class="puzzle_list_header"><%= key.html_safe %></div>
+      <% value.each do |p| %>
+
+	<div class="puzzle_list_record">
+
+	  <div class="puzzle_list_record_right">
+	    <div class="plr_constructors">
+	      <% p.constructors.each_index do |i| %>
+                <%= link_to p.constructors[i].name, constructor_path(p.constructors[i]) %>
+                <% if ((i+1) < p.constructors.length) %>--<% end %>
+	      <% end %>
+	    </div>
+	    <div class="plr_sources">
+ 	      <% p.sources.each_index do |i| %>
+                <%= link_to p.sources[i].display_name, source_path(p.sources[i]) %>
+                <% if ((i+1) < p.sources.length) %>--<% end %>
+              <% end %>
+	    </div>
+	  </div><!-- right div -->
+
+	  <div class="puzzle_list_record_left" id="<%= p.seq_no %>">
+	    <a href='/puzzles/<%= p.seq_no %>'>
+	      <div class="puzzle_list_link">
+	        <div>
+		    <span class="plr_title"><%= p.title.html_safe %></span>
+	        </div>
+	        <div>
+		  <% if !p.publication_date.nil? %>
+		    <span class="plr_date"><%= I18n.t("date.abbr_month_names")[p.publication_date.month] %> <%= p.publication_date.day %>, <%= p.publication_date.year %></span>
+		  <% end %>
+		    <span class="plr_stats"><%= p.size %> - <%= p.word_count %>/<%= p.block_count %>, <%= p.avg_word_length %></span>
+	            <div style="clear:both;"></div>
+	        </div>
+	      </div>
+	    </a>
+	  </div><!-- left div -->
+
+          <div style="clear:both;"></div>
+
+      </div><!-- end of puzzle_list_record -->
+
+
+      <% end %>
+    <% end %>
+  </div>
+  <div style="clear:both;"></div>
+</div>

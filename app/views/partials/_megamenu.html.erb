@@ -1,7 +1,7 @@
 <div id="megamenu">
   <div id="search_bar">
     <%= form_tag "/search", :method => :get, :id => 'search_form' do %>
-      <%= text_field_tag :search, params[:search]%>
+      <%= text_field_tag :search, params[:search], class: 'megamenu_search' %>
     <% end %>
   </div>
   <a href="#" id="black_megamenu_square">?</a>
@@ -43,6 +43,9 @@
     </li>
     <li>
 	<%= link_to 'About', about_path %>
+	<ul>
+	  <li><%= link_to 'Q and A', qanda_path %></li>
+	</ul>
     </li>
   </ul>
 

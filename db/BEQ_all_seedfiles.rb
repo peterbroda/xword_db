@@ -1,4 +1,3 @@
-=begin
 puts "Processing 001WhippingPosts_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/001WhippingPosts_seeds.rb"
 puts "Processing 002WaronDrugs_seeds.rb...\n"
@@ -91,12 +90,10 @@ puts "Processing 125MachineShop_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/125MachineShop_seeds.rb"
 puts "Processing 126BarbershopQuartet_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/126BarbershopQuartet_seeds.rb"
-=end
 puts "Processing 127ThemelessMonday_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/127ThemelessMonday_seeds.rb"
 puts "Processing 128Fireplaces_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/128Fireplaces_seeds.rb"
-=begin
 puts "Processing 129SorryWrongNumber_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/129SorryWrongNumber_seeds.rb"
 puts "Processing 130ThemelessMonday_seeds.rb...\n"
@@ -1191,4 +1188,3 @@ puts "Processing WhatsInAName_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/WhatsInAName_seeds.rb"
 puts "Processing WheresTheBeef_seeds.rb...\n"
 require "/home/peter/xword_db/db/BEQ_seedfiles/WheresTheBeef_seeds.rb"
-=end

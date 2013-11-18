@@ -1,3 +1,7 @@
+<%
+  current_uri = request.env['PATH_INFO']
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +16,9 @@
 </head>
 <body>
 <div id="wrapper">
-  <%= render partial: "/partials/megamenu" %>
+  <% if !current_uri.eql? '/' %>
+    <%= render partial: "/partials/megamenu" %>
+  <% end %>
 
   <div id="body_wrapper">
     <%= yield %>

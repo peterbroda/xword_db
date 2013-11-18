@@ -3,6 +3,7 @@ class ConstructorsController < ApplicationController
     @constructor = Constructor.find(params[:id])
 
     @puzzles_by_year = Hash.new
+    @total_puzzles = @constructor.puzzles.size
 
     @constructor.puzzles.each do |p|
       this_date = p.publication_date.to_s[0,4]

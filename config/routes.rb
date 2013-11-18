@@ -28,6 +28,7 @@ XwordDb::Application.routes.draw do
 
   match '/display_puzzle',	to: 'cross_examination#display'
 
+  match 'qanda',	to: 'static_pages#faq'
   match '/about',	to: 'static_pages#about'
   match '/help',	to: 'static_pages#help'
   match '/contact',	to: 'static_pages#contact'

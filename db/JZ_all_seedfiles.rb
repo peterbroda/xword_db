@@ -1,4 +1,3 @@
-=begin
 puts "Processing jz080605_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz080605_seeds.rb"
 puts "Processing jz080612_seeds.rb...\n"
@@ -93,10 +92,8 @@ puts "Processing jz090416_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz090416_seeds.rb"
 puts "Processing jz090423_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz090423_seeds.rb"
-=end
 puts "Processing jz090430_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz090430_seeds.rb"
-=begin
 puts "Processing jz090507_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz090507_seeds.rb"
 puts "Processing jz090514_seeds.rb...\n"
@@ -551,4 +548,3 @@ puts "Processing jz130905_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz130905_seeds.rb"
 puts "Processing jz130912_seeds.rb...\n"
 require "/home/peter/xword_db/db/JZ_seedfiles/jz130912_seeds.rb"
-=end

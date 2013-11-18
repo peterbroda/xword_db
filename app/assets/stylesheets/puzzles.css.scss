@@ -61,6 +61,12 @@ table.solution_grid_with_outer td.white_square, td.black_square {
 td.no_display {
 	border: none;
 }
+td.black_square {
+	background-color: black;
+}
+td.black_square_with_letter {
+	background-color: black;
+}
 div.black_square {
 	background-color: black;
 	border: 1px solid black;
@@ -150,7 +156,9 @@ div#puzzle_grid {
 div#title_bar {
 	width: 100%;
 	height: 25px;
-	border-top: 2px solid #AAA;
+	border-top: 2px solid #AAA;	
+	position: relative;
+	z-index: 2;
 }
 #puzzle_constructors a {
 	font-size: 1.2em;
@@ -191,7 +199,6 @@ div#title_bar {
 	font-size: 6em;
 	font-family: "Impact", sans-serif;
 	color: #EAEAEA;
-	z-index: -1;
 	white-space: nowrap;
 }
 #puzzle_main_info {

@@ -155,7 +155,7 @@ class PuzzlesController < ApplicationController
 	    end
 	    if spec_feat[this_gs.id_name].start_with?("S") #schrodinger square
 	      this_gs.class_name += " schrodinger"
-	      spec_feat[this_gs.id_name] =  spec_feat[this_gs.id_name].gsub(/\//, '_') + 'xxxx' # use 9999 as a delimiter
+	      spec_feat[this_gs.id_name] =  spec_feat[this_gs.id_name].gsub(/\//, '_') + 'xxxx' # use xxxx as a delimiter
 	      this_gs.class_name += spec_feat[this_gs.id_name].gsub(/^./, '') #for now we'll just store the letters on the end of the class name. We'll peel these off and create an inner div with the letters as ID in the view
 	    end
 	  end # of spec_feat

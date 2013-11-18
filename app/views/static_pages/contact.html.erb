@@ -1,3 +1,9 @@
-<% provide(:title, 'Contact Us') %>
-<h1>Get in Touch</h1>
-<p>Contact form and my e-mail address will go here</p>
+<% provide(:title, 'Contact Me') %>
+
+<%= render partial: "/partials/pages_header", locals: {title: 'Get in Touch', subtitle: 'I don\'t bite'} %>
+
+<div class="page_body">
+
+<div class="page_text">
+Get at me: <a href="mailto:peter.bananarchy@gmail.com?Subject=Cross%20Examination" target="_top">peter [decimal point] bananarchy [where it's ___] gmail</a>
+</div>

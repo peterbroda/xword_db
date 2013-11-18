@@ -1,24 +1,19 @@
-=begin
 puts "Processing 02_ABBEY_ROAD_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/02_ABBEY_ROAD_seeds.rb"
 puts "Processing 03_FOREVER_UNCLEAN_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/03_FOREVER_UNCLEAN_seeds.rb"
-=end
 puts "Processing 04_FOUR_COURSE_MEAL_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/04_FOUR_COURSE_MEAL_seeds.rb"
 puts "Processing 05_RUN_THE_WORLD_GIRLS_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/05_RUN_THE_WORLD_GIRLS_seeds.rb"
-=begin
 puts "Processing 06_I_GET_A_KICK_OUT_OF_YOU_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/06_I_GET_A_KICK_OUT_OF_YOU_seeds.rb"
 puts "Processing 07_BOWL_GAME_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/07_BOWL_GAME_seeds.rb"
 puts "Processing 08_I_WANT_CANDY_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/08_I_WANT_CANDY_seeds.rb"
-=end
 puts "Processing 09_BELLY_LAUGHS_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/09_BELLY_LAUGHS_seeds.rb"
-=begin
 puts "Processing 10_RUN_THE_WORLD_GIRLS_REMIX_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/10_RUN_THE_WORLD_GIRLS_REMIX_seeds.rb"
 puts "Processing 11_FEEL_THE_BURN_seeds.rb...\n"
@@ -27,12 +22,10 @@ puts "Processing 12_SHIRTS_VS_SKINS_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/12_SHIRTS_VS_SKINS_seeds.rb"
 puts "Processing 13_TAKING_STOC_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/13_TAKING_STOC_seeds.rb"
-=end
 puts "Processing 14_ENTER_THE_TURTLE_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/14_ENTER_THE_TURTLE_seeds.rb"
 puts "Processing 15_MAKE_A_WISH_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/15_MAKE_A_WISH_seeds.rb"
-=begin
 puts "Processing gfp1_timeline_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp1_timeline_seeds.rb"
 puts "Processing gfp2_the_path_seeds.rb...\n"
@@ -89,10 +82,8 @@ puts "Processing gfp27_themeless4_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp27_themeless4_seeds.rb"
 puts "Processing gfp28_mixedmessages_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp28_mixedmessages_seeds.rb"
-=end
 puts "Processing gfp29_schcat_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp29_schcat_seeds.rb"
-=begin
 puts "Processing gfp30_lol_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp30_lol_seeds.rb"
 puts "Processing gfp31_impaired_seeds.rb...\n"
@@ -133,4 +124,3 @@ puts "Processing gfp48_july22_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp48_july22_seeds.rb"
 puts "Processing gfp49_late_seeds.rb...\n"
 require "/home/peter/xword_db/db/EA_seedfiles/gfp49_late_seeds.rb"
-=end

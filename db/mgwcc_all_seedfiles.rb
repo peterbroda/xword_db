@@ -1,4 +1,5 @@
-=begin
+puts "Processing 1_seeds.rb...\n"
+require "/home/peter/xword_db/db/mgwcc_seedfiles/1_seeds.rb"
 puts "Processing 2_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/2_seeds.rb"
 puts "Processing 3_seeds.rb...\n"
@@ -495,10 +496,8 @@ puts "Processing 248_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/248_seeds.rb"
 puts "Processing 249_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/249_seeds.rb"
-=end
 puts "Processing 250_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/250_seeds.rb"
-=begin
 puts "Processing 251_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/251_seeds.rb"
 puts "Processing 252_seeds.rb...\n"
@@ -507,10 +506,8 @@ puts "Processing 253_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/253_seeds.rb"
 puts "Processing 254_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/254_seeds.rb"
-=end
 puts "Processing 255_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/255_seeds.rb"
-=begin
 puts "Processing 256_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/256_seeds.rb"
 puts "Processing 257_seeds.rb...\n"
@@ -525,14 +522,11 @@ puts "Processing 261_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/261_seeds.rb"
 puts "Processing 262_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/262_seeds.rb"
-=end
 puts "Processing 263_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/263_seeds.rb"
 puts "Processing 264_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/264_seeds.rb"
-=begin
 puts "Processing 265_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/265_seeds.rb"
 puts "Processing 266_seeds.rb...\n"
 require "/home/peter/xword_db/db/mgwcc_seedfiles/266_seeds.rb"
-=end

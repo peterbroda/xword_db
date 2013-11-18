@@ -1,11 +1,76 @@
 <% provide(:title, 'Home') %>
 
-<%= render partial: "/partials/pages_header", locals: {title: 'HOME', subtitle: 'you are here'} %>
+<div id="home_logo">
+CROSS EXAMINATION
+</div>
 
-<div class="page_body">
+<div id="home_body">
 
-  <div class="page_subheader">Announcements</div>
-    <%= render partial: "/partials/announcements" %>
-  </div>
+  <div id="home_left_bar">
+
+    <div id="home_menu">
+
+    <ul id="home_nav">
+      <li>
+	<%= link_to 'Puzzles', puzzles_path %>
+	<ul>
+	  <li><a href="#">Find by theme type</a></li>
+	  <li><a href="#">Find by answer words</a></li>
+	  <li><a href="#">Find by custom query</a></li>
+	</ul>
+      </li>
+      <li>
+	<%= link_to 'Constructors', constructors_path %>
+      </li>
+      <li>
+	<%= link_to 'Hall of Fame', halloffame_path %>
+	<ul>
+	  <li><%= link_to 'Word Count', hofwc_path %></li>
+	  <li><%= link_to 'Block Count', hofbc_path %></li>
+	  <li><%= link_to 'Word Length', hofwl_path %></li>
+	  <li><%= link_to 'Personal Favourites', hofpersonal_path %></li>
+	  <li><%= link_to 'Interesting', hofint_path %></li>
+	</ul>
+      </li>
+      <li>
+	<%= link_to 'About', about_path %>
+	<ul>
+	  <li><%= link_to 'Q and A', qanda_path %></li>
+	</ul>
+      </li>
+    </ul>
+  </div><!-- home_menu  -->
+  </div><!-- left_bar -->
+
+  <div id="home_right_bar">
+    This database contains puzzles from many sources. 
+    View <%= link_to 'a full list with details', sources_path %> or jump to any of the following:
+    <%
+      Source.find(:all).each do |src|
+        %><a href='/sources/<%= src.id %>'><%
+	  %><span class="home_source_record"><%
+            %><%= src.name %><%
+	  %></span><%
+	%></a><%
+      end
+    %>
+  </div><!-- right_bar -->
+
+
+  <div id="home_center">
+    <div id="home_search_bar">
+      <div id="home_search_text">Looking for an entry?</div>
+      <%= form_tag "/search", :method => :get, :id => 'home_search_form' do %>
+        <%= text_field_tag :search, params[:search], class: 'home_search' %>
+      <% end %>
+    </div>
+
+    <div id="announcements">
+      <%= render partial: "/partials/announcements" %>
+    </div>
+  </div><!-- home_center -->
+
+
+  <div style="clear:both;"></div>
 
 </div>
