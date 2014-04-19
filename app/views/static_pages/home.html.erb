@@ -1,5 +1,11 @@
 <% provide(:title, 'Home') %>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		document.getElementById('home_search').focus();
+	});
+</script>
+
 <div id="home_logo">
 CROSS EXAMINATION
 </div>
@@ -61,7 +67,7 @@ CROSS EXAMINATION
     <div id="home_search_bar">
       <div id="home_search_text">Looking for an entry?</div>
       <%= form_tag "/search", :method => :get, :id => 'home_search_form' do %>
-        <%= text_field_tag :search, params[:search], class: 'home_search' %>
+        <%= text_field_tag :search, params[:search], class: 'home_search', id: 'home_search' %>
       <% end %>
     </div>
 

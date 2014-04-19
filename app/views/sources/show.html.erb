@@ -13,9 +13,13 @@
   <div style="clear:both;">&nbsp;</div>
 </div>
 
-<div class="page_body">
+<div class="resource_page_body">
 
-  <div class="source_record">
+  <div class="puzzle_list_preview_column">
+    <%= render partial: "/partials/puzzle_preview_column" %>
+  </div>
+
+  <div class="puzzle_list_left_column">
 
     <div class="page_text">
       <%= @source.description.html_safe %>

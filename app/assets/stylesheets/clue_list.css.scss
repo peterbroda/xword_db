@@ -1,0 +1,70 @@
+.clue_list {
+	background-color: #333;
+	padding: 20px;
+	width: 658px;
+	border: 4px solid #666;
+}
+.clue_list_record {
+        background-color: #555;
+	width: 100%;
+        margin-top: 7px;
+}
+.clue_list_record:hover {
+}
+
+.clue_list_record_right {
+	float: right;
+}
+.clue_list_record_left {
+
+}
+
+.clue_list_link {
+        padding: 10px;
+        color: #AAA;
+        font-weight: normal;
+	a {
+		color: #AAA;
+	}
+	a:hover {
+		color: #444;
+	}
+        &:hover {
+                background-color: #777;
+                color: #444;
+                cursor: pointer;
+		a {
+			color: #444;
+		}
+        }
+}
+.clr_count {
+	font-size: 1em;
+	font-weight: bold;
+	margin-right: 25px;
+}
+.clr_word {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.clr_clue {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.clr_title {
+	font-size: 1em;
+	text-align: right;
+}
+.clr_date {
+}
+.clr_con_sources {
+	font-size: 0.8em;
+	text-align: right;
+}
+.clr_type {
+	font-size: 1em;
+}
+.clr_stats {
+	font-size: 0.8em;
+}

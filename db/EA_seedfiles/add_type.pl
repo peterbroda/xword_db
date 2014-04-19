@@ -10,7 +10,7 @@ while (<IN>)
 {
 	if (m/Puzzle\.create/)
 	{
-		if ($infile =~ m/themeless/)
+		if ($infile =~ m/hemeless/)
 		{
 			s/\)\s*$/\, puzzle_type\: \'freestyle\'\)/;
 		}

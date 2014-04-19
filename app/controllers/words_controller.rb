@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   def search
+    @search_term = params[:search].upcase
     @results = Word.search(params[:search])
     @grouped_results = Hash.new
     @results.each do |w|
@@ -9,5 +10,6 @@ class WordsController < ApplicationController
 
   def show
     @word = Word.find(params[:id])
+    render :layout => false
   end
 end

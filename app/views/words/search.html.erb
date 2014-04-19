@@ -1,26 +1,28 @@
 <% provide(:title, 'Search') %>
 
-<div class="word_record">
-
-<table id="word_appearances_table" class="large_list_table">
-  <tr>
-    <th>Word</th>
-    <th>Count</th>
-  </tr>
-  <%
-    row_color = "dark";
-    @grouped_results.each do |w, c|
-      %><tr class="llt_<%= row_color %>"><%
-        %><td class="word_answer"><%= link_to w.grid_text, word_path(w.id) %></td><%
-        %><td class="word_count"><%= c %></td><%
-      %></tr><%
-      if row_color.eql?("dark")
-        row_color = "light"
-      elsif row_color.eql?("light")
-        row_color = "dark"
-      end
-    end
-  %>
-</table>
-
+<div class="page_title_bar">
+  <div class="page_header">RESULTS</div>
+  <div class="page_header_line">&nbsp;</div>
+  <div class="page_altheader">Here's what I got for <span style="font-weight:bold;"><%= @search_term %></span></div>
+  <div style="clear:both;">&nbsp;</div>
 </div>
+
+
+<div class="resource_page_body">
+
+  <% if (@grouped_results.size > 0) %>
+    <div class="word_record">
+
+    </div>
+
+    <div class="word_list_header">Entries matching your search:</div>
+
+    <%= render partial: "/partials/list_words", locals: {word_list: @grouped_results} %>
+  <% else %>
+    <div class="resource_page_text" id="no_results_text">
+	Sorry, no matches
+    </div>
+
+  <% end %>
+</div>
+<div style="clear:both;"></div>

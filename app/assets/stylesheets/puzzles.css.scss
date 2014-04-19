@@ -312,7 +312,7 @@ span.clue_column_header {
 #down_clues {
 	float: right;
 }
-table.clue_list {
+table.puzzle_clue_list {
 	width: 100%;
 	margin-top: 15px;
 	border: none;
@@ -329,7 +329,7 @@ table.clue_list {
 }
 
 
-#down_clues table.clue_list {
+#down_clues table.puzzle_clue_list {
 	tr:hover td.clue_answer {
 	  /* fallback */
 		  background-color: #EEE;
@@ -364,7 +364,7 @@ table.clue_list {
 	}
 }
 
-#across_clues table.clue_list {
+#across_clues table.puzzle_clue_list {
 	tr:hover td.clue_answer {
 	  /* fallback */
 		  background-color: #EEE;

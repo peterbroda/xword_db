@@ -1,0 +1,58 @@
+<div class="solvable_list">
+
+  <table class="solvable_list_table">
+    <% solvable_list.each do |s| %>
+
+	<tr class="solvable_list_row">
+
+	  <span class="slr_clue"><%= s.entry.clue.html_safe %></span>
+
+	  <div class="solvable_list_record_right">
+	    <div class="plr_constructors">
+	      <% s.entry.puzzle.constructors.each_index do |i| %>
+                <%= link_to s.entry.puzzle.constructors[i].name, constructor_path(s.entry.puzzle.constructors[i]) %>
+                <% if ((i+1) < s.entry.puzzle.constructors.length) %>--<% end %>
+	      <% end %>
+	    </div>
+	    <div class="plr_sources">
+ 	      <% s.entry.puzzle.sources.each_index do |i| %>
+                <%= link_to s.entry.puzzle.sources[i].display_name, source_path(s.entry.puzzle.sources[i]) %>
+                <% if ((i+1) < s.entry.puzzle.sources.length) %>--<% end %>
+              <% end %>
+	    </div>
+	  </div><!-- right div -->
+
+	  <div class="solvable_list_record_left" id="<%= s.entry.puzzle.seq_no %>">
+	    <a href='/puzzles/<%= s.entry.puzzle.seq_no %>'>
+	      <div class="solvable_list_link">
+		<div class="solvable_list_record_center">
+		  <div>
+		    <div class="plr_type"><%= s.entry.puzzle.puzzle_type %></div>
+		  </div>
+		  <div>
+		    <span class="plr_stats"><%= s.entry.puzzle.size %> - <%= s.entry.puzzle.word_count %>/<%= s.entry.puzzle.block_count %>, <%= s.entry.puzzle.avg_word_length %></span>
+		  </div>
+		</div>
+		<div>
+	          <div>
+		    <span class="plr_title"><%= s.entry.puzzle.title.html_safe %></span>
+	          </div>
+	          <div>
+		    <% if !s.entry.puzzle.publication_date.nil? %>
+		      <span class="plr_date"><%= I18n.t("date.abbr_month_names")[s.entry.puzzle.publication_date.month] %> <%= s.entry.puzzle.publication_date.day %>, <%= s.entry.puzzle.publication_date.year %></span>
+		    <% end %>
+	          </div>
+	        </div>
+	        <div style="clear:both;"></div>
+	      </div>
+	    </a>
+	  </div><!-- left div -->
+
+          <div style="clear:both;"></div>
+
+      </tr><!-- end of solvable_list_row -->
+
+
+    <% end %>
+  </table>
+</div>

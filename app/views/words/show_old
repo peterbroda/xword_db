@@ -1,0 +1,23 @@
+<% provide(:title, @word.grid_text) %>
+
+<div class="page_title_bar">
+  <div class="page_header">CLUES</div>
+  <div class="page_header_line">&nbsp;</div>
+  <div class="page_altheader">Why write your own?</div>
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+<div class="resource_page_body">
+
+    <div class="page_subheader">Clues for <span style="color:#666; font-size: 1.3em"><%= @word.grid_text %></span></div>
+
+    <%= render partial: "/partials/list_clues", locals: {solvable_list: @word.solvables} %>
+
+<!--
+We send a list of solvables, because we need both the entry and word info. 
+Using solvables also helps for Schrodinger puzzles, where the entry.answer column will have 'CLINTON/BOBDOLE' and the entry will have 2 solvables. Since at this point we
+know which of the 2 we're interested in (if we searched for BOBDOLE, we don't want CLINTON as a search result), we would lose information were we to send a list of
+entries.
+-->
+
+</div>

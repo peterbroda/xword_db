@@ -20,10 +20,11 @@ class Word < ActiveRecord::Base
       reg_search = reg_search.gsub("?", ".")
       reg_search = reg_search.gsub("@", "[AEIOUY]")
       reg_search = reg_search.gsub("#", "[BCDFGHJKLMNPQRSTVWXYZ]")
-      
+      reg_search = reg_search.upcase      
+
       temp_results = Array.new()
       results.each do |w|
-	if (w.grid_text =~ /#{reg_search}/)
+	if (w.grid_text.upcase =~ /#{reg_search}/)
 	  temp_results = temp_results.push(w)
 	end
       end

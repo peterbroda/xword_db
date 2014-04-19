@@ -1,11 +1,6 @@
-<% provide(:title, @word.grid_text) %>
+    <div class="word_list_header">Clues for <%= @word.grid_text %></div>
 
-<div class="word_record">
-
-<p>Word in the grid: <%= @word.grid_text %></p>
-<p>Full word: <%= @word.full_text %></p>
-
-<%= render partial: "/partials/list_words", locals: {solvable_list: @word.solvables} %> 
+    <%= render partial: "/partials/list_clues", locals: {solvable_list: @word.solvables} %>
 
 <!--
 We send a list of solvables, because we need both the entry and word info. 
@@ -14,4 +9,3 @@ know which of the 2 we're interested in (if we searched for BOBDOLE, we don't wa
 entries.
 -->
 
-</div>

@@ -18,7 +18,14 @@
 	  <span class="resource_list_item_key">Editor: </span><span class="resource_list_item_value"> <%= src.editor %></span>
 	</div>
 	<div class="resource_list_item_field">
-	  <span class="resource_list_item_key">Homepage: </span><span class="resource_list_item_value"><a target="_blank" href="<%= src.url %>"><%= src.url.gsub('http://', '\1') %></a></span>
+	  <span class="resource_list_item_key">Homepage: </span>
+	  <span class="resource_list_item_value">
+	    <% if (!src.url.eql? ('#')) %>
+	      <a target="_blank" href="<%= src.url %>"><%= src.url.gsub('http://', '\1') %></a>
+	    <% else %>
+	      N/A
+	    <% end %>
+	  </span>
 	</div>
       </div>
     <%

@@ -125,11 +125,20 @@ class PuzzlesController < ApplicationController
 	  col_num += 1
 	  current_row.push(this_gs)
 	when "#" # blank space in a grid with outer contents
-	  this_gs.class_name = "no_display"
-	  this_gs.contents = "&nbsp;".html_safe
-	  this_gs.id_name = row_num.to_s + "_" + col_num.to_s
-	  col_num += 1
-	  current_row.push(this_gs)  
+	  if !params[:id].eql?("NF_59") # special case of a puzzle with the # symbol in grid squares
+	    this_gs.class_name = "no_display"
+	    this_gs.contents = "&nbsp;".html_safe
+	    this_gs.id_name = row_num.to_s + "_" + col_num.to_s
+	    col_num += 1
+	    current_row.push(this_gs)  
+	  else
+	    this_gs.class_name = "white_square"
+	    this_gs.id_name = row_num.to_s + "_" + col_num.to_s
+	    this_gs.contents = i	  
+	    @letter_counts[i.upcase] += 1 # add to letter counts
+	    col_num += 1
+	    current_row.push(this_gs)
+	  end
         else	# everything else - ie. contents of white square
 	  this_gs.class_name = "white_square"
 	  this_gs.id_name = row_num.to_s + "_" + col_num.to_s

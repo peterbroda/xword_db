@@ -6,6 +6,7 @@ Word.create(grid_text: "IMLOVINIT", full_text: "I'm lovin' it")
 
 File.foreach('./db/seed_wordlist.txt') { |line|
   puts line
+  line = line.gsub(/\\n/, '')
   Word.find_or_create_by_grid_text(line)
 }
 #e.solvables.create(word: Word.find_or_create_by_grid_text("RAILS"))

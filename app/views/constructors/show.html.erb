@@ -6,16 +6,26 @@
 
 <div class="resource_page_body">
 
-<div class="page_subheader">Who?</div>
-<div class="page_text">
-<%= @constructor.bio.html_safe %>
-</div>
+  <div class="puzzle_list_preview_column">
+    <%= render partial: "/partials/puzzle_preview_column" %>
+  </div>
+  
+  <div class="puzzle_list_left_column">
 
-<div class="page_subheader">
-<%= @total_puzzles %> puzzle<%if @total_puzzles != 1%>s<%end%> by <%= @constructor.name %>:
-</div>
+    <div class="page_subheader">Who?</div>
+  
+    <div class="page_text">
+      <%= @constructor.bio.html_safe %>
+    </div>
 
-<%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_year, page_source: "constructor"} %>
+    <div class="page_subheader">
+      <%= @total_puzzles %> puzzle<%if @total_puzzles != 1%>s<%end%> by <%= @constructor.name %>:
+    </div>
 
-</div>
+
+    <%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_year, page_source: "constructor"} %>
+
+  </div><!-- end of left column -->
+
+</div><!-- end of resource_page_body -->
 

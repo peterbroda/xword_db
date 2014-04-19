@@ -4,17 +4,25 @@
 
 <div class="resource_page_body">
 
-<div class="page_text">
+  <div class="puzzle_list_preview_column">
+    <%= render partial: "/partials/puzzle_preview_column" %>
+  </div>
+
+  <div class="puzzle_list_left_column">
+
+    <div class="page_text">
 While much analysis of grid layout focuses on word and block counts, I argue that neither gives the full story and that the average word length is a better single representation of a grids "openness".
 Some of the grids with the lowest word counts have unremarkable block counts and vice-versa; word length takes both of these figures into account. 
 Most importantly, though, word length is largely independent of grid dimensions, so it offers us a way to meaningfully compare grids of different shapes and sizes. Some of the most wide-open freestyle grids in this database are 16x16 grids by Matt Jones, for instance, and it would be a shame to ignore these.
-</div>
-<div class="page_text">
+    </div>
+    <div class="page_text">
 I calculate the average word length by doubling the number of white squares in a grid and dividing that number by the number of entries. This is effectively equivalent to counting the total number of letters in all entries and dividing by the number of entries, but faster.
 The results are accurate in most cases, but for grids with unusual elements they might be a little off. I have manually corrected the numbers for some of these edge cases, but I've definitely missed some.
 Also, for some puzzles there's not always one way to calculate it. Take <a href="/puzzles/20U30_11">this puzzle</a>, for instance; while the three off-the-grid letters are in grid squares (they're shown to the solver), they're also unchecked letters. I opted to exclude them from stats calculations since including them wouldn't give a proper representation of the "openness" of the grid, but including them wouldn't be inaccurate either.
-</div>
+    </div>
 
-<%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_awl, page_source: "hofwl"} %>
+    <%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_awl, page_source: "hofwl"} %>
+
+  </div>
 
 </div>

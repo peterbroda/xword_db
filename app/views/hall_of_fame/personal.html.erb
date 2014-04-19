@@ -4,12 +4,18 @@
 
 <div class="resource_page_body">
 
-  <div class="page_text">
-Just some puzzles that I think are neato.
+  <div class="puzzle_list_preview_column">
+    <%= render partial: "/partials/puzzle_preview_column" %>
   </div>
 
-  <%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_type, page_source: "hofpers"} %>
+  <div class="puzzle_list_left_column">
 
+    <div class="page_text">
+Just some puzzles that I think are neato.
+    </div>
 
+    <%= render partial: "/partials/list_puzzles", locals: {puzzles_sorted: @puzzles_by_type, page_source: "hofpers"} %>
+
+  </div>
 
 </div>

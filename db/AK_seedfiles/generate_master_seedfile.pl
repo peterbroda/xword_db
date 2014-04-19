@@ -13,7 +13,7 @@ while (<IN>)
 {
 	chomp;
 	print OUT qq{puts "Processing $_...\\n"\n};
-	print OUT qq{require "/home/peter/xword_db/db/AK_seedfiles/};
+	print OUT qq{require "/home/peter/xword_db/db/AK_seedfiles/round_2/};
 	print OUT $_;
 	print OUT qq{"};
 	print OUT "\n";

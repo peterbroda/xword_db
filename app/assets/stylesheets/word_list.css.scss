@@ -1,0 +1,57 @@
+.word_record {
+	min-height: 100px;
+	float: right;
+	width: 700px;
+}
+
+.word_list {
+	background-color: #333;
+	padding: 20px;
+	width: 248px;
+	border: 4px solid #666;
+	overflow: hidden;
+}
+.word_list_header {
+	margin: 0px 0px 15px 10px;
+	color: #A17470;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.word_list_row {
+        background-color: #555;
+        margin-top: 7px;
+        padding: 10px;
+        color: #AAA;
+        font-weight: normal;
+	a {
+		color: #AAA;
+	}
+	a:hover {
+		color: #444;
+	}
+        &:hover {
+                background-color: #777;
+                color: #444;
+                cursor: pointer;
+		a {
+			color: #444;
+		}
+        }
+}
+
+.word_list_row_right {
+	float: right;
+}
+.word_list_row_left {
+
+}
+
+.wlr_count {
+	font-size: 1em;
+	font-weight: bold;
+}
+.wlr_word {
+	font-size: 1.1em;
+	font-weight: bold;
+}

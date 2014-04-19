@@ -1,51 +1,20 @@
-<table class="large_list_table" id="word_appearances_table">
-  <tr>
-    <th>Word</th>
-    <th>Clue</th>
-    <th>Constructor(s)</th>
-    <th>Puzzle</th>
-    <th>Source</th>
-  </tr>
-  <%
-    row_color = "light"
-    solvable_list.each do |s|
-      %>
-	<tr class="llt_<%= row_color %>">
-	  <td class="llt_answer_word">
-            <div class="puzzle_link" id="<%= s.entry.puzzle.seq_no %>">
-                <%= link_to s.word.grid_text, puzzle_path(s.entry.puzzle.seq_no) %>
-                <div class="popup_puzzle" id ="<%= s.entry.puzzle.seq_no %>">Loading...</div>
-            </div>
-	  </td>
-          <td class="llt_left"><%= s.entry.clue.html_safe %></td>
-          <td>
-	  <%
-            s.entry.puzzle.constructors.each do |c|
-              if c.eql?(s.entry.puzzle.constructors.last) && s.entry.puzzle.constructors.size > 1
-                %> and<%
-              end
-              %> <%= link_to c.name, constructor_path(c) %><%
-              if s.entry.puzzle.constructors.size > 2 && !c.eql?(s.entry.puzzle.constructors.last)
-                %>,<%
-              end
-            end
-	  %>
-          </td>
-          <td>
-            <div class="puzzle_link" id="<%= s.entry.puzzle.seq_no %>">
-                <%= link_to s.entry.puzzle.title, puzzle_path(s.entry.puzzle.seq_no) %>
-                <div class="popup_puzzle" id ="<%= s.entry.puzzle.seq_no %>">Loading...</div>
-            </div>
-          <td><%= link_to s.entry.puzzle.sources.first.display_name, source_path(s.entry.puzzle.sources.first) %></td>
-        </tr>
-      <%
-      if row_color.eql?("dark")
-        row_color = "light"
-      elsif row_color.eql?("light")
-        row_color = "dark"
-      end
-    end
-  %>
-</table>
+<div class="word_list">
+<% word_list.each_pair do |w, c| %>
 
+  <div class="word_list_row" id="<%= w.id %>">
 
+	  <div class="word_list_row_right">
+            <div class="wlr_count"><%= c %></div>
+	  </div><!-- right div -->
+
+	  <div class="word_list_row_left">
+	    <div class="wlr_word"><%= w.grid_text %></div>
+	  </div><!-- left div -->
+
+          <div style="clear:both;"></div>
+
+  </div><!-- end of word_list_row -->
+
+<% end %>
+<div style="clear:both;"></div>
+</div>

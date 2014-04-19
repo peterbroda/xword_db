@@ -1,0 +1,39 @@
+<div class="clue_list">
+
+    <% solvable_list.each do |s| %>
+
+	<div class="clue_list_record">
+
+    <a href='/puzzles/<%= s.entry.puzzle.seq_no %>'>
+      <div class="clue_list_link">
+
+	  <div class="clue_list_record_right">
+	    <div>
+	      <div class="clr_title"><%= s.entry.puzzle.title %></div>
+	    </div>
+	    <div class="clr_con_sources">
+	      <% s.entry.puzzle.constructors.each_index do |i| %>
+                <%= s.entry.puzzle.constructors[i].name %>
+                <% if ((i+1) < s.entry.puzzle.constructors.length) %>/<% end %>
+	      <% end %>-
+ 	      <% s.entry.puzzle.sources.each_index do |i| %>
+                <%= s.entry.puzzle.sources[i].display_name %>
+                <% if ((i+1) < s.entry.puzzle.sources.length) %>/<% end %>
+              <% end %>
+	    </div>
+	  </div><!-- right div -->
+
+	  <div class="clue_list_record_left" id="<%= s.entry.puzzle.seq_no %>">
+	    <div class="clr_clue"><%= s.entry.clue.html_safe %></div>
+	  </div><!-- left div -->
+
+          <div style="clear:both;"></div>
+      </div>
+    </a>
+
+      </div><!-- end of clue_list_record -->
+
+
+    <% end %>
+  <div style="clear:both;"></div>
+</div>

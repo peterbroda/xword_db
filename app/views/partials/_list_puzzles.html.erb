@@ -1,10 +1,5 @@
 <div class="puzzle_list">
 
-  <div class="puzzle_list_preview_wrapper">
-    <div class="puzzle_list_preview">
-    </div>
-  </div>
-
   <div class="puzzle_list_recordlist">
     <% puzzles_sorted.each_pair do |key, value| %>
       <div class="puzzle_list_header"><%= key.html_safe %></div>
@@ -30,16 +25,25 @@
 	  <div class="puzzle_list_record_left" id="<%= p.seq_no %>">
 	    <a href='/puzzles/<%= p.seq_no %>'>
 	      <div class="puzzle_list_link">
-	        <div>
-		    <span class="plr_title"><%= p.title.html_safe %></span>
-	        </div>
-	        <div>
-		  <% if !p.publication_date.nil? %>
-		    <span class="plr_date"><%= I18n.t("date.abbr_month_names")[p.publication_date.month] %> <%= p.publication_date.day %>, <%= p.publication_date.year %></span>
-		  <% end %>
+		<div class="puzzle_list_record_center">
+		  <div>
+		    <div class="plr_type"><%= p.puzzle_type %></div>
+		  </div>
+		  <div>
 		    <span class="plr_stats"><%= p.size %> - <%= p.word_count %>/<%= p.block_count %>, <%= p.avg_word_length %></span>
-	            <div style="clear:both;"></div>
+		  </div>
+		</div>
+		<div>
+	          <div>
+		    <span class="plr_title"><%= p.title.html_safe %></span>
+	          </div>
+	          <div>
+		    <% if !p.publication_date.nil? %>
+		      <span class="plr_date"><%= I18n.t("date.abbr_month_names")[p.publication_date.month] %> <%= p.publication_date.day %>, <%= p.publication_date.year %></span>
+		    <% end %>
+	          </div>
 	        </div>
+	        <div style="clear:both;"></div>
 	      </div>
 	    </a>
 	  </div><!-- left div -->
